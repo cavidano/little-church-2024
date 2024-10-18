@@ -34,11 +34,14 @@ const devPages = {
     'Tab': 'tab',
     'Table': 'table',
     'Track': 'track',
-    'Typography': 'typography'
+    'Typography': 'typography',
+
+    // Custom
+    'GlobalHeader': 'global-header',
 }
 
 const devDir = './dist/html';
-const devPage = `${devPages.Typography}.html`;
+const devPage = `${devPages.GlobalHeader}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

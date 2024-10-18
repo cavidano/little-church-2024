@@ -32,7 +32,6 @@ In this file:
 // C. Optional Partials
 //////////////////////////////////////////////
 
-
 @use './accordion';
 @use './alert';
 @use './article';
@@ -64,3 +63,4 @@ In this file:
 //////////////////////////////////////////////
 
 @use './theme/variables';
+@use './theme/components';

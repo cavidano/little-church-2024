@@ -1,3 +1,4 @@
+
 :root {
 
     // Colors
@@ -13,4 +14,8 @@
     --header-font-family: "Playfair Display", serif;
 
     --banner-headline-font-weight: var(--font-weight-bold);
+
+    --grid-divider-border-x-color: var(--dark);
+    --grid-divider-border-y-color: var(--dark);
+
 }
