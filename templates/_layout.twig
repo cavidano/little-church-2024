@@ -16,11 +16,23 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css">
 
         <!-- Natura11y Stylesheet -->
-        <link rel="stylesheet" href="/dist/css/natura11y.css">
+        <link rel="stylesheet" href="/dist/natura11y.css">
 
     </head>
 
-    <body class="box-shadow-3">
+    <body>
+
+		<div class="skip-links">
+
+			<a href="#main">
+				Jump to main content
+			</a>
+
+			<a href="#global-footer">
+				Jump to website footer
+			</a>
+		
+		</div>
 
         {{ include('_includes/global-header.twig') }}
 
@@ -31,7 +43,7 @@
         {{ include('_includes/global-footer.twig') }}
 
         <!-- Natura11y Javascript -->
-        <script src="/dist/js/natura11y.js"></script>
+        <script src="/dist/natura11y.js"></script>
     
     </body>
 
