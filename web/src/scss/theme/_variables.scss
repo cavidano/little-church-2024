@@ -1,7 +1,16 @@
 :root {
+
+    // Colors
+
     --primary: #008445;
     --secondary: #ffcc66;
     --dark: #000;
     --light: #f2edeb;
     --canvas: white;
+
+    // Fonts
+
+    --header-font-family: "Playfair Display", serif;
+
+    --banner-headline-font-weight: var(--font-weight-bold);
 }
