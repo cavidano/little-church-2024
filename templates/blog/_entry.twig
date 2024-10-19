@@ -2,6 +2,32 @@
 
 {% block content %}
 
+<div class="border-top padding-y-2">
+
+	<div class="container wide">
+
+		<ul class="nav-breadcrumb font-size-sm">
+			<li>
+				<a href="{{ siteUrl }}">
+					<span class="icon icon-home" aria-hidden="true"></span>
+				</a>
+			</li>
+			<li>
+				<a href="/blog">
+					<em>
+						Blog
+					</em>
+				</a>
+			</li>
+			<li class="text-color-primary">
+				{{ entry.title }}
+			</li>
+		</ul>
+
+	</div>
+	
+</div>
+
 <main id="skip-header-target">
 
 	<article>
@@ -10,16 +36,16 @@
 
 			<div class="container narrow medium--lg text-align-center padding-y-5">
 
-				<p class="font-size-sm">
+				<p class="font-size-sm margin-bottom-0">
 					{{ entry.postDate.format('F j, Y') }}
 				</p>
 
-				<h1 class="banner-headline">
+				<h1 class="banner-headline margin-bottom-1">
 					{{ entry.title }}
 				</h1>
 
 				<p class="font-size-sm">
-				{{ entry.blogAuthor }}
+					{{ entry.blogAuthor }}
 				</p>
 
 			</div>

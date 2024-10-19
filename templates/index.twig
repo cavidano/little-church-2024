@@ -4,7 +4,7 @@
 
 <main id="skip-header-target">
 
-	<section class="backdrop theme-dark" id="introduction">
+	<section class="backdrop backdrop--stack--lg theme-dark" id="introduction">
 
 		<div class="backdrop__media gradient-mask-bottom">
 			<img class="opacity-50 fade-on-scroll" src="/images/backdrop-banner-01.jpg" alt="Placeholder" />
@@ -12,7 +12,7 @@
 
 		<div class="backdrop__cover align-content-end">
 
-			<div class="container narrow medium--lg text-align-center margin-y-6">
+			<div class="container narrow medium--lg text-align-center margin-y-5">
 
 				<h1 class="banner-headline text-shadow margin-bottom-4">
 					We embrace all who seek God's inclusive love
@@ -36,12 +36,6 @@
 			<h2 class="banner-headline">
 				We embrace all who seek God's inclusive love
 			</h2>
-
-			<p>
-
-			{{ entry.homepageContent }}
-			
-			</p>
 			
 		</div>
 
@@ -206,21 +200,29 @@
                 </h2>
             </header>
             
-            <div class="grid grid--divider--fill-y grid--column-3" style="--grid-divider-border-y-color: currentColor">
+            <div class="grid grid--divider--fill-y grid--column-3">
+
+				{% for item in craft.entries.section('blog').limit(3).all() %}
             
-                <div class="grid grid--column-3 gap-2 align-items-center">
+                <a class="grid grid--column-3 gap-2 align-items-center" href="{{ item.url}}">
 
                     <div class="theme-dark aspect-ratio-1x1"></div>
 
                     <div class="grid__colspan-2">
+
+					<p class="font-size-sm margin-bottom-0">
+						{{ item.postDate.format('F j, Y') }}
+					</p>
                         
                         <h3 class="h6">
-                            A Requiem Mass for Rudy Mazzocchi
+                            {{ item.title }}
                         </h3>
                     
                     </div>
 
-                </div>
+                </a>
+
+				{% endfor %}
             
                 <div class="grid grid--column-3 gap-2 align-items-center">
 
