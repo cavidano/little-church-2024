@@ -1,0 +1,39 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<main id="skip-header-target">
+
+	<article>
+
+		<header>
+
+			<div class="container narrow medium--lg text-align-center padding-y-5">
+
+				<p class="font-size-sm">
+					{{ entry.postDate.format('F j, Y') }}
+				</p>
+
+				<h1 class="banner-headline">
+					{{ entry.title }}
+				</h1>
+
+				<p class="font-size-sm">
+				{{ entry.blogAuthor }}
+				</p>
+
+			</div>
+
+		</header>
+
+		<div class="container narrow">
+
+			{{ entry.newsBody }}
+
+		</div>
+
+	</article>
+
+</main>
+
+{% endblock %}

@@ -1,13 +1,26 @@
-dateModified: 1729299919
+dateModified: 1729329999
 email:
   fromEmail: carl@avidanodigital.com
   fromName: 'Little Church'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    90d007fb-964b-4788-b672-633d855a0058: 'Rich Text' # Rich Text
     312a0d44-7d08-4c21-bc00-91291780659b: 'Public Schema' # Public Schema
+    649c5a54-f759-4177-990f-60a9da779147: Blog # Blog
+    820e255c-6450-4806-b5ca-85831d8a7c7f: 'Plain Text' # Plain Text
+    4573cb02-ab7d-471a-80a1-93b140d3422a: 'Introduction Title' # Introduction Title
+    29691dec-8406-465e-bd7f-694f6a1776ff: Blog # Blog
+    aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: Homepage # Homepage
     be991be1-9fbd-4fb8-9e2b-19282b305c62: 'Little Church' # Little Church
+    c243e913-1c84-463a-bbcb-327b23ff279a: Simple # Simple
     f627def0-bb59-4992-ae44-aef0dfb97c08: 'Little Church' # Little Church
+    fce93b65-4251-416d-9a60-b4bdd015eb33: Homepage # Homepage
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
 system:
   edition: solo
   live: true
