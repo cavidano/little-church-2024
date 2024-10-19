@@ -1,19 +1,55 @@
-dateModified: 1729332819
+dateModified: 1729376164
 email:
   fromEmail: carl@avidanodigital.com
   fromName: 'Little Church'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  FeatureImages:
+    hasUrls: true
+    name: 'Feature Image'
+    settings:
+      path: '@webroot/images/feature-images'
+    type: craft\fs\Local
+    url: '@web/images/feature-images'
+  homepageCarouselImages:
+    hasUrls: true
+    name: 'Homepage Carousel Images'
+    settings:
+      path: '@webroot/images/uploads/homepage-carousel-images'
+    type: craft\fs\Local
+    url: '@web/images/uploads/homepage-carousel-images'
+  virtualTourImages:
+    hasUrls: true
+    name: 'Virtual Tour Images'
+    settings:
+      path: '@webroot/images/uploads/virtual-tour-images'
+    type: craft\fs\Local
+    url: '@web/images/uploads/virtual-tour-images'
 meta:
   __names__:
+    3f15b324-fa65-485b-ab56-f9bfed089117: 'Homepage Carousel' # Homepage Carousel
+    4de8895d-cb53-4939-90f8-d37639e60da3: 'Virtual Tour' # Virtual Tour
+    5b9003a1-5077-4296-9639-f03328dd74a2: 'Virtual Tour Images' # Virtual Tour Images
+    5da48b70-636f-4798-99d0-24e2899dff02: 'Link URL' # Link URL
+    27c04a34-53b5-4eaf-a615-91ca4dd52dd5: Image # Image
+    41ea8475-5a25-4156-99a9-75f192140d9c: 'Homepage Carousel Images' # Homepage Carousel Images
+    67cb7d46-6622-4ee4-8930-b7fe3a6b6655: 'Hompepage Carousel' # Hompepage Carousel
     90d007fb-964b-4788-b672-633d855a0058: 'Rich Text' # Rich Text
     312a0d44-7d08-4c21-bc00-91291780659b: 'Public Schema' # Public Schema
+    612cf07a-8adc-436d-8d30-04c51e6251c6: About # About
     649c5a54-f759-4177-990f-60a9da779147: Blog # Blog
     820e255c-6450-4806-b5ca-85831d8a7c7f: 'Plain Text' # Plain Text
+    979c8d61-727b-4c46-ab40-83a3561c192a: 'About Feature Images' # About Feature Images
     4573cb02-ab7d-471a-80a1-93b140d3422a: 'Introduction Title' # Introduction Title
+    6453b749-5f18-4ffc-b62a-393fa9752a52: Image # Image
     29691dec-8406-465e-bd7f-694f6a1776ff: Blog # Blog
     aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: Homepage # Homepage
+    b9395e1a-8d3b-4b8f-aafe-3eab9556b505: Article # Article
     be991be1-9fbd-4fb8-9e2b-19282b305c62: 'Little Church' # Little Church
+    c9a7a600-9d0b-49e7-abe5-92407d1134b0: Backdrop # Backdrop
     c243e913-1c84-463a-bbcb-327b23ff279a: Simple # Simple
+    cadcecb7-766f-4de8-bee3-62b75a1e2092: 'Tour Highlight' # Tour Highlight
+    f9b00a9a-3b02-4e35-a580-c3f5f7996da0: 'Featured Sections' # Featured Sections
     f627def0-bb59-4992-ae44-aef0dfb97c08: 'Little Church' # Little Church
     fce93b65-4251-416d-9a60-b4bdd015eb33: Homepage # Homepage
 plugins:

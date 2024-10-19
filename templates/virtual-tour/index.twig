@@ -1,0 +1,95 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<main id="skip-header-target">
+
+	<article>
+
+		<header class="theme-primary" id="introduction">
+
+			<div class="container narrow medium--lg text-align-center padding-y-5">
+
+				<h1>
+					Explore Our Church &amp; Grounds
+				</h1>
+
+			</div>
+
+		</header>
+
+		<div class="theme-dark" style="--panel-peeking: calc((100vw - var(--wide-width)) * 0.5);">
+			
+			<section
+				class="track track--peeking"
+				aria-labelledby="virtual-tour-highlights">
+
+				<h3 id="virtual-tour-highlights" class="screen-reader-only">Featured Content</h3>
+
+				<div class="track__container">
+				
+					<button
+						class="button button--icon-only track__prev"
+						aria-label="Previous Slide"
+						data-track-prev>
+						<span class="icon icon-arrow-left" aria-hidden="true"></span>
+					</button>
+
+					<ul class="track__panels gap-1">
+
+						{# Fetch entries from the virtualTour section #}
+                        {% set virtualTourEntries = craft.entries.section('virtualTour').all() %}
+
+						{# Loop through each entry #}
+                        {% for entry in virtualTourEntries %}
+                            <li class="track__panel">
+                                <article class="backdrop backdrop--stack--md theme-dark">
+
+                                    <div class="backdrop__media">
+                                        {# Output the entry's image #}
+                                        {% if entry.image | length %}
+                                            <img
+												class="gradient-mask-bottom"
+												src="{{ entry.image.one().url }}"
+												alt="{{ entry.image.one().title }}"
+
+											/>
+                                        {% else %}
+                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder">
+                                        {% endif %}
+                                    </div>
+
+                                    <div class="backdrop__cover align-content-end">
+                                        <div class="padding-3 font-size-md text-shadow width-50--lg margin-2">
+											<h2 class="h4">
+												{{ entry.title }}
+											</h2>
+											{{ entry.description }}
+                                        </div>
+                                    </div>
+
+                                </article>
+                            </li>
+                        {% endfor %}
+
+					</ul>
+
+					<button
+						class="button button--icon-only track__next"
+						aria-label="Next Slide"
+						data-track-next>
+						<span class="icon icon-arrow-right" aria-hidden="true"></span>
+					</button>
+				</div>
+				
+				<ul class="track__pagination margin-y-3" data-track-pagination></ul>
+
+			</section>
+
+		</div>
+
+	</article>
+
+</main>
+
+{% endblock %}

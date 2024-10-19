@@ -1,0 +1,18 @@
+defaultPlacement: end
+enableVersioning: false
+entryTypes:
+  - cadcecb7-766f-4de8-bee3-62b75a1e2092 # Tour Highlight
+handle: virtualTour
+maxAuthors: 1
+name: 'Virtual Tour'
+propagationMethod: all
+siteSettings:
+  f627def0-bb59-4992-ae44-aef0dfb97c08: # Little Church
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: b8e47366-e133-4aae-bec7-b992fddc3b5a
+type: structure

@@ -1,0 +1,18 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 67cb7d46-6622-4ee4-8930-b7fe3a6b6655 # Hompepage Carousel
+handle: homepageCarousel
+maxAuthors: 1
+name: 'Homepage Carousel'
+propagationMethod: all
+siteSettings:
+  f627def0-bb59-4992-ae44-aef0dfb97c08: # Little Church
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: c20c1463-f8ee-4a40-a591-9682f13af50a
+type: structure

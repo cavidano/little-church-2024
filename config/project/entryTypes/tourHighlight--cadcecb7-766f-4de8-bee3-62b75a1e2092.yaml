@@ -1,0 +1,83 @@
+color: null
+fieldLayouts:
+  bf2c98d7-5faa-4770-987a-721a125e94d9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-10-19T18:47:58+00:00'
+            elementCondition: null
+            fieldUid: 6453b749-5f18-4ffc-b62a-393fa9752a52 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d247a5b7-1bef-4c97-aa52-35b9ee58c469
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-10-19T18:41:59+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3386cb55-dde4-48c7-8f34-b41318e73c24
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-19T18:47:58+00:00'
+            elementCondition: null
+            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Rich Text
+            handle: description
+            includeInCards: false
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7b798b0c-5174-4912-ab33-ac4a90e991a8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3bfc050e-de00-40e9-8fc8-740e6e9d5226
+        userCondition: null
+handle: tourHighlight
+hasTitleField: true
+icon: camera
+name: 'Tour Highlight'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

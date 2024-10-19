@@ -4,28 +4,66 @@
 
 <main id="skip-header-target">
 
-	<section class="backdrop backdrop--stack--lg theme-dark" id="introduction">
+	<section
+		class="track theme-dark"
+		aria-labelledby="virtual-tour-highlights">
 
-		<div class="backdrop__media gradient-mask-bottom">
-			<img class="opacity-50 fade-on-scroll" src="/images/backdrop-banner-01.jpg" alt="Placeholder" />
-		</div>
+		<h3 id="virtual-tour-highlights" class="screen-reader-only">Featured Content</h3>
 
-		<div class="backdrop__cover align-content-end">
+		<div class="track__container">
 
-			<div class="container narrow medium--lg text-align-center margin-y-5">
+			<ul class="track__panels gap-1">
 
-				<h1 class="banner-headline text-shadow margin-bottom-4">
-					We embrace all who seek God's inclusive love
-				</h1>
-
-				<a class="button 👉 button--has-icon theme-primary" href="#1">
-					<span class="button__text">Worship With Us</span>
-					<span class="icon icon-arrow-right"></span>
-				</a>
+				{% set homepageCarouselEntries = craft.entries.section('homepageCarousel').all() %}
 				
-			</div>
+				{# Loop through each entry #}
+				{% for entry in homepageCarouselEntries %}
+				
+					<li class="track__panel">
+					
+						<article class="backdrop backdrop--stack--md theme-dark">
+
+							<div class="backdrop__media">
+								{# Output the entry's image #}
+								{% if entry.image | length %}
+									<img
+										class="gradient-mask-bottom"
+										src="{{ entry.image.one().url }}"
+										alt="{{ entry.image.one().title }}"
+
+									/>
+								{% else %}
+									<img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder">
+								{% endif %}
+							</div>
+
+							<div class="backdrop__cover align-content-end">
+
+								<div class="container narrow text-align-center margin-y-5">
+
+									<h1 class="h2 margin-bottom-3">
+										{{ entry.title }}
+									</h1>
+
+									<a class="button 👉 button--has-icon theme-primary font-size-md" href="{{ entry.linkUrl }}">
+										<span class="button__text">{{ entry.linkText }}</span>
+										<span class="icon icon-arrow-right"></span>
+									</a>
+									
+								</div>
+
+							</div>
+
+						</article>
+
+					</li>
+				{% endfor %}
+
+			</ul>
 
 		</div>
+		
+		<ul class="track__pagination margin-y-3 justify-content-center" data-track-pagination></ul>
 
 	</section>
 
