@@ -46,7 +46,7 @@ $rows: math.div($columns, 2);
     // Grid Block
 
     .grid,
-    [class*="grid-sidebar"] {
+    [class*="grid-sidebar"]:not([class*="__container"]) {
         display: grid;
         
         list-style: none;
@@ -169,7 +169,7 @@ $rows: math.div($columns, 2);
             display: none;
         }
 
-        > [class*="major"] {
+        > .grid-sidebar__major {
             grid-area: major;
         }
 
