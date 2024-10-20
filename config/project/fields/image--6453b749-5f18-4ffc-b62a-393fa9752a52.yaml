@@ -13,10 +13,10 @@ settings:
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
   maxRelations: 1
-  minRelations: 1
+  minRelations: 0
   previewMode: full
   restrictFiles: false
-  restrictLocation: true
+  restrictLocation: false
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:41ea8475-5a25-4156-99a9-75f192140d9c' # Homepage Carousel Images
   restrictedLocationSubpath: null

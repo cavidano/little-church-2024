@@ -49,34 +49,25 @@
 				<div class="grid-sidebar__minor-start">
 
 					<nav class="font-size-md">
+						{% set currentSection = entry.section.handle %}
+						
+						{# Fetch child pages for the current section dynamically #}
+						{% set childPages = craft.entries().section(currentSection).all() %}
 
-						<ul class="nav theme-light border-top border-color-primary padding-3 position-sticky-top">
-							<li>
-								<a href="/about" aria-current="page">Welcome</a>
-							</li>
-							<li>
-								<a href="#">A Brief History</a>
-							</li>
-							<li>
-								<a href="#">Clergy &amp; Staff</a>
-							</li>
-							<li>
-								<a href="#">Historical Society</a>
-							</li>
-							<li>
-								<a href="#">Parish Life</a>
-							</li>
-							<li>
-								<a href="#">Outreach</a>
-							</li>
-							<li>
-								<a href="#">Volunteer</a>
-							</li>
-							<li>
-								<a href="#">Sister Parishes</a>
-							</li>
-						</ul>
+						{% if childPages|length %}
+							<ul class="nav theme-light border-top border-color-primary padding-3 position-sticky-top">
 
+							{% for page in childPages %}
+								<li>
+									<a href="{{ page.url }}" 
+										{% if page.id == entry.id %}aria-current="page"{% endif %}>
+            							{{ page.title }}
+          							</a>
+								</li>
+							{% endfor %}
+							
+							</ul>
+						{% endif %}
 					</nav>
 
 				</div>
