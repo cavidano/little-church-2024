@@ -57,7 +57,18 @@
                         About
                 </button>
 
+                {% set pages = craft.entries()
+                    .section('about')
+                    .all() 
+                %}
+
                 <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-about">
+
+                    {% for page in pages %}
+                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+
+                    {# 
                     <li>
                         <a href="/about/a-welcome-message">Welcome</a>
                     </li>
@@ -82,7 +93,9 @@
                     <li>
                         <a href="#">Sister Parishes</a>
                     </li>
+                    #}
                 </ul>
+                
             </li>
             <li>
                 <button

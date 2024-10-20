@@ -26,12 +26,14 @@
 							<div class="backdrop__media">
 								{# Output the entry's image #}
 								{% if entry.image | length %}
+								{% set image = entry.image.one() %}
+
 									<img
 										class="gradient-mask-bottom"
-										src="{{ entry.image.one().url }}"
-										alt="{{ entry.image.one().title }}"
-
+										src="{{ image.url }}"
+										alt="{{ image.alt ?? '' }}"
 									/>
+
 								{% else %}
 									<img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder">
 								{% endif %}

@@ -1,4 +1,4 @@
-dateModified: 1729376164
+dateModified: 1729427498
 email:
   fromEmail: carl@avidanodigital.com
   fromName: 'Little Church'
@@ -15,16 +15,16 @@ fs:
     hasUrls: true
     name: 'Homepage Carousel Images'
     settings:
-      path: '@webroot/images/uploads/homepage-carousel-images'
+      path: '@webroot/images/uploads/homepage-carousel'
     type: craft\fs\Local
-    url: '@web/images/uploads/homepage-carousel-images'
+    url: '@web/images/uploads/homepage-carousel'
   virtualTourImages:
     hasUrls: true
     name: 'Virtual Tour Images'
     settings:
       path: '@webroot/images/uploads/virtual-tour-images'
     type: craft\fs\Local
-    url: '@web/images/uploads/virtual-tour-images'
+    url: '@web/images/uploads/virtual-tour'
 meta:
   __names__:
     3f15b324-fa65-485b-ab56-f9bfed089117: 'Homepage Carousel' # Homepage Carousel
