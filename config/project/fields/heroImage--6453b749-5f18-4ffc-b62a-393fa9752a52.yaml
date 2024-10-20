@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: image
-instructions: null
-name: Image
+handle: heroImage
+instructions: 'This is the hero image for the page'
+name: 'Hero Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -16,16 +16,17 @@ settings:
   minRelations: 0
   previewMode: full
   restrictFiles: false
-  restrictLocation: false
+  restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:41ea8475-5a25-4156-99a9-75f192140d9c' # Homepage Carousel Images
+  restrictedLocationSource: 'volume:979c8d61-727b-4c46-ab40-83a3561c192a' # Hero Images
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  sources: '*'
+  sources:
+    - 'volume:979c8d61-727b-4c46-ab40-83a3561c192a' # Hero Images
   targetSiteId: null
   validateRelatedElements: false
   viewMode: large

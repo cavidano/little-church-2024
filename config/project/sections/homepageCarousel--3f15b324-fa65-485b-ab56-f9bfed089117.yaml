@@ -13,6 +13,6 @@ siteSettings:
     template: null
     uriFormat: null
 structure:
-  maxLevels: null
-  uid: c20c1463-f8ee-4a40-a591-9682f13af50a
+  maxLevels: 1
+  uid: 11d41fbb-c927-4c30-8aac-860bccf2ed87
 type: structure

@@ -76,8 +76,8 @@
 
 					<div class="grid-sidebar__major__container">
 
-						{% if entry.image | length %}
-						{% set image = entry.image.one() %}
+						{% if entry.heroImage | length %}
+						{% set image = entry.heroImage.one() %}
 
 							<figure>
 
@@ -86,10 +86,10 @@
 									alt="{{ image.alt ?? '' }}"
 								/>
 
-								{% if entry.image[0].caption %}
-								<figcaption class=" container narrow">
+								{% if entry.heroCaption %}
+								<figcaption class="container narrow">
 									<p>
-										{{ entry.image[0].caption }}
+										{{ entry.heroCaption }}
 									</p>
 								</figcaption>
 								{% endif %}
@@ -97,11 +97,41 @@
 
 						{% endif %}
 
-						<section class="container narrow margin-y-4">
+						<div>
 						
-							{{ entry.richText }}
+							{# Loop through the Matrix blocks #}
+							{% for block in entry.articleContent.all() %}
+							
+							{# Handle the Rich Text block #}
+							{% if block.type.handle == 'richText' %}
+
+							<div class="container narrow margin-y-4">
 								
-						</section>
+								{{ block.richTextContent }}
+							
+							</div>
+							
+							{# Handle the Figure Image block #}
+							{% elseif block.type.handle == 'figureImage' %}
+								<figure class="margin-y-5">
+								{% set image = block.figureImage.one() %}
+								{% if image %}
+									<img src="{{ image.url }}" alt="{{ image.alt }}" />
+								{% endif %}
+								{% if block.figureCaption %}
+									<figcaption class="container narrow">
+										<p>
+											{{ block.figureCaption }}
+										</p>
+									</figcaption>
+								{% endif %}
+								</figure>
+							
+							{% endif %}
+							
+							{% endfor %}
+
+						</div>
 
 						<footer class="border-top padding-top-3 font-size-sm margin-top-4">
 							<div class="grid grid--column-3 gap-2 align-items-center">

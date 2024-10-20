@@ -1,7 +1,6 @@
-altTranslationKeyFormat: null
-altTranslationMethod: none
+color: violet
 fieldLayouts:
-  690ea02b-008c-4ea1-81f1-e6065db129a5:
+  762d7134-96de-444a-9f1e-39fa76b6ba50:
     tabs:
       -
         elementCondition: null
@@ -11,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-10-19T16:31:50+00:00'
+            dateAdded: '2024-10-20T15:16:40+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,62 +30,54 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 0881bf2d-172c-497d-8029-03e991e6d555
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: e1e65e66-0158-4fbe-9c4e-9325e1cede36
             userCondition: null
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            dateAdded: '2024-10-19T17:16:58+00:00'
-            disabled: false
+            dateAdded: '2024-10-20T18:28:26+00:00'
             elementCondition: null
-            id: null
+            fieldUid: 75c8e62e-3242-4d56-90d1-090d035078f6 # Figure Image
+            handle: null
             includeInCards: false
             instructions: null
             label: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: true
-            required: false
-            rows: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: 0f1ff995-ec90-4af5-841f-48db6a981b69
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-10-19T17:17:36+00:00'
-            elementCondition: null
-            fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
-            handle: caption
-            includeInCards: false
-            instructions: 'A caption for the image '
-            label: Caption
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7657dd66-fc32-4ec6-b2bf-2a31bfbcd54c
+            uid: 040f0b8f-bbf1-4869-afc1-176ba2db6806
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-20T15:19:29+00:00'
+            elementCondition: null
+            fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
+            handle: figureCaption
+            includeInCards: false
+            instructions: null
+            label: 'Figure Caption'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 75a6ecf6-6897-4e73-a7f3-ce9678bf3ba1
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: eccef903-680c-4530-be7a-d3a2e6956836
+        uid: 2de0b7c0-d798-4dd9-839d-1265ea212673
         userCondition: null
-fs: heroImages
-handle: heroImages
-name: 'Hero Images'
-sortOrder: 1
-subpath: ''
+handle: figureImage
+hasTitleField: false
+icon: image-polaroid
+name: 'Figure Image'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: ''
-transformSubpath: ''

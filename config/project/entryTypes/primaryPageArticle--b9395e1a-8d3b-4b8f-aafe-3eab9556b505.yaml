@@ -1,7 +1,6 @@
-altTranslationKeyFormat: null
-altTranslationMethod: none
+color: null
 fieldLayouts:
-  690ea02b-008c-4ea1-81f1-e6065db129a5:
+  0cad27d9-0556-413c-9436-8f7061ea89ea:
     tabs:
       -
         elementCondition: null
@@ -11,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-10-19T16:31:50+00:00'
+            dateAdded: '2024-10-19T17:21:17+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,62 +30,70 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 0881bf2d-172c-497d-8029-03e991e6d555
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: fa8f80c5-69e6-476e-ba4f-285df2de1e0b
             userCondition: null
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            dateAdded: '2024-10-19T17:16:58+00:00'
-            disabled: false
+            dateAdded: '2024-10-19T17:24:05+00:00'
             elementCondition: null
-            id: null
+            fieldUid: 6453b749-5f18-4ffc-b62a-393fa9752a52 # Hero Image
+            handle: null
             includeInCards: false
             instructions: null
             label: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: true
-            required: false
-            rows: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: 0f1ff995-ec90-4af5-841f-48db6a981b69
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-10-19T17:17:36+00:00'
-            elementCondition: null
-            fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
-            handle: caption
-            includeInCards: false
-            instructions: 'A caption for the image '
-            label: Caption
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7657dd66-fc32-4ec6-b2bf-2a31bfbcd54c
+            uid: 4a04a7c8-a05a-4392-80f6-639b8c8b954f
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: eccef903-680c-4530-be7a-d3a2e6956836
+          -
+            dateAdded: '2024-10-20T15:48:36+00:00'
+            elementCondition: null
+            fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
+            handle: heroCaption
+            includeInCards: false
+            instructions: null
+            label: 'Hero Caption'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dede1c86-a414-4f84-ac15-6cd6f41abbc2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-20T15:53:26+00:00'
+            elementCondition: null
+            fieldUid: 820a6717-36a8-4b5c-819b-cbdc9e036334 # Article Content Builder
+            handle: articleContent
+            includeInCards: false
+            instructions: null
+            label: 'Article Content'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6e9efdcc-413f-4cfb-8bba-7efee690376e
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Meta Data'
+        uid: d9bcbf53-ed6a-4fcd-a867-dd9af3d34fba
         userCondition: null
-fs: heroImages
-handle: heroImages
-name: 'Hero Images'
-sortOrder: 1
-subpath: ''
+handle: primaryPageArticle
+hasTitleField: true
+icon: memo
+name: 'Primary Page Article'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: ''
-transformSubpath: ''

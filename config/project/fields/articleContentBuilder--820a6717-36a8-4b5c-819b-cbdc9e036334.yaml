@@ -1,21 +1,21 @@
 columnSuffix: null
-handle: featuredSections
+handle: articleContentBuilder
 instructions: null
-name: 'Featured Sections'
+name: 'Article Content Builder'
 searchable: true
 settings:
   createButtonLabel: null
   entryTypes:
-    - 27c04a34-53b5-4eaf-a615-91ca4dd52dd5 # Image
-    - c9a7a600-9d0b-49e7-abe5-92407d1134b0 # Backdrop
+    - 5a15575b-ec2e-47c3-bd00-eb854f1d8055 # Rich Text
+    - 2f747c28-c7c2-4200-a471-390a2e529c99 # Figure Image
   includeTableView: false
   maxEntries: null
   minEntries: null
-  pageSize: 50
+  pageSize: null
   propagationKeyFormat: null
   propagationMethod: all
   showCardsInGrid: false
-  viewMode: cards
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

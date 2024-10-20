@@ -8,7 +8,7 @@ fieldLayouts:
           -
             dateAdded: '2024-10-19T18:47:58+00:00'
             elementCondition: null
-            fieldUid: 6453b749-5f18-4ffc-b62a-393fa9752a52 # Image
+            fieldUid: 6453b749-5f18-4ffc-b62a-393fa9752a52 # Hero Image
             handle: null
             includeInCards: false
             instructions: null
@@ -54,7 +54,7 @@ fieldLayouts:
           -
             dateAdded: '2024-10-19T18:47:58+00:00'
             elementCondition: null
-            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Rich Text
+            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Rich Text Content
             handle: description
             includeInCards: false
             instructions: null

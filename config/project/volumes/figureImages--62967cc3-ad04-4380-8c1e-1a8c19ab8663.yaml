@@ -1,7 +1,7 @@
 altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
-  690ea02b-008c-4ea1-81f1-e6065db129a5:
+  30cbaeb9-4931-470d-9122-5623ec62711e:
     tabs:
       -
         elementCondition: null
@@ -11,7 +11,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-10-19T16:31:50+00:00'
+            dateAdded: '2024-10-20T18:23:53+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -32,7 +32,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: 0881bf2d-172c-497d-8029-03e991e6d555
+            uid: 01c7b6bb-5824-401b-b5ae-7a75afb9c963
             userCondition: null
             warning: null
             width: 100
@@ -40,7 +40,7 @@ fieldLayouts:
             attribute: alt
             class: null
             cols: null
-            dateAdded: '2024-10-19T17:16:58+00:00'
+            dateAdded: '2024-10-20T18:25:41+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -58,33 +58,17 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AltField
-            uid: 0f1ff995-ec90-4af5-841f-48db6a981b69
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-10-19T17:17:36+00:00'
-            elementCondition: null
-            fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
-            handle: caption
-            includeInCards: false
-            instructions: 'A caption for the image '
-            label: Caption
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7657dd66-fc32-4ec6-b2bf-2a31bfbcd54c
+            uid: cff1f434-ca94-4f7b-804b-7038b9186dc2
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: eccef903-680c-4530-be7a-d3a2e6956836
+        uid: bb09d4c9-7a92-4b2a-9424-204b66a3c8a9
         userCondition: null
-fs: heroImages
-handle: heroImages
-name: 'Hero Images'
-sortOrder: 1
+fs: figureImages
+handle: figureImages
+name: 'Figure Images'
+sortOrder: 4
 subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

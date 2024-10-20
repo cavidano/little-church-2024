@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - b9395e1a-8d3b-4b8f-aafe-3eab9556b505 # Article
+  - b9395e1a-8d3b-4b8f-aafe-3eab9556b505 # Primary Page Article
 handle: music
 maxAuthors: 1
 name: Music

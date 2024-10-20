@@ -1,8 +1,8 @@
 columnSuffix: null
-handle: richText
+handle: richTextContent
 instructions: null
-name: 'Rich Text'
-searchable: false
+name: 'Rich Text Content'
+searchable: true
 settings:
   availableTransforms: ''
   availableVolumes: ''

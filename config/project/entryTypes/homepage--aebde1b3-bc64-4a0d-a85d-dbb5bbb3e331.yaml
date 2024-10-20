@@ -38,7 +38,7 @@ fieldLayouts:
           -
             dateAdded: '2024-10-19T01:39:42+00:00'
             elementCondition: null
-            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Rich Text
+            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Rich Text Content
             handle: homepageContent
             includeInCards: false
             instructions: null
