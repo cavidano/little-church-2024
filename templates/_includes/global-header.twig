@@ -53,47 +53,22 @@
                     data-toggle="dropdown"
                     aria-controls="dropdown-about"
                     aria-expanded="false"
+                    {% if entry.section.handle == 'about' %}aria-current="page"{% endif %}
                 >
                         About
                 </button>
 
-                {% set pages = craft.entries()
+                {% set aboutPages = craft.entries()
                     .section('about')
                     .all() 
                 %}
 
                 <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-about">
 
-                    {% for page in pages %}
+                    {% for page in aboutPages %}
                         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
 
-                    {# 
-                    <li>
-                        <a href="/about/a-welcome-message">Welcome</a>
-                    </li>
-                    <li>
-                        <a href="/about">A Brief History</a>
-                    </li>
-                    <li>
-                        <a href="#">Clergy &amp; Staff</a>
-                    </li>
-                    <li>
-                        <a href="#">Historical Society</a>
-                    </li>
-                    <li>
-                        <a href="#">Parish Life</a>
-                    </li>
-                    <li>
-                        <a href="#">Outreach</a>
-                    </li>
-                    <li>
-                        <a href="#">Volunteer</a>
-                    </li>
-                    <li>
-                        <a href="#">Sister Parishes</a>
-                    </li>
-                    #}
                 </ul>
                 
             </li>
@@ -102,32 +77,22 @@
                     data-toggle="dropdown"
                     aria-controls="dropdown-worship"
                     aria-expanded="false"
+                    {% if entry.section.handle == 'worship' %}aria-current="page"{% endif %}
                 >
                         Worship
                 </button>
 
+                {% set worshipPages = craft.entries()
+                    .section('worship')
+                    .all() 
+                %}
+
                 <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-worship">
-                    <li>
-                        <a href="#">Worship Schedule</a>
-                    </li>
-                    <li>
-                        <a href="#">Liturgy</a>
-                    </li>
-                    <li>
-                        <a href="#">Audio Sermons</a>
-                    </li>
-                    <li>
-                        <a href="#">Weddings</a>
-                    </li>
-                    <li>
-                        <a href="#">Baptisms</a>
-                    </li>
-                    <li>
-                        <a href="#">Funerals</a>
-                    </li>
-                    <li>
-                        <a href="#">Prayer Requests</a>
-                    </li>
+
+                    {% for page in worshipPages %}
+                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+
                 </ul>
             </li>
             <li>
@@ -135,41 +100,22 @@
                     data-toggle="dropdown"
                     aria-controls="dropdown-music"
                     aria-expanded="false"
+                    {% if entry.section.handle == 'music' %}aria-current="page"{% endif %}
                 >
                     Music
                 </button>
 
+                {% set musicPages = craft.entries()
+                    .section('music')
+                    .all()
+                %}
+
                 <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-music">
-                    <li>
-                        <a href="#">Music at Tranfiguration</a>
-                    </li>
-                    <li>
-                        <a href="#">Organist &amp; Choirmaster</a>
-                    </li>
-                    <li>
-                        <a href="#">Liturgical Music</a>
-                    </li>
-                    <li>
-                        <a href="#">Concert Series</a>
-                    </li>
-                    <li>
-                        <a href="#">A Little Midday Music</a>
-                    </li>
-                    <li>
-                        <a href="#">Choir of Men &amp; Boys and Girls</a>
-                    </li>
-                    <li>
-                        <a href="#">Seraphim Singers</a>
-                    </li>
-                    <li>
-                        <a href="#">Cherub Choir</a>
-                    </li>
-                    <li>
-                        <a href="#">Camerata</a>
-                    </li>
-                    <li>
-                        <a href="#">Support Our Music Program</a>
-                    </li>
+
+                    {% for page in musicPages %}
+                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                    
                 </ul>
             </li>
             <li>
@@ -177,20 +123,20 @@
                     data-toggle="dropdown"
                     aria-controls="dropdown-education"
                     aria-expanded="false"
+                    {% if entry.section.handle == 'education' %}aria-current="page"{% endif %}
                 >
                         Education
                 </button>
 
+                {% set educationPages = craft.entries()
+                    .section('education')
+                    .all()    
+                %}
+
                 <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-education">
-                    <li>
-                        <a href="#">Bible Study</a>
-                    </li>
-                    <li>
-                        <a href="#">Adult Education</a>
-                    </li>
-                    <li>
-                        <a href="#">Sunday School</a>
-                    </li>
+                    {% for page in educationPages %}
+                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                    {% endfor %}
                 </ul>
             </li>
             <li>

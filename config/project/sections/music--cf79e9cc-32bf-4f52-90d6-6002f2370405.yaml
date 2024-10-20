@@ -2,17 +2,17 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   - b9395e1a-8d3b-4b8f-aafe-3eab9556b505 # Article
-handle: about
+handle: music
 maxAuthors: 1
-name: About
+name: Music
 propagationMethod: all
 siteSettings:
   f627def0-bb59-4992-ae44-aef0dfb97c08: # Little Church
     enabledByDefault: true
     hasUrls: true
     template: about/_entry.twig
-    uriFormat: 'about/{slug}'
+    uriFormat: 'music/{slug}'
 structure:
   maxLevels: 1
-  uid: 4999dd74-986e-474b-8e83-abd14277ec3b
+  uid: 0e69c9c3-686b-4a41-b530-53e9dbe280bf
 type: structure

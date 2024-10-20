@@ -1,4 +1,101 @@
-dateModified: 1729429547
+dateModified: 1729434199
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: singles
+      tableAttributes:
+        - status
+        - link
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      key: 'section:29691dec-8406-465e-bd7f-694f6a1776ff' # Blog
+      type: native
+    -
+      heading: Structures
+      type: heading
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:3f15b324-fa65-485b-ab56-f9bfed089117' # Homepage Carousel
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:612cf07a-8adc-436d-8d30-04c51e6251c6' # About
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'section:f3ad64b9-df55-4707-9d73-70653a4ee4f9' # Worship
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:4de8895d-cb53-4939-90f8-d37639e60da3' # Virtual Tour
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:cf79e9cc-32bf-4f52-90d6-6002f2370405' # Music
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: 'section:bfa7add0-6499-4af5-8d33-4dc3e2e262ad' # Education
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+      type: native
 email:
   fromEmail: carl@avidanodigital.com
   fromName: 'Little Church'
@@ -46,9 +143,12 @@ meta:
     aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: Homepage # Homepage
     b9395e1a-8d3b-4b8f-aafe-3eab9556b505: Article # Article
     be991be1-9fbd-4fb8-9e2b-19282b305c62: 'Little Church' # Little Church
+    bfa7add0-6499-4af5-8d33-4dc3e2e262ad: Education # Education
     c9a7a600-9d0b-49e7-abe5-92407d1134b0: Backdrop # Backdrop
     c243e913-1c84-463a-bbcb-327b23ff279a: Simple # Simple
     cadcecb7-766f-4de8-bee3-62b75a1e2092: 'Tour Highlight' # Tour Highlight
+    cf79e9cc-32bf-4f52-90d6-6002f2370405: Music # Music
+    f3ad64b9-df55-4707-9d73-70653a4ee4f9: Worship # Worship
     f9b00a9a-3b02-4e35-a580-c3f5f7996da0: 'Featured Sections' # Featured Sections
     f627def0-bb59-4992-ae44-aef0dfb97c08: 'Little Church' # Little Church
     fce93b65-4251-416d-9a60-b4bdd015eb33: Homepage # Homepage

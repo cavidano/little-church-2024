@@ -2,17 +2,17 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   - b9395e1a-8d3b-4b8f-aafe-3eab9556b505 # Article
-handle: about
+handle: worship
 maxAuthors: 1
-name: About
+name: Worship
 propagationMethod: all
 siteSettings:
   f627def0-bb59-4992-ae44-aef0dfb97c08: # Little Church
     enabledByDefault: true
     hasUrls: true
     template: about/_entry.twig
-    uriFormat: 'about/{slug}'
+    uriFormat: 'worship/{slug}'
 structure:
   maxLevels: 1
-  uid: 4999dd74-986e-474b-8e83-abd14277ec3b
+  uid: be1a7fde-63fb-4ef3-adfd-864677d7f5f7
 type: structure

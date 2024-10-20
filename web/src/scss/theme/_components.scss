@@ -21,6 +21,12 @@
       position: relative;
     }
 
+    [aria-current="page"] {
+      font-weight: var(--font-weight-bold);
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
     > * {
     //   outline: 2px solid blue;
     }
