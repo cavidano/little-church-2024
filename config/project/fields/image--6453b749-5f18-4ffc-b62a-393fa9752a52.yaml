@@ -9,7 +9,7 @@ settings:
   allowUploads: true
   allowedKinds: null
   branchLimit: null
-  defaultUploadLocationSource: 'volume:979c8d61-727b-4c46-ab40-83a3561c192a' # About Feature Images
+  defaultUploadLocationSource: 'volume:979c8d61-727b-4c46-ab40-83a3561c192a' # Hero Images
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
   maxRelations: 1

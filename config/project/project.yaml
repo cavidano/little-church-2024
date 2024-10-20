@@ -1,16 +1,16 @@
-dateModified: 1729427498
+dateModified: 1729429547
 email:
   fromEmail: carl@avidanodigital.com
   fromName: 'Little Church'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
-  FeatureImages:
+  heroImage:
     hasUrls: true
-    name: 'Feature Image'
+    name: 'Hero Image'
     settings:
-      path: '@webroot/images/feature-images'
+      path: '@webroot/images/uploads/hero'
     type: craft\fs\Local
-    url: '@web/images/feature-images'
+    url: '@web/images/uploads/hero'
   homepageCarouselImages:
     hasUrls: true
     name: 'Homepage Carousel Images'
@@ -39,7 +39,7 @@ meta:
     612cf07a-8adc-436d-8d30-04c51e6251c6: About # About
     649c5a54-f759-4177-990f-60a9da779147: Blog # Blog
     820e255c-6450-4806-b5ca-85831d8a7c7f: 'Plain Text' # Plain Text
-    979c8d61-727b-4c46-ab40-83a3561c192a: 'About Feature Images' # About Feature Images
+    979c8d61-727b-4c46-ab40-83a3561c192a: 'Hero Images' # Hero Images
     4573cb02-ab7d-471a-80a1-93b140d3422a: 'Introduction Title' # Introduction Title
     6453b749-5f18-4ffc-b62a-393fa9752a52: Image # Image
     29691dec-8406-465e-bd7f-694f6a1776ff: Blog # Blog

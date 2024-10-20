@@ -76,28 +76,31 @@
 
 					<div class="grid-sidebar__major__container">
 
-                    {% if entry.image|length %}
-                        <figure>
-                            <img
-                                src="{{ entry.image[0].url }}"
-                                alt="{{ entry.image[0].title }}"
-                            />
-                            {% if entry.image[0].caption %}
-                            <figcaption class=" container narrow">
-                                <p>
-                                    {{ entry.image[0].caption }}
-                                </p>
-                            </figcaption>
-                            {% endif %}
-                        </figure>
-                    {% endif %}
+						{% if entry.image | length %}
+						{% set image = entry.image.one() %}
+
+							<figure>
+
+								<img
+									src="{{ image.url }}"
+									alt="{{ image.alt ?? '' }}"
+								/>
+
+								{% if entry.image[0].caption %}
+								<figcaption class=" container narrow">
+									<p>
+										{{ entry.image[0].caption }}
+									</p>
+								</figcaption>
+								{% endif %}
+							</figure>
+
+						{% endif %}
 
 						<section class="container narrow margin-y-4">
-
-							<p>
-                                {{ entry.richText }}
-                            </p>
-
+						
+							{{ entry.richText }}
+								
 						</section>
 
 						<footer class="border-top padding-top-3 font-size-sm margin-top-4">

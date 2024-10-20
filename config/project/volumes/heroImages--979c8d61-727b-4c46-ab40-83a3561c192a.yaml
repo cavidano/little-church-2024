@@ -81,9 +81,9 @@ fieldLayouts:
         name: Content
         uid: eccef903-680c-4530-be7a-d3a2e6956836
         userCondition: null
-fs: FeatureImages
-handle: aboutFeatureImages
-name: 'About Feature Images'
+fs: heroImage
+handle: heroImages
+name: 'Hero Images'
 sortOrder: 1
 subpath: ''
 titleTranslationKeyFormat: null
