@@ -54,7 +54,7 @@ fieldLayouts:
           -
             dateAdded: '2024-10-19T18:47:58+00:00'
             elementCondition: null
-            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Rich Text Content
+            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Rich Text
             handle: description
             includeInCards: false
             instructions: null

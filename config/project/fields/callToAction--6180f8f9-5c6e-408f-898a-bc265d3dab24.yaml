@@ -1,0 +1,34 @@
+columnSuffix: null
+handle: callToAction
+instructions: null
+name: 'Call to Action'
+searchable: false
+settings:
+  maxLength: 255
+  typeSettings:
+    __assoc__:
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+  types:
+    - url
+    - email
+    - entry
+    - tel
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link
