@@ -1,7 +1,6 @@
 <header class="global-header container wide--lg">
 
     <div class="global-header__brand">
-
         <a href="/" title="Home" data-logo="brand">
             <picture>
                 <source
@@ -10,11 +9,10 @@
                 >
                 <img
                     src="/dist/images/little-church-logo-sm.svg"
-                    alt="the little church around the corner logo"
+                    alt="The Little Church Around the Corner Logo"
                 />
             </picture>
         </a>
-    
     </div>
 
     <div class="global-header__address">
@@ -23,129 +21,115 @@
         <em>212-684-6770</em>
     </div>
 
-    <div class="global-header__secondary">
+    <div class="global-header__toggle">
 
-        <ul>
-            <li>
-                <a href="/virtual-tour">Virtual Tour</a>
-            </li>
-            <li>
-                <a href="#">Visit</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-            <li>
-                <a href="#">Blog</a>
-            </li>
-            <li>
-                <a href="#">Pledge</a>
-            </li>
-        </ul>
-
+        <button
+            class="button button--icon-only theme-primary"
+            aria-label="Menu"
+            data-toggle="collapse"
+            aria-controls="main-menu">
+                <span class="icon icon-menu"></span>
+        </button>
+    
     </div>
 
-    <nav class="global-header__primary">
+    <div class="global-header__secondary">
+        <ul>
+            <li><a href="/virtual-tour">Virtual Tour</a></li>
+            <li><a href="#">Visit</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pledge</a></li>
+        </ul>
+    </div>
 
+    <nav class="global-header__primary collapse" id="main-menu">
         <ul>
             <li>
                 <button
                     data-toggle="dropdown"
                     aria-controls="dropdown-about"
                     aria-expanded="false"
-                    {% if entry.section.handle == 'about' %}aria-current="page"{% endif %}
+                    {% if entry.section is defined and entry.section.handle == 'about' %}
+                        aria-current="page"
+                    {% endif %}
                 >
-                        About
+                    About
                 </button>
 
-                {% set aboutPages = craft.entries()
-                    .section('about')
-                    .all() 
-                %}
-
+                {% set aboutPages = craft.entries().section('about').all() %}
                 <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-about">
-
                     {% for page in aboutPages %}
                         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
-
                 </ul>
-                
             </li>
+
             <li>
                 <button
                     data-toggle="dropdown"
                     aria-controls="dropdown-worship"
                     aria-expanded="false"
-                    {% if entry.section.handle == 'worship' %}aria-current="page"{% endif %}
+                    {% if entry.section is defined and entry.section.handle == 'worship' %}
+                        aria-current="page"
+                    {% endif %}
                 >
-                        Worship
+                    Worship
                 </button>
 
-                {% set worshipPages = craft.entries()
-                    .section('worship')
-                    .all() 
-                %}
-
+                {% set worshipPages = craft.entries().section('worship').all() %}
                 <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-worship">
-
                     {% for page in worshipPages %}
                         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
-
                 </ul>
             </li>
+
             <li>
                 <button
                     data-toggle="dropdown"
                     aria-controls="dropdown-music"
                     aria-expanded="false"
-                    {% if entry.section.handle == 'music' %}aria-current="page"{% endif %}
+                    {% if entry.section is defined and entry.section.handle == 'music' %}
+                        aria-current="page"
+                    {% endif %}
                 >
                     Music
                 </button>
 
-                {% set musicPages = craft.entries()
-                    .section('music')
-                    .all()
-                %}
-
+                {% set musicPages = craft.entries().section('music').all() %}
                 <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-music">
-
                     {% for page in musicPages %}
                         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
-                    
                 </ul>
             </li>
+
             <li>
                 <button
                     data-toggle="dropdown"
                     aria-controls="dropdown-education"
                     aria-expanded="false"
-                    {% if entry.section.handle == 'education' %}aria-current="page"{% endif %}
+                    {% if entry.section is defined and entry.section.handle == 'education' %}
+                        aria-current="page"
+                    {% endif %}
                 >
-                        Education
+                    Education
                 </button>
 
-                {% set educationPages = craft.entries()
-                    .section('education')
-                    .all()    
-                %}
-
+                {% set educationPages = craft.entries().section('education').all() %}
                 <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-education">
                     {% for page in educationPages %}
                         <li><a href="{{ page.url }}">{{ page.title }}</a></li>
                     {% endfor %}
                 </ul>
             </li>
+
             <li>
                 <a href="#1">
                     Events
                 </a>
             </li>
         </ul>
-
     </nav>
-
 </header>

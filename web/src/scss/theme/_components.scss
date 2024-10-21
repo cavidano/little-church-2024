@@ -7,7 +7,8 @@
 
     grid-template-columns: auto 1fr; /* Two equal-width columns */
         grid-template-areas:
-            "brand address"
+            "address address"
+            "brand toggle"
             "secondary secondary"
             "primary primary"; /* Make secondary and primary span both columns */
 
@@ -38,22 +39,24 @@
     }
     
     [class*="__address"] {
-      grid-area: address;
-      
-      display: flex;
+        grid-area: address;
 
-      flex-direction: column;
-      justify-content: center;
-      gap: 0.125em;
+        flex-direction: row;
+        justify-content: end;
+        gap: 0.75rem;
+        
+        font-size: var(--font-size-sm);
 
-      text-align: end;
-      
-      font-size: var(--font-size-sm);
-
-      .divider {
         display: none;
-      }
     }
+    
+    [class*="__toggle"] {
+      grid-area: toggle;
+
+      display: grid;
+      place-content: center end;
+    }
+    
     
     [class*="__secondary"]  {
         grid-area: secondary;
@@ -80,6 +83,10 @@
             
         place-items: end;
 
+        [class*="__toggle"] {
+            display: none;
+        }
+
         :is(
             [class*="__primary"], 
             [class*="__secondary"]
@@ -105,13 +112,7 @@
         }
 
         [class*="__address"] {
-            flex-direction: row;
-            justify-content: end;
-            gap: 0.5rem;
-
-            .divider {
-                display: block;
-            }
+            display: flex;
         }
 
         .nav__dropdown {
