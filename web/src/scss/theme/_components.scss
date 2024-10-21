@@ -1,18 +1,17 @@
 
 .global-header {
     --_header-gap: 0;
-    --_header-padding: var(--spacer-2);
+    --_header-padding-y: var(--spacer-2);
+    --_header-padding-x: var(--container-padding-x);
 
     display: grid;
 
-    grid-template-columns: auto 1fr; /* Two equal-width columns */
-        grid-template-areas:
-            "address address"
-            "brand toggle"
-            "secondary secondary"
-            "primary primary"; /* Make secondary and primary span both columns */
-
-    // gap: var(--_header-gap);
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        "address address"
+        "brand toggle"
+        "secondary secondary"
+        "nav nav";
 
     ul {
         list-style: none;
@@ -24,18 +23,15 @@
 
     [aria-current="page"] {
       font-weight: var(--font-weight-bold);
-      color: var(--primary);
+      color: var(--nav);
       text-decoration: underline;
-    }
-
-    > * {
-    //   outline: 2px solid blue;
     }
 
     [class*="__brand"] {
       grid-area: brand;
 
-      padding-block: var(--_header-padding);
+      padding-block: var(--_header-padding-y);
+
     }
     
     [class*="__address"] {
@@ -55,31 +51,73 @@
 
       display: grid;
       place-content: center end;
+
     }
     
-    
-    [class*="__secondary"]  {
-        grid-area: secondary;
+    .global-header__nav__secondary  {
         font-weight: var(--font-weight-bold);
         font-size: var(--font-size-sm);
     }
-    
-    [class*="__primary"] {
-        grid-area: primary;
-        
-        > ul > li {
-            padding-block: var(--_header-padding);
-        }
+
+    .global-header__nav {
+        grid-area: nav;
     }
     
-    @media (min-width: 1000px) {
+    .global-header__nav__secondary {
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+        
+        padding-block: var(--_header-padding-y);
+    }
+
+    .nav__dropdown {
+            --_padding: var(--_header-padding-x);
+            
+            padding: var(--_padding);
+
+            background-color: var(--light);
+        }
+
+     @media (max-width: 1200px) {
+
+     .global-header__nav {
+        grid-area: nav;
+    
+        border-top: var(--border-width) var(--border-style) var(--border-color);
+    }
+
+        [class*="__brand"],
+        [class*="__toggle"],
+        .global-header__nav__secondary,
+        .global-header__nav__primary > li > :is(a, button) {
+            padding-inline: var(--_header-padding-x);
+        }
+
+        .global-header__nav__secondary {
+            justify-content: center;
+            
+            padding-block: var(--_header-padding-y);
+        }
+        .global-header__nav__primary > li {
+        border-top: var(--border-width) var(--border-style) var(--border-color);
+        > :is(a, button) {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+            padding-block: 0.5em;
+        }
+    }
+     }
+    
+    @media (min-width: 1200px) {
 
         grid-template-columns: auto 1fr;
 
         grid-template-areas:
             "brand address"
-            "brand secondary"
-            "brand primary";
+            "brand nav";
             
         place-items: end;
 
@@ -87,27 +125,22 @@
             display: none;
         }
 
-        :is(
-            [class*="__primary"], 
-            [class*="__secondary"]
-        ) {
-            display: flex;
-            justify-content: end;
+        [class*="__nav"] {
+
+            display: flex ;
+            flex-direction: column;
 
             > ul {
-                list-style: none;
                 display: flex;
-                
+                flex-direction: row;
+                justify-content: end;
                 gap: 1em;
+                // outline: 3px solid red;
             }
 
-        }
-
-        [class*="__primary"] {
+            > ul[class*="primary"] > li {
+                padding-block-end: var(--_header-padding-y);
             font-size: var(--font-size-lg);
-
-            > ul > li {
-                padding-block-end: var(--_header-padding);
             }
         }
 

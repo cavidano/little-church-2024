@@ -18,7 +18,7 @@
 
     <body>
 
-        <div class="container wide--lg">
+        <div class="margin-x-auto wide--lg">
         
             <header class="global-header">
 
@@ -27,11 +27,11 @@
                     <a href="/" title="Home" data-logo="brand">
                         <picture>
                             <source
-                                srcset="./images/little-church-logo.svg"
+                                srcset="../images/little-church-logo.svg"
                                 media="(min-width: 1000px)"
                             >
                             <img
-                                src="./images/little-church-logo-sm.svg"
+                                src="../images/little-church-logo-sm.svg"
                                 alt="the little church around the corner logo"
                             />
                         </picture>
@@ -45,21 +45,25 @@
                     <em>212-684-6770</em>
                 </div>
 
-                <div class="global-header__toggle">
+                <div class="global-header__toggle font-size-md">
 
-                    <button
-                        class="button button--icon-only theme-primary"
-                        aria-label="Menu"
-                        data-toggle="collapse"
-                        aria-controls="main-menu">
-                            <span class="icon icon-menu"></span>
-                    </button>
+                        <button
+                            class="button 👉 button--icon-over-text mobile-menu-toggle"
+                            aria-label="Menu"
+                            data-toggle="collapse"
+                            aria-controls="main-menu"
+                        >
+                            <span class="button__icon">
+                                <span class="icon icon-menu" aria-hidden="true"></span>
+                            </span>
+                            <span class="button__text">MENU</span>
+                        </button>
                 
                 </div>
 
-                <nav class="global-header__secondary">
-
-                    <ul>
+                <nav class="global-header__nav collapse" id="main-menu">
+            
+                    <ul class="global-header__nav__secondary">
                         <li>
                             <a href="#">Virtual Tour</a>
                         </li>
@@ -72,16 +76,9 @@
                         <li>
                             <a href="#">Blog</a>
                         </li>
-                        <li>
-                            <a href="#">Pledge</a>
-                        </li>
                     </ul>
 
-                </nav>
-
-                <nav class="global-header__primary collapse" id="main-menu">
-            
-                    <ul>
+                    <ul class="global-header__nav__primary">
                         <li>
                             <button
                                 data-toggle="dropdown"

@@ -1,135 +1,141 @@
-<header class="global-header container wide--lg">
+<div class="margin-x-auto wide--lg">
 
-    <div class="global-header__brand">
-        <a href="/" title="Home" data-logo="brand">
-            <picture>
-                <source
-                    srcset="/dist/images/little-church-logo.svg"
-                    media="(min-width: 1000px)"
-                >
-                <img
-                    src="/dist/images/little-church-logo-sm.svg"
-                    alt="The Little Church Around the Corner Logo"
-                />
-            </picture>
-        </a>
-    </div>
+    <header class="global-header">
 
-    <div class="global-header__address">
-        <em>1 E 29th St, NY 10016</em>
-        <span class="divider">•</span>
-        <em>212-684-6770</em>
-    </div>
+        <div class="global-header__brand">
+            <a href="/" title="Home" data-logo="brand">
+                <picture>
+                    <source
+                        srcset="/dist/images/little-church-logo.svg"
+                        media="(min-width: 1000px)"
+                    >
+                    <img
+                        src="/dist/images/little-church-logo-sm.svg"
+                        alt="The Little Church Around the Corner Logo"
+                    />
+                </picture>
+            </a>
+        </div>
 
-    <div class="global-header__toggle">
+        <div class="global-header__address">
+            <em>1 E 29th St, NY 10016</em>
+            <span class="divider">•</span>
+            <em>212-684-6770</em>
+        </div>
 
-        <button
-            class="button button--icon-only theme-primary"
-            aria-label="Menu"
-            data-toggle="collapse"
-            aria-controls="main-menu">
-                <span class="icon icon-menu"></span>
-        </button>
-    
-    </div>
+        <div class="global-header__toggle">
 
-    <div class="global-header__secondary">
-        <ul>
-            <li><a href="/virtual-tour">Virtual Tour</a></li>
-            <li><a href="#">Visit</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Pledge</a></li>
-        </ul>
-    </div>
-
-    <nav class="global-header__primary collapse" id="main-menu">
-        <ul>
-            <li>
                 <button
-                    data-toggle="dropdown"
-                    aria-controls="dropdown-about"
-                    aria-expanded="false"
-                    {% if entry.section is defined and entry.section.handle == 'about' %}
-                        aria-current="page"
-                    {% endif %}
+                    class="button 👉 button--icon-over-text font-size-md"
+                    aria-label="Menu"
+                    data-toggle="collapse"
+                    aria-controls="main-menu"
                 >
-                    About
+                    <span class="button__icon">
+                        <span class="icon icon-menu" aria-hidden="true"></span>
+                    </span>
+                    <span class="button__text">MENU</span>
                 </button>
+        
+        </div>
 
-                {% set aboutPages = craft.entries().section('about').all() %}
-                <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-about">
-                    {% for page in aboutPages %}
-                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </li>
+        <nav class="global-header__nav collapse" id="main-menu">
+            <ul class="global-header__nav__secondary">
+                <li><a href="/virtual-tour">Virtual Tour</a></li>
+                <li><a href="#">Visit</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Pledge</a></li>
+            </ul>
 
-            <li>
-                <button
-                    data-toggle="dropdown"
-                    aria-controls="dropdown-worship"
-                    aria-expanded="false"
-                    {% if entry.section is defined and entry.section.handle == 'worship' %}
-                        aria-current="page"
-                    {% endif %}
-                >
-                    Worship
-                </button>
+            <ul class="global-header__nav__primary">
+                <li>
+                    <button
+                        data-toggle="dropdown"
+                        aria-controls="dropdown-about"
+                        aria-expanded="false"
+                        {% if entry.section is defined and entry.section.handle == 'about' %}
+                            aria-current="page"
+                        {% endif %}
+                    >
+                        About
+                    </button>
 
-                {% set worshipPages = craft.entries().section('worship').all() %}
-                <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-worship">
-                    {% for page in worshipPages %}
-                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </li>
+                    {% set aboutPages = craft.entries().section('about').all() %}
+                    <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-about">
+                        {% for page in aboutPages %}
+                            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
 
-            <li>
-                <button
-                    data-toggle="dropdown"
-                    aria-controls="dropdown-music"
-                    aria-expanded="false"
-                    {% if entry.section is defined and entry.section.handle == 'music' %}
-                        aria-current="page"
-                    {% endif %}
-                >
-                    Music
-                </button>
+                <li>
+                    <button
+                        data-toggle="dropdown"
+                        aria-controls="dropdown-worship"
+                        aria-expanded="false"
+                        {% if entry.section is defined and entry.section.handle == 'worship' %}
+                            aria-current="page"
+                        {% endif %}
+                    >
+                        Worship
+                    </button>
 
-                {% set musicPages = craft.entries().section('music').all() %}
-                <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-music">
-                    {% for page in musicPages %}
-                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </li>
+                    {% set worshipPages = craft.entries().section('worship').all() %}
+                    <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-worship">
+                        {% for page in worshipPages %}
+                            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
 
-            <li>
-                <button
-                    data-toggle="dropdown"
-                    aria-controls="dropdown-education"
-                    aria-expanded="false"
-                    {% if entry.section is defined and entry.section.handle == 'education' %}
-                        aria-current="page"
-                    {% endif %}
-                >
-                    Education
-                </button>
+                <li>
+                    <button
+                        data-toggle="dropdown"
+                        aria-controls="dropdown-music"
+                        aria-expanded="false"
+                        {% if entry.section is defined and entry.section.handle == 'music' %}
+                            aria-current="page"
+                        {% endif %}
+                    >
+                        Music
+                    </button>
 
-                {% set educationPages = craft.entries().section('education').all() %}
-                <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-education">
-                    {% for page in educationPages %}
-                        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </li>
+                    {% set musicPages = craft.entries().section('music').all() %}
+                    <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-music">
+                        {% for page in musicPages %}
+                            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
 
-            <li>
-                <a href="#1">
-                    Events
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
+                <li>
+                    <button
+                        data-toggle="dropdown"
+                        aria-controls="dropdown-education"
+                        aria-expanded="false"
+                        {% if entry.section is defined and entry.section.handle == 'education' %}
+                            aria-current="page"
+                        {% endif %}
+                    >
+                        Education
+                    </button>
+
+                    {% set educationPages = craft.entries().section('education').all() %}
+                    <ul class="nav__dropdown box-shadow-1--lg" id="dropdown-education">
+                        {% for page in educationPages %}
+                            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#1">
+                        Events
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+</div>

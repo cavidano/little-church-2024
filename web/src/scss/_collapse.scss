@@ -13,7 +13,7 @@ In this file:
 
 @layer component {
 
-    .button[aria-expanded="true"] {
+    .button:not([class*="button--icon-over-text"])[aria-expanded="true"] {
         background-color: var(--subtle-fill-2);
     }
 

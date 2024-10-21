@@ -39,7 +39,7 @@ In this file:
     
     --button-outline-border-width: calc( var(--border-width) * 2);
 
-    --button-icon-over-text-width: 4em; 
+    --button-icon-over-text-width: var(--button-target-size); 
     
     --button-icon-over-text-border-radius: var(--button-border-radius);
     
