@@ -1,0 +1,126 @@
+/*
+
+In this file:
+
+// A. Selector Resets
+// B. Components
+// C. Components
+
+*/
+
+////////////////////////////////////////
+// A. Variables
+////////////////////////////////////////
+
+:root {
+  --audio-player-track-height: 0.5rem;
+
+  --audio-player-track-fill-color: currentColor;
+}
+
+////////////////////////////////////////
+// B. Components
+////////////////////////////////////////
+
+@layer component {
+
+  .audio-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .audio-player__title {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: var(--border-width) var(--border-style) var(--border-color);
+
+    font-size: var(--font-size-sm);
+    opacity: 0.7;
+    width: 100%;
+
+    padding: 0.25em 0.5em;
+
+    p {
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .audio-player__controls,
+  .audio-player__volume-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: var(--spacer-1);
+
+    width: 100%;
+
+    gap: var(--spacer-2);
+
+  }
+
+  .audio-player__volume-container {
+    max-width: 8rem;
+  }
+
+  .audio-player__progress,
+  .audio-player__volume {
+
+    --focus-outline-color: var(--default-link-color);
+
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: var(--audio-player-track-height);
+
+    background-color: hsla(0, 0%, 0%, 0.125);
+
+    border-radius: calc(var(--border-radius) * 0.5);
+    
+    &:focus-visible {
+      outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color)  ;
+      outline-offset: var(--focus-outline-size);
+    }
+  }
+
+  .audio-player__volume {
+    gap: var(--spacer-1);
+
+    font-size: var(--font-size-sm);
+  }
+
+  [class*="__fill"] {
+    height: 100%;
+    width: 0;
+
+    background-color: var(--audio-player-track-fill-color);
+
+    border-top-left-radius: calc(var(--border-radius) * 0.5);
+    border-bottom-left-radius: calc(var(--border-radius) * 0.5);
+  }
+
+  .audio-player__thumb {
+    --size: calc(var(--audio-player-track-height) * 2.25);
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-inline-end: calc(var(--size) * -1);
+    height: var(--size);
+    width: var(--size);
+    background-color: var(--audio-player-track-fill-color);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+// end @layer

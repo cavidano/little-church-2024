@@ -16,6 +16,7 @@ const devPages = {
     'Accordion': 'accordion',
     'Alert': 'alert',
     'Article': 'article',
+    'AudioPlayer': 'audio-player',
     'Button': 'button',
     'Border': 'border',
     'Backdrop': 'backdrop',
@@ -41,7 +42,7 @@ const devPages = {
 }
 
 const devDir = './dist/html';
-const devPage = `${devPages.GlobalHeader}.html`;
+const devPage = `${devPages.AudioPlayer}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

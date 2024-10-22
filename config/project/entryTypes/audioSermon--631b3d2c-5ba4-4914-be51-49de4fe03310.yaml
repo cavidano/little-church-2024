@@ -1,0 +1,99 @@
+color: violet
+fieldLayouts:
+  0e600a03-95d9-4a47-944e-c4115ee4ba57:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-10-21T20:50:40+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9848ba84-c4db-4439-a5ad-b07abdc034ec
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-21T20:58:48+00:00'
+            elementCondition: null
+            fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
+            handle: speaker
+            includeInCards: false
+            instructions: 'The person(s) who delivered the sermon '
+            label: Speaker
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 506cc1aa-2013-4513-9a4e-b384b94620c5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-21T20:58:48+00:00'
+            elementCondition: null
+            fieldUid: 7e837081-2d44-4b75-914c-abca14574951 # Date
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c53ef5e8-9b10-4c07-8cb5-f5a738bb09c5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-21T20:58:48+00:00'
+            elementCondition: null
+            fieldUid: c7d153a5-be7a-4158-94da-72e77d34ffbe # Audio File
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 660bac91-55a3-4482-9c37-11d22d977a99
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e1bc1de9-967c-41a2-ab15-54d9c1c26bc7
+        userCondition: null
+handle: audioSermon
+hasTitleField: true
+icon: microphone-stand
+name: 'Audio Sermon'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

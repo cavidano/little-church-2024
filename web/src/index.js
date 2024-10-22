@@ -20,6 +20,9 @@ import Table from './js/table';
 import Tab from './js/tab';
 import Track from './js/track';
 
+
+import AudioPlayer from './js/theme/audio-player';
+
 //////////////////////////////////////////////
 // C. Class Instantiation
 //////////////////////////////////////////////
@@ -65,4 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = new Track();
   track.init();
 
+  // Custom JS Modules
+
+  const audioPlayer = new AudioPlayer();
+  audioPlayer.init();
 });

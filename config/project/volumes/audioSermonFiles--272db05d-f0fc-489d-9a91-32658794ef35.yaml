@@ -1,0 +1,50 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  59cd3904-c824-4659-bc89-3072078b7a35:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-10-21T21:13:34+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: a25e37db-5f64-4092-ac0c-0bb62d6f429e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 355a7413-071d-4c97-952c-cf63bc5c8ec1
+        userCondition: null
+fs: audioSermonMp3s
+handle: audioSermonFiles
+name: 'Audio Sermon Files'
+sortOrder: 5
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''
