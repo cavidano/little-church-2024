@@ -2,10 +2,8 @@ export default class AudioPlayer {
 
     // Public method to initialize multiple players
     init() {
-        // Select all the .audio-player elements on the page
         const playerElements = document.querySelectorAll('.audio-player');
 
-        // Loop through each player and initialize controls
         playerElements.forEach((playerElement) => {
             const audio = playerElement.querySelector('#audio');
             const playPauseButton = playerElement.querySelector('#play-pause-button');
@@ -20,6 +18,13 @@ export default class AudioPlayer {
 
             let isPlaying = false;
             let volumeBeforeMute = null;
+
+            // Display the full duration of the audio once metadata is loaded
+            const showDuration = () => {
+                const durationMinutes = Math.floor(audio.duration / 60);
+                const durationSeconds = Math.floor(audio.duration - durationMinutes * 60);
+                timestamp.innerText = `${durationMinutes.toString().padStart(2, '0')}:${durationSeconds.toString().padStart(2, '0')}`;
+            };
 
             // Toggle play/pause
             const togglePlayPause = () => {
@@ -108,6 +113,9 @@ export default class AudioPlayer {
             audio.addEventListener('timeupdate', updateProgress);
             progressBar.addEventListener('click', setTime);
             volumeSlider.addEventListener('click', setVolume);
+
+            // Ensure duration is displayed when metadata is loaded
+            audio.addEventListener('loadedmetadata', showDuration);
 
             // Initialize volume and progress
             setVolumeLevel();

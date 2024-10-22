@@ -57,16 +57,28 @@ In this file:
     flex-direction: row;
     align-items: center;
 
-    padding: var(--spacer-1);
+    // padding: var(--spacer-1);
 
     width: 100%;
 
-    gap: var(--spacer-2);
+    gap: 1rem;
 
+  }
+
+  .audio-player__controls__button {
+
+  background-color: none !important;
+  [class*="icon-"] {
+            --icon-size: 75cqi;
+            
+            display: flex;
+        }
+  
   }
 
   .audio-player__volume-container {
     max-width: 8rem;
+    padding-inline-end: var(--spacer-3);
   }
 
   .audio-player__progress,
@@ -81,7 +93,7 @@ In this file:
     width: 100%;
     height: var(--audio-player-track-height);
 
-    background-color: hsla(0, 0%, 0%, 0.125);
+    background-color: var(--subtle-fill-2);
 
     border-radius: calc(var(--border-radius) * 0.5);
     
