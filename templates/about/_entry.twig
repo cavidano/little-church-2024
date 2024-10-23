@@ -42,7 +42,7 @@
 
 		</header>
 
-		<div class="container narrow wide--lg">
+		<div class="container narrow--md wide--lg">
 
 			<div class="grid-sidebars grid--divider gap-4 margin-y-5">
 
@@ -105,7 +105,7 @@
 							{# Handle the Rich Text block #}
 							{% if block.type.handle == 'richText' %}
 
-							<div class="container narrow margin-y-4">
+							<div class="container narrow--md margin-y-4">
 								
 								{{ block.richText }}
 							
@@ -131,7 +131,7 @@
 							{# Handle the Call to Action block #}
 							{% elseif block.type.handle == 'callToAction' %}
 
-								<div class="container narrow margin-y-2">
+								<div class="container narrow--md margin-y-2">
 									
 									{# Link for the Call to Action #}
 									{% if block.linkField is defined and block.linkField %}
@@ -166,7 +166,7 @@
 							</h3>
 
 							{# Query the audio sermons section #}
-							{% set audioSermons = craft.entries.section('audioSermons').orderBy('postDate desc').all() %}
+							{% set audioSermons = craft.entries.section('audioSermons').orderBy('date desc').all() %}
 
 							{# Check if there are any audio sermons #}
 							{% if audioSermons | length %}
@@ -176,7 +176,7 @@
 
 									<section class="border-top padding-y-4">
 
-									<div class="container narrow">
+									<div class="container narrow--md">
 									
 										<p class="font-size-md margin-bottom-1">
 											{{ audioSermon.date|date("F j, Y") }}
