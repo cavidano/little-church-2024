@@ -52,6 +52,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-10-25T17:53:46+00:00'
+            elementCondition: null
+            fieldUid: dff320e3-08a7-4091-a328-0a3aa8fc2b82 # Blog Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 070baeee-41e3-4a69-a796-a3245f8c8054
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2024-10-19T09:11:27+00:00'
             elementCondition: null
             fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Rich Text
@@ -64,6 +80,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: f24fe5f9-ec49-4bb4-a7aa-ed1795996734
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-25T17:52:34+00:00'
+            elementCondition: null
+            fieldUid: 820a6717-36a8-4b5c-819b-cbdc9e036334 # Article Content Matrix
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 775f3851-181e-46f4-a339-d78a2a51b601
             userCondition: null
             warning: null
             width: 100

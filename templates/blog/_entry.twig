@@ -52,9 +52,34 @@
 
 		</header>
 
+		<div class="container medium">
+
+		{% if entry.blogImage | length %}
+			{% set image = entry.blogImage.one() %}
+
+				<figure>
+
+					<img
+						src="{{ image.url }}"
+						alt="{{ image.alt ?? '' }}"
+					/>
+
+					{% if entry.heroCaption %}
+					<figcaption class="container narrow">
+						<p>
+							{{ entry.heroCaption }}
+						</p>
+					</figcaption>
+					{% endif %}
+				</figure>
+
+			{% endif %}
+
+		</div>
+
 		<div class="container narrow margin-y-5">
 
-			{{ entry.newsBody }}
+					{{ entry.newsBody }}
 
 		</div>
 

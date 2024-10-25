@@ -1,0 +1,92 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  ba5f7f32-23c5-4d9a-a679-271e1430c182:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-10-25T17:47:49+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 2d5541c9-7ca3-4116-a9f8-5fbc59d3921c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            dateAdded: '2024-10-25T17:51:17+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            instructions: null
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 6b34fd6c-9d07-457c-88db-3c3641affa63
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-25T17:51:55+00:00'
+            elementCondition: null
+            fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
+            handle: caption
+            includeInCards: false
+            instructions: null
+            label: Caption
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e45d0e30-6a0e-4556-bfe3-8917310d4d2b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a1b54ce5-4f96-4508-b22b-7b0e4cf0fb86
+        userCondition: null
+fs: blog
+handle: blogImages
+name: 'Blog Images'
+sortOrder: 6
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

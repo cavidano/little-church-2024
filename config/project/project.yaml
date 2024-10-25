@@ -1,4 +1,4 @@
-dateModified: 1729552723
+dateModified: 1729878826
 elementSources:
   craft\elements\Entry:
     -
@@ -123,6 +123,13 @@ fs:
       path: '@webroot/mp3/uploads/sermons'
     type: craft\fs\Local
     url: '@web/mp3/uploads/sermons'
+  blog:
+    hasUrls: true
+    name: Blog
+    settings:
+      path: '@webroot/images/uploads/blog'
+    type: craft\fs\Local
+    url: '@web/images/uploads/blog'
   figureImages:
     hasUrls: true
     name: 'Figure Images'
@@ -167,6 +174,7 @@ meta:
     67cb7d46-6622-4ee4-8930-b7fe3a6b6655: 'Hompepage Carousel' # Hompepage Carousel
     75c8e62e-3242-4d56-90d1-090d035078f6: 'Figure Image' # Figure Image
     90d007fb-964b-4788-b672-633d855a0058: 'Rich Text' # Rich Text
+    92eb37bb-240d-4363-ac53-88e9360941e8: 'Blog Images' # Blog Images
     0230f447-379b-4039-be7e-8a8160c130fd: 'Audio Sermons' # Audio Sermons
     272db05d-f0fc-489d-9a91-32658794ef35: 'Audio Sermon Files' # Audio Sermon Files
     312a0d44-7d08-4c21-bc00-91291780659b: 'Public Schema' # Public Schema
@@ -190,6 +198,7 @@ meta:
     c243e913-1c84-463a-bbcb-327b23ff279a: Simple # Simple
     cadcecb7-766f-4de8-bee3-62b75a1e2092: 'Tour Highlight' # Tour Highlight
     cf79e9cc-32bf-4f52-90d6-6002f2370405: Music # Music
+    dff320e3-08a7-4091-a328-0a3aa8fc2b82: 'Blog Image' # Blog Image
     f3ad64b9-df55-4707-9d73-70653a4ee4f9: Worship # Worship
     f627def0-bb59-4992-ae44-aef0dfb97c08: 'Little Church' # Little Church
     fce93b65-4251-416d-9a60-b4bdd015eb33: Homepage # Homepage
