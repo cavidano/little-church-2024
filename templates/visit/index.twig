@@ -1,0 +1,76 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<main id="skip-header-target">
+    <article>
+        <header class="theme-primary">
+            <div class="container narrow medium--lg text-align-center padding-y-5">
+                <h1>Visit Us</h1>
+            </div>
+        </header>
+
+        <div class="margin-x-auto narrow--md wide--lg margin-y-5">
+
+
+            <div class="grid-sidebar--right gap-4 grid--divider margin-y-4" style="--grid-sidebar-width: calc(var(--article-sidebar-width) *1.5);">
+
+                <div class="grid-sidebar__minor">
+
+					<div class="map">
+					
+						<img src="https://maps.googleapis.com/maps/api/staticmap?
+							&center=40.745191, -73.985870
+							&zoom=16
+							&size=640x420
+							&maptype=roadmap
+							&markers=color:green%7Clabel:C%7C40.745191,-73.985870
+							&key=AIzaSyBMukzRcxV0QEUWhIAQiDALNq0PoVqyghs" alt="The Church of The Transfiguration Location"
+						/>
+					
+					</div>
+
+                </div>
+
+				<div class="grid-sidebar__major">
+					<figure>
+						<img
+							src="/src/images/visit/hero-visit.jpg"
+							alt="The Little Church Around the Corner, NYC"
+						/>
+					</figure>
+					<section class="container narrow padding-y-5">
+						<p>
+							We love to have visitors. Every Sunday sees a stream of visitors who come here to photograph the stained-glass windows, wander through the nooks and crannies, and discover the unexpected, such as the actor Rex Harrison’s memorial plaque placed next to a Madonna window. Some come for a guided tour and listen to the story of how we came to be called the "Little Church Around the Corner." Others come to carry out research on our various art and artifacts or their personal connections.
+						</p>
+
+						<h2>Hours of Operation</h2>
+						<p>
+							Our garden is open every day during the day for quiet meditation. The Parish Office is open Monday through Friday from 9:00 am to 4:00 pm ET.
+						</p>
+
+						<p>
+							Visits into the church are available during our office hours. Please contact our parish office to ensure that a member of the staff is able to let you in for a quick prayer, meditation, or visit.
+						</p>
+
+						<p>
+							The church is also open on Sundays between our 8:30 and 11 am masses and after our masses until about 3 pm. On the third Sunday, it is open until 6:30 pm for our Spanish mass.
+						</p>
+
+						<h3>Guided Tours</h3>
+						<p>
+							Guided tours are offered most Sundays after the 11:00 am mass. Please meet at the organ around 12:45 pm. Group tours are available by appointment.
+						</p>
+
+						<p>
+							<em>To contact the Parish Office or book a tour, call 212-684-6770 or e-mail parishoffice@littlechurch.org.</em>
+						</p>
+					</section>
+				</div>
+
+			</div>
+
+    </article>
+</main>
+
+{% endblock %}
