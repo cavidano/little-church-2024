@@ -1,3 +1,6 @@
+
+        {% import "_macros.twig" as macros %}
+
 <div class="margin-x-auto wide--xl">
 
     <header class="global-header">
@@ -41,11 +44,31 @@
 
         <nav class="global-header__nav collapse" id="main-menu">
             <ul class="global-header__nav__secondary">
-                <li><a href="/virtual-tour">Virtual Tour</a></li>
-                <li><a href="/visit">Visit</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Pledge</a></li>
+                <li>
+                    <a href="/virtual-tour" {{ macros.is_active('virtual-tour') }}>
+                        Virtual Tour
+                    </a>
+                </li>
+                <li>
+                    <a href="/visit" {{ macros.is_active('visit') }}>
+                        Visit
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact" {{ macros.is_active('contact') }}>
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="/blog" {{ macros.is_active('blog') }}>
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="#" {{ macros.is_active('pledge') }}>
+                        Pledge
+                    </a>
+                </li>
             </ul>
 
             <ul class="global-header__nav__primary">
@@ -54,9 +77,7 @@
                         data-toggle="dropdown"
                         aria-controls="dropdown-about"
                         aria-expanded="false"
-                        {% if entry.section is defined and entry.section.handle == 'about' %}
-                            aria-current="page"
-                        {% endif %}
+                        {{ macros.is_active('about') }}
                     >
                         About
                     </button>
@@ -74,9 +95,7 @@
                         data-toggle="dropdown"
                         aria-controls="dropdown-worship"
                         aria-expanded="false"
-                        {% if entry.section is defined and entry.section.handle == 'worship' %}
-                            aria-current="page"
-                        {% endif %}
+                        {{ macros.is_active('worship') }}
                     >
                         Worship
                     </button>
@@ -94,9 +113,7 @@
                         data-toggle="dropdown"
                         aria-controls="dropdown-music"
                         aria-expanded="false"
-                        {% if entry.section is defined and entry.section.handle == 'music' %}
-                            aria-current="page"
-                        {% endif %}
+                        {{ macros.is_active('music') }}
                     >
                         Music
                     </button>
@@ -114,9 +131,7 @@
                         data-toggle="dropdown"
                         aria-controls="dropdown-education"
                         aria-expanded="false"
-                        {% if entry.section is defined and entry.section.handle == 'education' %}
-                            aria-current="page"
-                        {% endif %}
+                        {{ macros.is_active('education') }}
                     >
                         Education
                     </button>

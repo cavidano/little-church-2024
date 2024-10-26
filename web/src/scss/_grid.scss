@@ -30,9 +30,9 @@ $rows: math.div($columns, 2);
 
     --grid-divider-border-width: var(--border-width);
 
-    --grid-divider-border-x-color: var(--canvas-border);
+    --grid-divider-border-x-color: color-mix(in srgb, currentColor 25%, transparent);
     
-    --grid-divider-border-y-color: var(--canvas-border);
+    --grid-divider-border-y-color: color-mix(in srgb, currentColor 25%, transparent);
 
     --grid-sidebar-width: var(--article-sidebar-width);
 }

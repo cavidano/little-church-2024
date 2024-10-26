@@ -1,0 +1,5 @@
+{% macro is_active(segment) %}
+    {% if craft.app.request.segments | first == segment %}
+        aria-current="page"
+    {% endif %}
+{% endmacro %}
