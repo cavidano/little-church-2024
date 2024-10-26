@@ -1,4 +1,4 @@
-dateModified: 1729950224
+dateModified: 1729962910
 elementSources:
   craft\elements\Entry:
     -
@@ -164,7 +164,7 @@ fs:
     hasUrls: true
     name: 'Virtual Tour Images'
     settings:
-      path: '@webroot/images/uploads/virtual-tour-images'
+      path: '@webroot/images/uploads/virtual-tour'
     type: craft\fs\Local
     url: '@web/images/uploads/virtual-tour'
 meta:
@@ -211,7 +211,9 @@ meta:
     dff320e3-08a7-4091-a328-0a3aa8fc2b82: 'Blog Image' # Blog Image
     f3ad64b9-df55-4707-9d73-70653a4ee4f9: Worship # Worship
     f627def0-bb59-4992-ae44-aef0dfb97c08: 'Little Church' # Little Church
+    f8355048-22c0-4c2d-8873-4db92a78ab46: 'Virtual Tour Image' # Virtual Tour Image
     fce93b65-4251-416d-9a60-b4bdd015eb33: Homepage # Homepage
+    fdcba0b0-5a7a-4a08-b572-3f2b31afb9a1: 'Virtual Tour Image' # Virtual Tour Image
 plugins:
   ckeditor:
     edition: standard

@@ -164,3 +164,13 @@
 
     }
 }
+
+.track--carousel {
+    --narrow-width: min(40rem, 85vw); // Approximately 55 characters wide for readability
+
+    .track__container {
+        margin-inline: auto;
+        max-width: calc(var(--wide-width) * 1.125);
+    }
+}
+

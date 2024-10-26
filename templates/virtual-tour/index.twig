@@ -47,11 +47,11 @@
 
                                     <div class="backdrop__media">
                                         {# Output the entry's image #}
-                                        {% if entry.image | length %}
+                                        {% if entry.virtualTourImage | length %}
                                             <img
 												class="gradient-mask-bottom"
-												src="{{ entry.image.one().url }}"
-												alt="{{ entry.image.one().title }}"
+												src="{{ entry.virtualTourImage.one().url }}"
+												alt="{{ entry.virtualTourImage.one().title }}"
 
 											/>
                                         {% else %}

@@ -40,7 +40,7 @@ In this file:
 
     [class*="gradient-mask"] {
         --_gradient-stop-1: hsla(0, 0%, 100%, var(--gradient-mask-opacity)) var(--gradient-direction-start);
-        --_gradient-stop-2: transparent;
+        --_gradient-stop-2: transparent 100%;
 
         pointer-events: none;
 
@@ -70,6 +70,8 @@ In this file:
     // Gradient Mask Vignette
 
     [class*="gradient-mask-vignette"] {
+
+    --gradient-direction-start: clamp(60%, 80%, 90%);
         --_gradient-mask-image: 
             linear-gradient(to top, var(--_gradient-stop-1), var(--_gradient-stop-2)),
             linear-gradient(to right, var(--_gradient-stop-1), var(--_gradient-stop-2)),
@@ -77,7 +79,7 @@ In this file:
             linear-gradient(to left, var(--_gradient-stop-1), var(--_gradient-stop-2)),
             radial-gradient(ellipse at center, var(--_gradient-stop-1), var(--_gradient-stop-2));
         
-        mask-position: right;
+        // mask-position: right;
         mask-composite: intersect;
     }
 

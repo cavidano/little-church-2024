@@ -1,561 +1,162 @@
 <!DOCTYPE html>
 
-<html class='theme-canvas--prefers' lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track • Natura11y</title>
 
-        <title>Track • Natura11y</title>
-        
-        <!-- Natura11y Icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/natura11y-icons@v1/dist/natura11y-icons.min.css">
+    <!-- Natura11y Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/natura11y-icons@v1/dist/natura11y-icons.min.css">
 
-        <style>
-            :root {
-                --dark: black !important;
-            }
+    <style>
+        :root {
+            --dark: black !important;
+        }
 
-            #main-content {
-                --wide-width: 80vw;
-            }   
-        </style>
+        #main-content {
+            --wide-width: 80vw;
+        }
+    </style>
+</head>
 
-    </head>
+<body>
 
-    <body>
+    <main class="overflow-hidden margin-y-5" id="main-content">
 
-        <main class="overflow-hidden" id="main-content">
+        <!-- Carousel -->
 
-            <section>
-
-                <header class="margin-y-4 text-align-center">
-                    <h1 class="banner-headline">
-                        Track
-                    </h1>
-                </header>
-                
-                <!-- Single-panel -->
-
-                <figure class="wide margin-x-auto margin-y-6">
-
-                    <section
-                        class="track"
-                        aria-labelledby="carousel-heading-1">
-
-                        <h3 id="carousel-heading-1" class="screen-reader-only">Featured Content</h3>
-
-                        <div class="track__container">
-                        
-                            <ul class="track__panels gap-2">
-
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=One" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Two" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Three" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Four" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Five" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-
-                            </ul>
-
-                        </div>  
-
-                        <div class="track__controls">
-
-                            <ul class="track__pagination" data-track-pagination></ul>
-
-                            <button
-                                class="button button--icon-only track__prev"
-                                aria-label="Previous Slide"
-                                data-track-prev>
-                                <span class="icon icon-arrow-left" aria-hidden="true"></span>
-                            </button>
-
-                            <button
-                                class="button button--icon-only track__next"
-                                aria-label="Next Slide"
-                                data-track-next>
-                                <span class="icon icon-arrow-right" aria-hidden="true"></span>
-                            </button>
-
-                        </div>
-
-                    </section>
-                    
-                </figure>
+        <section class="track track--carousel theme-dark" aria-labelledby="virtual-tour-highlights" data-track-id="track-0">
             
-                <!-- Multi-panel -->
+            <h3 class="screen-reader-only" id="virtual-tour-highlights">Featured Content</h3>
 
-                <figure class="margin-y-6">
+            <div class="track__container gradient-mask-vignette">
+                <ul class="track__panels gap-1">
 
-                    <section
-                        class="track track--column-2--lg"
-                        aria-labelledby="carousel-heading-2"
-                        style="--panel-peeking: calc((100vw - var(--wide-width)) * 0.5);">
+                    <li class="track__panel" id="track-0-panel-0" aria-hidden="false">
+                        <article class="backdrop backdrop--stack--md">
+                            <div class="backdrop__media">
+                                <img class="gradient-mask-bottom" src="https://little-church/images/uploads/homepage-carousel/01.jpg" alt="This is custom alt text">
+                            </div>
 
-                        <h3 id="carousel-heading-2" class="screen-reader-only">Recent news</h3>
-
-                        <div class="track__container">
-
-                            <button
-                                class="button button--icon-only track__prev"
-                                aria-label="Previous Slide"
-                                data-track-prev>
-                                <span class="icon icon-arrow-left" aria-hidden="true"></span>
-                            </button>
-
-                            <ul class="track__panels gap-2">
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=One" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button theme-primary font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
+                            <div class="backdrop__cover align-content-end">
+                                <div class="container narrow text-align-center">
+                                    <div class="text-shadow">
+                                        <h1 class="h4 margin-bottom-3">
+                                            An Episcopal parish in Manhattan’s NoMad neighborhood
+                                        </h1>
+                                    </div>
+                                    <a class="button button--has-icon theme-primary font-size-md" href="https://little-church/about/a-welcome-message" tabindex="0">
+                                        <span class="button__text">Worship</span>
+                                        <span class="icon icon-arrow-right"></span>
                                     </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
+                                </div>
+                            </div>
+                        </article>
+                    </li>
 
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Two" alt="Placeholder" />
-                                        </div>
+                    <li class="track__panel" id="track-0-panel-1" aria-hidden="true">
+                        <article class="backdrop backdrop--stack--md">
+                            <div class="backdrop__media">
+                                <img class="gradient-mask-bottom" src="https://little-church/images/uploads/homepage-carousel/02.jpg" alt="">
+                            </div>
 
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
+                            <div class="backdrop__cover align-content-end">
+                                <div class="container narrow text-align-center">
+                                    <div class="text-shadow">
+                                        <h1 class="h4 margin-bottom-3">
+                                            Your next quiet moment is right around the corner
+                                        </h1>
+                                    </div>
+                                    <a class="button button--has-icon theme-primary font-size-md" href="" tabindex="-1">
+                                        <span class="button__text">Visit</span>
+                                        <span class="icon icon-arrow-right"></span>
                                     </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
+                                </div>
+                            </div>
+                        </article>
+                    </li>
 
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Three" alt="Placeholder" />
-                                        </div>
+                    <li class="track__panel" id="track-0-panel-2" aria-hidden="true">
+                        <article class="backdrop backdrop--stack--md">
+                            <div class="backdrop__media">
+                                <img class="gradient-mask-bottom" src="https://little-church/images/uploads/homepage-carousel/03.jpg" alt="">
+                            </div>
 
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
+                            <div class="backdrop__cover align-content-end">
+                                <div class="container narrow text-align-center">
+                                    <div class="text-shadow">
+                                        <h1 class="h4 margin-bottom-3">
+                                            Big City Church, Small Town Feeling
+                                        </h1>
+                                    </div>
+                                    <a class="button button--has-icon theme-primary font-size-md" href="" tabindex="-1">
+                                        <span class="button__text">Parish Life</span>
+                                        <span class="icon icon-arrow-right"></span>
                                     </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
+                                </div>
+                            </div>
+                        </article>
+                    </li>
 
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Four" alt="Placeholder" />
-                                        </div>
+                    <li class="track__panel" id="track-0-panel-3" aria-hidden="true">
+                        <article class="backdrop backdrop--stack--md">
+                            <div class="backdrop__media">
+                                <img class="gradient-mask-bottom" src="https://little-church/images/uploads/homepage-carousel/04.jpg" alt="">
+                            </div>
 
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
+                            <div class="backdrop__cover align-content-end">
+                                <div class="container narrow text-align-center margin-y-4">
+                                    <div class="text-shadow">
+                                        <h1 class="h4">
+                                            Meet our friendly staff
+                                        </h1>
+                                    </div>
+                                    <a class="button button--has-icon theme-primary font-size-md" href="" tabindex="-1">
+                                        <span class="button__text">Link</span>
+                                        <span class="icon icon-arrow-right"></span>
                                     </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Five" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Six" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Seven" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Eight" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                            </ul>
-
-                             <button
-                                class="button button--icon-only track__next"
-                                aria-label="Next Slide"
-                                data-track-next>
-                                <span class="icon icon-arrow-right" aria-hidden="true"></span>
-                            </button>
-
-                        </div>
-                        
-                        <ul class="track__pagination" data-track-pagination></ul>
-
-                    </section>
-                
-                </figure>
-            
-                <!-- Custom Buttons -->
-
-                <figure class="wide--lg margin-x-auto margin-y-6">
-
-                    <section
-                        class="track track--peeking track--column-3--lg"
-                        aria-labelledby="carousel-heading-3">
-
-                        <h3 id="carousel-heading-3" class="screen-reader-only">Recent news</h3>
-
-                        <div class="track__container">
-                        
-                            <button
-                                class="button button--icon-only track__prev"
-                                aria-label="Previous Slide" 
-                                data-track-prev> 
-                                <span class="icon icon-arrow-left" aria-hidden="true"></span>
-                            </button>
-
-                            <ul class="track__panels gap-2">
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=One" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Two" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Three" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Four" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Five" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Six" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Seven" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                                <li class="track__panel">
-                                    <a class="backdrop" href="#1">
-
-                                        <div class="backdrop__media">
-                                            <img class="opacity-50" src="https://via.placeholder.com/1500x750?text=Eight" alt="Placeholder" />
-                                        </div>
-
-                                        <div class="backdrop__cover align-content-end">
-
-                                            <div class="margin-2">
-                                                <span class="button font-size-sm">
-                                                    Button Label
-                                                </span>
-                                            </div>
-
-                                        </div>
-
-                                    </a>
-                                </li>
-                            </ul>
-
-                            <button
-                                class="button button--icon-only track__next"
-                                aria-label="Previous Slide"
-                                data-track-next>
-                                <span class="icon icon-arrow-right" aria-hidden="true"></span>
-                            </button>
-
-                        </div>
-                        
-                        <ul class="track__pagination text-color-link" data-track-pagination></ul>
-
-                    </section>
-                
-                </figure>
-            
-            </section>
-        
-        </main>
-
-    </body>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+
+                </ul>
+            </div>
+
+            <ul class="track__pagination margin-y-3 justify-content-center" data-track-pagination>
+                <li>
+                    <button type="button" data-page-index="0" aria-label="Go To Page 1" aria-current="true">
+                        <span class="pagination__number">1</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" data-page-index="1" aria-label="Go To Page 2">
+                        <span class="pagination__number">2</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" data-page-index="2" aria-label="Go To Page 3">
+                        <span class="pagination__number">3</span>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" data-page-index="3" aria-label="Go To Page 4">
+                        <span class="pagination__number">4</span>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="liveregion screen-reader-only" aria-live="polite" aria-atomic="true">
+                Page 1 of 4
+            </div>
+        </section>
+
+        <!-- Single-panel carousel and other content sections follow here -->
+
+    </main>
+
+</body>
 
 </html>
