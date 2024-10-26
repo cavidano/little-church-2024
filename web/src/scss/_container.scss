@@ -71,6 +71,8 @@ In this file:
 
             .wide#{$mod} {
                 max-width: var(--wide-width);
+                outline: 2px solid red;
+                outline-offset: -2px;
             }
         }
     }
