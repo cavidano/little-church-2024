@@ -22,6 +22,7 @@ import Track from './js/track';
 
 
 import AudioPlayer from './js/theme/audio-player';
+import Map from './js/map';
 
 //////////////////////////////////////////////
 // C. Class Instantiation
@@ -72,4 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const audioPlayer = new AudioPlayer();
   audioPlayer.init();
+
+  const map = new Map();
+  map.init();
 });

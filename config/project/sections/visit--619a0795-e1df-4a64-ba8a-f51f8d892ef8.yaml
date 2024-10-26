@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - b9395e1a-8d3b-4b8f-aafe-3eab9556b505 # Primary Page Article
+handle: visit
+maxAuthors: 1
+name: Visit
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  f627def0-bb59-4992-ae44-aef0dfb97c08: # Little Church
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single

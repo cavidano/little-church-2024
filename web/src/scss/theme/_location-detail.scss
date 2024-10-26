@@ -1,0 +1,61 @@
+/*
+
+In this file:
+
+// A. Components
+
+*/
+
+////////////////////////////////////////
+// A. Components
+////////////////////////////////////////
+
+@layer component {
+
+    .location-detail {
+        display: grid;
+
+        gap: var(--spacer-2);
+
+        font-size: var(--font-size-md);
+
+        [class*="__map"] {
+            aspect-ratio: 16 / 9;
+        }
+
+        [class*="__address"] {        
+            p {
+                margin-block: 0;
+            }
+        }
+
+        [class*="__accessibility"] {
+            display: flex;
+
+            flex-direction: row;
+
+            align-items: center;
+
+            gap: var(--spacer-2);
+
+            .icon {
+                --icon-size: 32px;
+                
+                width: 64px;
+                aspect-ratio: 1 / 1;
+                
+                align-items: center;
+                justify-content: center;
+
+                border-radius: 0.5rem;
+
+                background-color: var(--light);
+            }
+
+            p {
+                font-size: var(--font-size-sm);
+            }
+        }
+    }
+
+} // end @layer

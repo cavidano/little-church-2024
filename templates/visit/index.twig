@@ -4,77 +4,177 @@
 
 <main id="skip-header-target">
 
+	{% set entry = craft.entries.section('visit').one() %}
+
     <article>
 
         <header class="theme-primary">
             <div class="container narrow medium--lg text-align-center padding-y-5">
-                <h1>Visit Us</h1>
+                <h1>
+					{{ entry.title }}
+				</h1>
             </div>
         </header>
 
         <div class="margin-x-auto narrow--md wide--lg margin-y-5">
 
-
-            <div class="grid-sidebar--right gap-4 grid--divider margin-y-4" style="--grid-sidebar-width: calc(var(--article-sidebar-width) *1.5);">
+            <div
+				class="grid-sidebar--right gap-4 grid--divider margin-y-4"
+				style="--grid-sidebar-width: calc(var(--article-sidebar-width) * 1.5);"
+			>
 
                 <div class="grid-sidebar__minor">
 
-					<div class="map">
+					<div class="margin-x-auto narrow">
 					
-						<img src="https://maps.googleapis.com/maps/api/staticmap?
-							&center=40.745191, -73.985870
-							&zoom=16
-							&size=640x420
-							&maptype=roadmap
-							&markers=color:green%7Clabel:C%7C40.745191,-73.985870
-							&key=AIzaSyBMukzRcxV0QEUWhIAQiDALNq0PoVqyghs" alt="The Church of The Transfiguration Location"
-						/>
-					
+						<div class="location-detail">
+						
+							<div class="location-detail__map" id="map"></div>
+
+							<div class="location-detail__address">
+								<p>
+									<strong>
+										Church of the Transfiguration
+									</strong>
+								</p>
+								<address class="margin-bottom-2">
+									1 E 29th St, NY 10016									
+								</address>
+
+								<a class="button font-size-sm button--outline text-color-link" href="#1">
+									<span class="icon icon-map-pin" aria-hidden="true"></span>
+									<span class="link__text">Directions</span>
+								</a>
+							</div>
+
+							<div class="location-detail__directions">
+								<h4>Getting Here</h4>
+								<p><strong>By subway:</strong> Take the 1, R/W, or 6 to 28th Street, or take the B/D/F/M/N/Q to Herald Square.</p>
+								<p><strong>By bus:</strong> M1, M2, M3, M5, M6, M7.</p>                        
+							</div>
+
+							<div class="location-detail__accessibility">
+								<span class="icon icon-wheelchair"></span>
+								<p>The Church and Garden is <br>wheelchair accessible</p>
+							</div>
+
+						</div>
+
 					</div>
 
                 </div>
 
 				<div class="grid-sidebar__major">
 
-					<figure class="">
-						<img
-							src="/src/images/visit/hero-visit.jpg"
-							alt="The Little Church Around the Corner, NYC"
-						/>
-					</figure>
-					
-					<section class="container narrow padding-y-5">
-						<p>
-							We love to have visitors. Every Sunday sees a stream of visitors who come here to photograph the stained-glass windows, wander through the nooks and crannies, and discover the unexpected, such as the actor Rex Harrison’s memorial plaque placed next to a Madonna window. Some come for a guided tour and listen to the story of how we came to be called the "Little Church Around the Corner." Others come to carry out research on our various art and artifacts or their personal connections.
-						</p>
+					<div class="grid-sidebar__major__container">
 
-						<h2>Hours of Operation</h2>
-						<p>
-							Our garden is open every day during the day for quiet meditation. The Parish Office is open Monday through Friday from 9:00 am to 4:00 pm ET.
-						</p>
+						{% if entry.heroImage | length %}
+						{% set image = entry.heroImage.one() %}
 
-						<p>
-							Visits into the church are available during our office hours. Please contact our parish office to ensure that a member of the staff is able to let you in for a quick prayer, meditation, or visit.
-						</p>
+							<figure>
 
-						<p>
-							The church is also open on Sundays between our 8:30 and 11 am masses and after our masses until about 3 pm. On the third Sunday, it is open until 6:30 pm for our Spanish mass.
-						</p>
+								<img
+									src="{{ image.url }}"
+									alt="{{ image.alt ?? '' }}"
+								/>
 
-						<h3>Guided Tours</h3>
-						<p>
-							Guided tours are offered most Sundays after the 11:00 am mass. Please meet at the organ around 12:45 pm. Group tours are available by appointment.
-						</p>
+								{% if entry.heroCaption %}
+								<figcaption class="container narrow">
+									<p>
+										{{ entry.heroCaption }}
+									</p>
+								</figcaption>
+								{% endif %}
+							</figure>
 
-						<p>
-							<em>To contact the Parish Office or book a tour, call 212-684-6770 or e-mail parishoffice@littlechurch.org.</em>
-						</p>
-					</section>
+						{% endif %}
+
+						<div>
+						
+							{# Loop through the Matrix blocks #}
+							{% for block in entry.articleContent.all() %}
+							
+							{# Handle the Rich Text block #}
+							{% if block.type.handle == 'richText' %}
+
+							<div class="container narrow--md margin-y-4">
+								
+								{{ block.richText }}
+							
+							</div>
+							
+							{# Handle the Figure Image block #}
+							{% elseif block.type.handle == 'figureImage' %}
+							
+								<figure class="margin-y-5">
+								{% set image = block.figureImage.one() %}
+								{% if image %}
+									<img class="width-100" src="{{ image.url }}" alt="{{ image.alt }}" />
+								{% endif %}
+								{% if block.figureCaption %}
+									<figcaption class="container narrow">
+										<p>
+											{{ block.figureCaption }}
+										</p>
+									</figcaption>
+								{% endif %}
+								</figure>
+
+							{# Handle the Call to Action block #}
+							{% elseif block.type.handle == 'callToAction' %}
+
+								<div class="container narrow--md margin-y-2">
+									
+									{# Link for the Call to Action #}
+									{% if block.linkField is defined and block.linkField %}
+										<a class="button text-color-link" href="{{ block.linkField}}">
+											{{ block.title }}
+											{% if block.linkField.type == 'url' %}
+												<span class="icon icon-open-new"></span>
+											{% else %}
+												<span class="icon icon-arrow-right"></span>
+											{% endif %}
+										</a>
+									{% endif %}
+
+									{# {{ dump(block.linkField.type) }} #}
+
+								</div>
+							
+							{% endif %}
+							
+							{% endfor %}
+
+						</div>
+						
+						<footer class="border-top padding-top-3 font-size-sm margin-top-4">
+							<div class="grid grid--column-3 gap-2 align-items-center">
+							
+								<a class="button 👉 button--has-icon" href="#1">
+									<span class="icon icon-facebook"></span>
+									<span class="button__text">Share</span>
+								</a>
+							
+								<a class="button 👉 button--has-icon" href="#1">
+									<span class="icon icon-twitter"></span>
+									<span class="button__text">Tweet</span>
+								</a>
+							
+								<a class="button 👉 button--has-icon" href="#1">
+									<span class="icon icon-mail"></span>
+									<span class="button__text">Send</span>
+								</a>
+							</div>
+						</footer>
+
+					</div>
+
 				</div>
 
 			</div>
 
     </article>
+
 </main>
 
 {% endblock %}

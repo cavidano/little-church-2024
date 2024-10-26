@@ -1,4 +1,4 @@
-dateModified: 1729878826
+dateModified: 1729950224
 elementSources:
   craft\elements\Entry:
     -
@@ -97,6 +97,9 @@ elementSources:
         - link
       type: native
     -
+      key: 'section:619a0795-e1df-4a64-ba8a-f51f8d892ef8' # Visit
+      type: native
+    -
       heading: Channels
       type: heading
     -
@@ -110,6 +113,12 @@ elementSources:
         - postDate
         - expiryDate
         - link
+      type: native
+    -
+      heading: ''
+      type: heading
+    -
+      key: 'section:0230f447-379b-4039-be7e-8a8160c130fd' # Audio Sermons
       type: native
 email:
   fromEmail: carl@avidanodigital.com
@@ -179,6 +188,7 @@ meta:
     272db05d-f0fc-489d-9a91-32658794ef35: 'Audio Sermon Files' # Audio Sermon Files
     312a0d44-7d08-4c21-bc00-91291780659b: 'Public Schema' # Public Schema
     612cf07a-8adc-436d-8d30-04c51e6251c6: About # About
+    619a0795-e1df-4a64-ba8a-f51f8d892ef8: Visit # Visit
     631b3d2c-5ba4-4914-be51-49de4fe03310: 'Audio Sermon' # Audio Sermon
     649c5a54-f759-4177-990f-60a9da779147: Blog # Blog
     820a6717-36a8-4b5c-819b-cbdc9e036334: 'Article Content Matrix' # Article Content Matrix
