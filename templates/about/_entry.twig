@@ -32,7 +32,7 @@
 
 		<header class="theme-primary" id="introduction">
 
-			<div class="container narrow medium--lg text-align-center padding-y-5">
+			<div class="container narrow--md medium--lg text-align-center padding-y-5">
 
 				<h1 class="banner-headline">
 					{{ entry.title }}
@@ -42,7 +42,7 @@
 
 		</header>
 
-		<div class="container narrow--md wide--lg">
+		<div class="margin-x-auto narrow--md wide--xl">
 
 			<div class="grid-sidebars grid--divider gap-4 margin-y-5">
 
@@ -117,7 +117,7 @@
 								<figure class="margin-y-5">
 								{% set image = block.figureImage.one() %}
 								{% if image %}
-									<img src="{{ image.url }}" alt="{{ image.alt }}" />
+									<img class="width-100" src="{{ image.url }}" alt="{{ image.alt }}" />
 								{% endif %}
 								{% if block.figureCaption %}
 									<figcaption class="container narrow">
