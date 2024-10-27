@@ -1,0 +1,34 @@
+columnSuffix: null
+handle: figureImageFull
+instructions: null
+name: 'Figure Image Full'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds: null
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:979c8d61-727b-4c46-ab40-83a3561c192a' # Hero Images
+  defaultUploadLocationSubpath: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: 1
+  previewMode: full
+  restrictFiles: false
+  restrictLocation: true
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:62967cc3-ad04-4380-8c1e-1a8c19ab8663' # Figure Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add Figure Image'
+  showCardsInGrid: false
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

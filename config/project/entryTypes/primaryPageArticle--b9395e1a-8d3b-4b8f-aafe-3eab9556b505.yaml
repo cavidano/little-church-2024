@@ -17,7 +17,7 @@ fieldLayouts:
             includeInCards: false
             inputType: null
             instructions: null
-            label: null
+            label: 'Page Title'
             max: null
             min: null
             name: null
@@ -35,6 +35,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2024-10-27T11:06:27+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: d229339b-b194-438f-a753-879d9b859fd2
+            userCondition: null
           -
             dateAdded: '2024-10-19T17:24:05+00:00'
             elementCondition: null
@@ -67,6 +73,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2024-10-27T11:06:27+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: e693cec1-b03a-4470-8830-cd848b8d01b6
+            userCondition: null
           -
             dateAdded: '2024-10-20T15:53:26+00:00'
             elementCondition: null

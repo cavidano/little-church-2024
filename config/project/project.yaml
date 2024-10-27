@@ -1,4 +1,4 @@
-dateModified: 1730019704
+dateModified: 1730032629
 elementSources:
   craft\elements\Entry:
     -
@@ -169,19 +169,21 @@ fs:
     url: '@web/images/uploads/virtual-tour'
 meta:
   __names__:
-    2f747c28-c7c2-4200-a471-390a2e529c99: 'Figure Image' # Figure Image
+    2f747c28-c7c2-4200-a471-390a2e529c99: 'Figure Image Full' # Figure Image Full
     3f15b324-fa65-485b-ab56-f9bfed089117: 'Homepage Carousel' # Homepage Carousel
     4de8895d-cb53-4939-90f8-d37639e60da3: 'Virtual Tour' # Virtual Tour
-    5a15575b-ec2e-47c3-bd00-eb854f1d8055: 'Rich Text' # Rich Text
+    5a15575b-ec2e-47c3-bd00-eb854f1d8055: 'Text Content' # Text Content
     5b9003a1-5077-4296-9639-f03328dd74a2: 'Virtual Tour Images' # Virtual Tour Images
     5da48b70-636f-4798-99d0-24e2899dff02: 'Link URL' # Link URL
     6fded0a5-09f9-4885-9b87-14e039c52a6c: 'Link Field' # Link Field
+    7e6327ec-021c-419b-a22d-fc3e845dc10f: 'Figure Image Right' # Figure Image Right
     7e837081-2d44-4b75-914c-abca14574951: Date # Date
     27c04a34-53b5-4eaf-a615-91ca4dd52dd5: Image # Image
     41ea8475-5a25-4156-99a9-75f192140d9c: 'Homepage Carousel Images' # Homepage Carousel Images
     45ab6eb6-a238-4395-8d2d-7a851616aed6: 'Call to Action' # Call to Action
+    46c2bc01-7fec-4a8d-9e8f-c578c727a0e3: 'Figure Image Right' # Figure Image Right
     67cb7d46-6622-4ee4-8930-b7fe3a6b6655: 'Hompepage Carousel' # Hompepage Carousel
-    75c8e62e-3242-4d56-90d1-090d035078f6: 'Figure Image' # Figure Image
+    75c8e62e-3242-4d56-90d1-090d035078f6: 'Figure Image Full' # Figure Image Full
     90d007fb-964b-4788-b672-633d855a0058: 'Rich Text' # Rich Text
     92eb37bb-240d-4363-ac53-88e9360941e8: 'Blog Images' # Blog Images
     0230f447-379b-4039-be7e-8a8160c130fd: 'Audio Sermons' # Audio Sermons
@@ -190,7 +192,7 @@ meta:
     612cf07a-8adc-436d-8d30-04c51e6251c6: About # About
     619a0795-e1df-4a64-ba8a-f51f8d892ef8: Visit # Visit
     631b3d2c-5ba4-4914-be51-49de4fe03310: 'Audio Sermon' # Audio Sermon
-    649c5a54-f759-4177-990f-60a9da779147: Blog # Blog
+    649c5a54-f759-4177-990f-60a9da779147: 'Blog Article' # Blog Article
     820a6717-36a8-4b5c-819b-cbdc9e036334: 'Article Content Matrix' # Article Content Matrix
     820e255c-6450-4806-b5ca-85831d8a7c7f: 'Plain Text' # Plain Text
     979c8d61-727b-4c46-ab40-83a3561c192a: 'Hero Images' # Hero Images
@@ -198,7 +200,7 @@ meta:
     6180f8f9-5c6e-408f-898a-bc265d3dab24: 'Call to Action' # Call to Action
     6453b749-5f18-4ffc-b62a-393fa9752a52: 'Hero Image' # Hero Image
     8827b8d4-2266-4f88-840c-c506b19dafb0: Image # Image
-    24446aa6-8005-424a-8454-e760a87e7bb5: 'Content Builder' # Content Builder
+    24446aa6-8005-424a-8454-e760a87e7bb5: Standard # Standard
     29691dec-8406-465e-bd7f-694f6a1776ff: Blog # Blog
     62967cc3-ad04-4380-8c1e-1a8c19ab8663: 'Figure Images' # Figure Images
     aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: Homepage # Homepage

@@ -6,12 +6,13 @@ searchable: true
 settings:
   availableTransforms: ''
   availableVolumes: '*'
-  ckeConfig: 24446aa6-8005-424a-8454-e760a87e7bb5 # Content Builder
+  ckeConfig: 24446aa6-8005-424a-8454-e760a87e7bb5 # Standard
   createButtonLabel: null
   defaultTransform: null
   enableSourceEditingForNonAdmins: false
   entryTypes:
-    - 2f747c28-c7c2-4200-a471-390a2e529c99 # Figure Image
+    - 2f747c28-c7c2-4200-a471-390a2e529c99 # Figure Image Full
+    - 7e6327ec-021c-419b-a22d-fc3e845dc10f # Figure Image Right
     - 45ab6eb6-a238-4395-8d2d-7a851616aed6 # Call to Action
   purifierConfig: null
   purifyHtml: true

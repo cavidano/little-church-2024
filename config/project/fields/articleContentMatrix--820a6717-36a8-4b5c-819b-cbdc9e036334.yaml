@@ -6,12 +6,12 @@ searchable: true
 settings:
   createButtonLabel: null
   entryTypes:
-    - 5a15575b-ec2e-47c3-bd00-eb854f1d8055 # Rich Text
-    - 2f747c28-c7c2-4200-a471-390a2e529c99 # Figure Image
+    - 5a15575b-ec2e-47c3-bd00-eb854f1d8055 # Text Content
+    - 2f747c28-c7c2-4200-a471-390a2e529c99 # Figure Image Full
     - 45ab6eb6-a238-4395-8d2d-7a851616aed6 # Call to Action
   includeTableView: false
   maxEntries: null
-  minEntries: null
+  minEntries: 1
   pageSize: null
   propagationKeyFormat: null
   propagationMethod: all

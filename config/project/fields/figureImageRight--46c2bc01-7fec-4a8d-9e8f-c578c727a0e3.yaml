@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: figureImage
+handle: figureImageRight
 instructions: null
-name: 'Figure Image'
+name: 'Figure Image Right'
 searchable: false
 settings:
   allowSelfRelations: false

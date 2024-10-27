@@ -1,6 +1,6 @@
 color: violet
 fieldLayouts:
-  762d7134-96de-444a-9f1e-39fa76b6ba50:
+  ebcfc2b2-c56d-4d94-9d16-5d6c456e6cf1:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-10-20T15:16:40+00:00'
+            dateAdded: '2024-10-27T12:16:21+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,14 +31,14 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: e1e65e66-0158-4fbe-9c4e-9325e1cede36
+            uid: 0f5833f5-4fe1-4486-a899-2fcc03466ce2
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-10-20T18:28:26+00:00'
+            dateAdded: '2024-10-27T12:18:23+00:00'
             elementCondition: null
-            fieldUid: 75c8e62e-3242-4d56-90d1-090d035078f6 # Figure Image
+            fieldUid: 46c2bc01-7fec-4a8d-9e8f-c578c727a0e3 # Figure Image Right
             handle: null
             includeInCards: false
             instructions: null
@@ -47,12 +47,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 040f0b8f-bbf1-4869-afc1-176ba2db6806
+            uid: 86b6f6c9-bc98-4d64-a05c-6a11d4029ab5
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-10-20T15:19:29+00:00'
+            dateAdded: '2024-10-27T12:18:23+00:00'
             elementCondition: null
             fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
             handle: figureCaption
@@ -63,17 +63,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 75a6ecf6-6897-4e73-a7f3-ce9678bf3ba1
+            uid: 854c2600-e866-4c8d-842a-a7b12ff12648
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 2de0b7c0-d798-4dd9-839d-1265ea212673
+        uid: caa638cd-edbd-4c13-8ef1-02ca3eff1c04
         userCondition: null
-handle: figureImage
+handle: figureImageRight
 hasTitleField: false
-icon: image-polaroid
-name: 'Figure Image'
+icon: image
+name: 'Figure Image Right'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 649c5a54-f759-4177-990f-60a9da779147 # Blog
+  - 649c5a54-f759-4177-990f-60a9da779147 # Blog Article
 handle: blog
 maxAuthors: 1
 name: Blog

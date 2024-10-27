@@ -1,0 +1,16 @@
+<figure class="float-right">
+    {% set image = entry.figureImageRight.one() %}
+    {% if image %}
+        <img
+            src="{{ image.url }}" 
+            alt="{{ image.alt }}" 
+        />
+    {% endif %}
+    {% if entry.figureCaption %}
+        <figcaption>
+            <p>
+                {{ entry.figureCaption }}
+            </p>
+        </figcaption>
+    {% endif %}
+</figure>
