@@ -79,7 +79,18 @@
 
 		<div class="container narrow--md margin-y-5 blog-article__body">
 
-			{{ entry.newsBody }}
+			{{ entry.newsBody }} {# Chat GPT, Ignore this for now #}
+
+
+			{# Parse the content field for references #}
+
+			{# Render CKEditor content with parsed references #}
+			{% set content = entry.blogArticle %}
+			
+			<div class="blog-article-content">
+				{{ content }}
+			</div>
+
 
 		</div>
 

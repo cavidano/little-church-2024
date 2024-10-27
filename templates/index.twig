@@ -260,67 +260,39 @@
         <div class="container wide">
             
             <header class="header border-bottom border-color-dark padding-bottom-1 margin-bottom-2">
-                <h2 class="font-size-sm font-weight-normal text-transform-uppercase">
-                    Latest News
+                <h2 class="h6 font-weight-normal text-transform-uppercase">
+                    News and Blog
                 </h2>
             </header>
             
-            <div class="grid grid--divider--fill-y grid--column-3">
+            <ul class="grid grid--divider--fill-x grid--column-3--lg gap-4">
 
 				{% for item in craft.entries.section('blog').limit(3).all() %}
             
-                <a class="grid grid--column-3 gap-2 align-items-center" href="{{ item.url}}">
+				<li>
+					<a class="display-block" href="{{ item.url}}">
+						<img
+							class="margin-bottom-2"
+							src="{{ item.blogImage.one().url }}"
+							alt="Transfiguration's Updated Statement on COVID-19"
+						/>
 
-                    <div class="theme-dark aspect-ratio-1x1"></div>
-
-                    <div class="grid__colspan-2">
-
-						<p class="font-size-sm margin-bottom-0">
+						<p class="margin-bottom-1 font-size-md">
 							{{ item.postDate.format('F j, Y') }}
 						</p>
-                        
-                        <h3 class="h6">
-                            {{ item.title }}
-                        </h3>
-                    
-                    </div>
 
-                </a>
+						<h3 class="h5" class="margin-bottom-1 font-size-md">
+							{{ item.title }}
+						</h3>
+					</a>
+				</li>
 
 				{% endfor %}
+
+			</ul>
+
+        </div> 
             
-                <div class="grid grid--column-3 gap-2 align-items-center">
-
-                    <div class="theme-dark aspect-ratio-1x1"></div>
-
-                    <div class="grid__colspan-2">
-                        
-                        <h3 class="h6">
-                            A Requiem Mass for Rudy Mazzocchi
-                        </h3>
-                    
-                    </div>
-
-                </div>
-            
-                <div class="grid grid--column-3 gap-2 align-items-center">
-
-                    <div class="theme-dark aspect-ratio-1x1"></div>
-
-                    <div class="grid__colspan-2">
-                        
-                        <h3 class="h6">
-                            A Requiem Mass for Rudy Mazzocchi
-                        </h3>
-                    
-                    </div>
-
-                </div>
-
-            </div> 
-            
-        </div>
-
     </section>
 
 </main>

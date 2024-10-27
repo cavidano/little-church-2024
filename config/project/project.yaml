@@ -1,4 +1,4 @@
-dateModified: 1729962910
+dateModified: 1730019704
 elementSources:
   craft\elements\Entry:
     -
@@ -198,6 +198,7 @@ meta:
     6180f8f9-5c6e-408f-898a-bc265d3dab24: 'Call to Action' # Call to Action
     6453b749-5f18-4ffc-b62a-393fa9752a52: 'Hero Image' # Hero Image
     8827b8d4-2266-4f88-840c-c506b19dafb0: Image # Image
+    24446aa6-8005-424a-8454-e760a87e7bb5: 'Content Builder' # Content Builder
     29691dec-8406-465e-bd7f-694f6a1776ff: Blog # Blog
     62967cc3-ad04-4380-8c1e-1a8c19ab8663: 'Figure Images' # Figure Images
     aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: Homepage # Homepage
@@ -208,6 +209,7 @@ meta:
     c243e913-1c84-463a-bbcb-327b23ff279a: Simple # Simple
     cadcecb7-766f-4de8-bee3-62b75a1e2092: 'Tour Highlight' # Tour Highlight
     cf79e9cc-32bf-4f52-90d6-6002f2370405: Music # Music
+    d19a47f7-e578-47f9-afb6-1d31e1066065: 'Blog Article' # Blog Article
     dff320e3-08a7-4091-a328-0a3aa8fc2b82: 'Blog Image' # Blog Image
     f3ad64b9-df55-4707-9d73-70653a4ee4f9: Worship # Worship
     f627def0-bb59-4992-ae44-aef0dfb97c08: 'Little Church' # Little Church

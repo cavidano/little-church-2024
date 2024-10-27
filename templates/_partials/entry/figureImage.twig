@@ -1,0 +1,13 @@
+<figure class="margin-y-5">
+    {% set image = entry.figureImage.one() %}
+    {% if image %}
+        <img class="width-100" src="{{ image.url }}" alt="{{ image.alt }}" />
+    {% endif %}
+    {% if entry.figureCaption %}
+        <figcaption class="container narrow">
+            <p>
+                {{ entry.figureCaption }}
+            </p>
+        </figcaption>
+    {% endif %}
+</figure>
