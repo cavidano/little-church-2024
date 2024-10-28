@@ -1,11 +1,33 @@
 <figure class="float-right">
     {% set image = entry.figureImageRight.one() %}
+
     {% if image %}
+
+    {% if entry.figureImageEnlarge %}
+
+    <button
+        class="lightbox-thumbnail"
+    👉  data-lightbox="image"
+    👉  data-lightbox-src="{{ image.url }}"
+    >
         <img
-            src="{{ image.url }}" 
+            class="width-100" 
+            src="{{ image.url('figureImageVertical') }}" 
             alt="{{ image.alt }}" 
         />
+    </button>
+
+    {% else %}
+
+    <img
+        src="{{ image.url('figureImageVertical') }}" 
+        alt="{{ image.alt }}" 
+    />
+
     {% endif %}
+
+    {% endif %}
+
     {% if entry.figureCaption %}
         <figcaption>
             <p>
@@ -13,4 +35,5 @@
             </p>
         </figcaption>
     {% endif %}
+
 </figure>

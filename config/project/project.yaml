@@ -1,4 +1,4 @@
-dateModified: 1730032629
+dateModified: 1730061635
 elementSources:
   craft\elements\Entry:
     -
@@ -95,9 +95,6 @@ elementSources:
         - postDate
         - expiryDate
         - link
-      type: native
-    -
-      key: 'section:619a0795-e1df-4a64-ba8a-f51f8d892ef8' # Visit
       type: native
     -
       heading: Channels
@@ -199,10 +196,12 @@ meta:
     4573cb02-ab7d-471a-80a1-93b140d3422a: 'Introduction Title' # Introduction Title
     6180f8f9-5c6e-408f-898a-bc265d3dab24: 'Call to Action' # Call to Action
     6453b749-5f18-4ffc-b62a-393fa9752a52: 'Hero Image' # Hero Image
+    8548ad6c-0d95-4934-8408-543b298b0227: 'Figure Image Horizontal' # Figure Image Horizontal
     8827b8d4-2266-4f88-840c-c506b19dafb0: Image # Image
     24446aa6-8005-424a-8454-e760a87e7bb5: Standard # Standard
     29691dec-8406-465e-bd7f-694f6a1776ff: Blog # Blog
     62967cc3-ad04-4380-8c1e-1a8c19ab8663: 'Figure Images' # Figure Images
+    661393a2-0468-49cc-8a89-0a450670c96d: 'Figure Image Vertical' # Figure Image Vertical
     aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: Homepage # Homepage
     b9395e1a-8d3b-4b8f-aafe-3eab9556b505: 'Primary Page Article' # Primary Page Article
     be991be1-9fbd-4fb8-9e2b-19282b305c62: 'Little Church' # Little Church
@@ -214,6 +213,7 @@ meta:
     d19a47f7-e578-47f9-afb6-1d31e1066065: 'Blog Article' # Blog Article
     dff320e3-08a7-4091-a328-0a3aa8fc2b82: 'Blog Image' # Blog Image
     f3ad64b9-df55-4707-9d73-70653a4ee4f9: Worship # Worship
+    f3e168c6-269e-4407-91bb-1679ca597acb: 'Figure Image Enlarge' # Figure Image Enlarge
     f627def0-bb59-4992-ae44-aef0dfb97c08: 'Little Church' # Little Church
     f8355048-22c0-4c2d-8873-4db92a78ab46: 'Virtual Tour Image' # Virtual Tour Image
     fce93b65-4251-416d-9a60-b4bdd015eb33: Homepage # Homepage
@@ -223,6 +223,17 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      allowedMessageFields: null
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from Little Church'
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: cavidano@gmail.com
 system:
   edition: solo
   live: true

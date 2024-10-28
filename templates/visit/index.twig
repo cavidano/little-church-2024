@@ -89,63 +89,12 @@
 
 						{% endif %}
 
-						<div>
-						
-							{# Loop through the Matrix blocks #}
+						{# Loop through the Matrix blocks #}
 							{% for block in entry.articleContent.all() %}
-							
-							{# Handle the Rich Text block #}
-							{% if block.type.handle == 'richText' %}
 
-							<div class="container narrow--md margin-y-4">
-								
-								{{ block.richText }}
-							
-							</div>
-							
-							{# Handle the Figure Image block #}
-							{% elseif block.type.handle == 'figureImage' %}
-							
-								<figure class="margin-y-5">
-								{% set image = block.figureImage.one() %}
-								{% if image %}
-									<img class="width-100" src="{{ image.url }}" alt="{{ image.alt }}" />
-								{% endif %}
-								{% if block.figureCaption %}
-									<figcaption class="container narrow">
-										<p>
-											{{ block.figureCaption }}
-										</p>
-									</figcaption>
-								{% endif %}
-								</figure>
-
-							{# Handle the Call to Action block #}
-							{% elseif block.type.handle == 'callToAction' %}
-
-								<div class="container narrow--md margin-y-2">
-									
-									{# Link for the Call to Action #}
-									{% if block.linkField is defined and block.linkField %}
-										<a class="button text-color-link" href="{{ block.linkField}}">
-											{{ block.title }}
-											{% if block.linkField.type == 'url' %}
-												<span class="icon icon-open-new"></span>
-											{% else %}
-												<span class="icon icon-arrow-right"></span>
-											{% endif %}
-										</a>
-									{% endif %}
-
-									{# {{ dump(block.linkField.type) }} #}
-
-								</div>
-							
-							{% endif %}
+							{{ block.render }}
 							
 							{% endfor %}
-
-						</div>
 						
 						<footer class="border-top padding-top-3 font-size-sm margin-top-4">
 							<div class="grid grid--column-3 gap-2 align-items-center">

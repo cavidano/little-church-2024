@@ -1,0 +1,11 @@
+fill: null
+format: null
+handle: figureImageHorizontal
+height: 1000
+interlace: none
+mode: fit
+name: 'Figure Image Horizontal'
+position: center-center
+quality: 60
+upscale: true
+width: 1000

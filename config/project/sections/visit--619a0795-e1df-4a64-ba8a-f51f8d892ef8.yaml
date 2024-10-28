@@ -21,7 +21,7 @@ propagationMethod: all
 siteSettings:
   f627def0-bb59-4992-ae44-aef0dfb97c08: # Little Church
     enabledByDefault: true
-    hasUrls: false
-    template: null
-    uriFormat: null
+    hasUrls: true
+    template: visit/index.twig
+    uriFormat: visit
 type: single

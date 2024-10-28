@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: figureImageEnlarge
+instructions: null
+name: 'Figure Image Enlarge'
+searchable: false
+settings:
+  default: false
+  offLabel: 'No Enlarge'
+  onLabel: Enlarge
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

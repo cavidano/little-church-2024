@@ -1,12 +1,34 @@
 <figure class="margin-y-5">
     {% set image = entry.figureImageFull.one() %}
+
     {% if image %}
+
+    {% if entry.figureImageEnlarge %}
+
+    <button
+        class="lightbox-thumbnail width-100"
+    👉  data-lightbox="image"
+    👉  data-lightbox-src="{{ image.url }}"
+    >
         <img
             class="width-100" 
-            src="{{ image.url }}" 
+            src="{{ image.url('figureImageHorizontal') }}" 
             alt="{{ image.alt }}" 
         />
+    </button>
+
+    {% else %}
+
+    <img
+        class="width-100" 
+        src="{{ image.url('figureImageHorizontal') }}" 
+        alt="{{ image.alt }}" 
+    />
+    
     {% endif %}
+
+    {% endif %}
+
     {% if entry.figureCaption %}
         <figcaption class="container narrow">
             <p>
@@ -14,4 +36,5 @@
             </p>
         </figcaption>
     {% endif %}
+
 </figure>

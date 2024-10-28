@@ -52,6 +52,28 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2024-10-27T16:24:50+00:00'
+            elementCondition: null
+            fieldUid: f3e168c6-269e-4407-91bb-1679ca597acb # Figure Image Enlarge
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6a948ddd-a1ef-451b-9be9-9faa656ea2a8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-27T16:25:13+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: d1a0c401-c8f9-4bdd-9ae3-8c3e3f63459c
+            userCondition: null
+          -
             dateAdded: '2024-10-27T12:18:23+00:00'
             elementCondition: null
             fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text

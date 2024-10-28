@@ -4,21 +4,96 @@
 
 <main id="skip-header-target">
 
-	<article>
+    <article>
 
-		<header class="theme-primary" id="introduction">
+        <header class="theme-primary" id="introduction">
+            <div class="container narrow medium--lg text-align-center padding-y-5">
+                <h1>Contact Us</h1>
+            </div>
+        </header>
 
-			<div class="container narrow medium--lg text-align-center padding-y-5">
+        {% macro errorList(errors) %}
+            {% if errors is not empty %}
+                {% for error in errors %}
+                    <small class="form-entry__feedback">
+                        <span class="icon icon-warn" aria-hidden="true"></span>
+                        <span class="message"><strong>{{ error }}</strong></span>
+                    </small>
+                {% endfor %}
+            {% endif %}
+        {% endmacro %}
 
-				<h1>
-					Conact Us
-				</h1>
+        {% set submission = submission ?? craft.app.session.getFlash('submission') %}
 
-			</div>
+        <form class="container medium margin-y-5" method="post" action="" accept-charset="UTF-8">
+            {{ csrfInput() }}
+            {{ actionInput('contact-form/send') }}
+            {{ redirectInput('contact/thanks') }}
 
-		</header>
+            <div class="form-entry {{ submission and submission.getErrors('fromName') ? 'is-invalid' }}">
+                <label class="form-entry__field">
+                    <span class="form-entry__field__label">Your Name</span>
+                    <span class="form-entry__field__input">
+                        {{ input('text', 'fromName', submission.fromName ?? '', {
+                            id: 'from-name',
+                            autocomplete: 'name',
+                        }) }}
+                    </span>
+                    {{ submission ? _self.errorList(submission.getErrors('fromName')) }}
+                </label>
+            </div>
 
-	</article>
+            <div class="form-entry {{ submission and submission.getErrors('fromEmail') ? 'is-invalid' }}">
+                <label class="form-entry__field">
+                    <span class="form-entry__field__label">Your Email</span>
+                    <span class="form-entry__field__input">
+                        {{ input('email', 'fromEmail', submission.fromEmail ?? '', {
+                            id: 'from-email',
+                            autocomplete: 'email',
+                        }) }}
+                    </span>
+                    {{ submission ? _self.errorList(submission.getErrors('fromEmail')) }}
+                </label>
+            </div>
+
+            <div class="form-entry {{ submission and submission.getErrors('subject') ? 'is-invalid' }}">
+                <label class="form-entry__field">
+                    <span class="form-entry__field__label">Subject</span>
+                    <span class="form-entry__field__input">
+                        {{ input('text', 'subject', submission.subject ?? '', {
+                            id: 'subject',
+                        }) }}
+                    </span>
+                    {{ submission ? _self.errorList(submission.getErrors('subject')) }}
+                </label>
+            </div>
+
+            <div class="form-entry {{ submission and submission.getErrors('message') ? 'is-invalid' }}">
+                <label class="form-entry__field">
+                    <span class="form-entry__field__label">Message</span>
+                    <span class="form-entry__field__input">
+                        {{ tag('textarea', {
+                            text: submission.message ?? '',
+                            id: 'message',
+                            name: 'message',
+                            rows: 10,
+                            cols: 40,
+                        }) }}
+                    </span>
+                </label>
+                {{ submission ? _self.errorList(submission.getErrors('message')) }}
+            </div>
+            
+            <button 
+                class="button theme-primary width-100" 
+                type="submit"
+            >
+                Send Message
+            </button>
+        
+        </form>
+
+    </article>
 
 </main>
 
