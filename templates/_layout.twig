@@ -18,6 +18,12 @@
         <!-- Natura11y Stylesheet -->
         <link rel="stylesheet" href="/dist/natura11y.css">
 
+        <!-- Events -->
+
+        <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet">
+        {# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> #}
+        {# <link rel="stylesheet" href="{{ siteUrl }}assets/events/css/main.css"> #}
+
     </head>
 
     <body>
@@ -44,6 +50,16 @@
 
         <!-- Natura11y Javascript -->
         <script src="/dist/natura11y.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Event
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
+        -->
+        <script src="{{ siteUrl }}/assets/events/js/main.js"></script>
+
+        {% block footerJs %}
+        {% endblock %}
 
     </body>
 

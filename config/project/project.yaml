@@ -1,4 +1,4 @@
-dateModified: 1730061635
+dateModified: 1730278911
 elementSources:
   craft\elements\Entry:
     -
@@ -172,6 +172,7 @@ meta:
     5a15575b-ec2e-47c3-bd00-eb854f1d8055: 'Text Content' # Text Content
     5b9003a1-5077-4296-9639-f03328dd74a2: 'Virtual Tour Images' # Virtual Tour Images
     5da48b70-636f-4798-99d0-24e2899dff02: 'Link URL' # Link URL
+    6f5da975-9b06-4385-a972-594aea2d9f04: 'Adult Education' # Adult Education
     6fded0a5-09f9-4885-9b87-14e039c52a6c: 'Link Field' # Link Field
     7e6327ec-021c-419b-a22d-fc3e845dc10f: 'Figure Image Right' # Figure Image Right
     7e837081-2d44-4b75-914c-abca14574951: Date # Date
@@ -218,7 +219,30 @@ meta:
     f8355048-22c0-4c2d-8873-4db92a78ab46: 'Virtual Tour Image' # Virtual Tour Image
     fce93b65-4251-416d-9a60-b4bdd015eb33: Homepage # Homepage
     fdcba0b0-5a7a-4a08-b572-3f2b31afb9a1: 'Virtual Tour Image' # Virtual Tour Image
+    ffa934d2-edc4-4201-869b-2aef62147aa3: Default # Default
 plugins:
+  calendar:
+    edition: pro
+    enabled: true
+    licenseKey: TAT0KQ80MC7YUFDGUON18YTP
+    schemaVersion: 5.0.1
+    settings:
+      allDay: false
+      authoredEventEditOnly: false
+      defaultView: day
+      demoBannerDisabled: true
+      descriptionFieldHandle: null
+      eventDuration: 60
+      firstDayOfWeek: -1
+      guestAccess: null
+      locationFieldHandle: null
+      overlapThreshold: 5
+      pluginName: Events
+      quickCreateEnabled: false
+      showDisabledEvents: false
+      showMiniCal: false
+      timeFormat: auto
+      timeInterval: 30
   ckeditor:
     edition: standard
     enabled: true

@@ -1,0 +1,22 @@
+allowRepeatingEvents: true
+color: '#21A789'
+description: ''
+descriptionFieldHandle: ''
+fieldLayout: null
+handle: adultEducation
+hasTitleField: true
+icsHash: null
+icsTimezone: floating
+locationFieldHandle: ''
+name: 'Adult Education'
+siteSettings:
+  66ede9ab-c579-4009-a15b-8c988a1aa0a4:
+    enabledByDefault: true
+    hasUrls: true
+    siteId: f627def0-bb59-4992-ae44-aef0dfb97c08 # Little Church
+    template: adult-education/_entry
+    uriFormat: 'adult-education/{slug}'
+titleFormat: ''
+titleLabel: Title
+titleTranslationKeyFormat: ''
+titleTranslationMethod: none

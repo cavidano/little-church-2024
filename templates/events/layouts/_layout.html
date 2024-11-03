@@ -1,0 +1,68 @@
+{% extends "_layout.twig" %}
+
+{# Acquire URL segments #}
+{% set segment1 = craft.app.request.segment(1) %}
+{% set segment2 = craft.app.request.segment(2) %}
+{% set segment3 = craft.app.request.segment(3) %}
+{% set segment4 = craft.app.request.segment(4) %}
+{% set segment5 = craft.app.request.segment(5) %}
+{% set segment6 = craft.app.request.segment(6) %}
+{% set segment7 = craft.app.request.segment(7) %}
+
+{% if page is not defined %}
+    {% set page = "month" %}
+{% endif %}
+
+{% block content %}
+
+<header class="theme-primary" id="introduction">
+
+    <div class="container narrow--md medium--lg text-align-center padding-y-5">
+
+        <h1 class="banner-headline">
+            Events
+        </h1>
+
+    </div>
+
+</header>
+
+<div class="container wide--xl">
+
+    <nav class="border-bottom">
+        <ul class="nav nav--horizontal nav--divider">
+            <li class="{{ page == 'month' ? 'active' }}">
+                <a class="nav-link" href="{{ siteUrl }}events/month">Month</a>
+            </li>
+            <li class="{{ page == 'week' ? 'active' }}">
+                <a class="nav-link" href="{{ siteUrl }}events/week">Week</a>
+            </li>
+            <li class="{{ page == 'day' ? 'active' }}">
+                <a class="nav-link" href="{{ siteUrl }}events/day">Day</a>
+            </li>
+            <li class="{{ page == 'events' ? 'active' }}">
+                <a class="nav-link" href="{{ siteUrl }}events/events">Events List</a>
+            </li>
+            {#
+            <li class="{{ page == 'calendars' ? 'active' }}">
+                <a class="nav-link" href="{{ siteUrl }}events/calendars">Calendars</a>
+            </li>
+            <li class="{{ page == 'fullcalendar' ? 'active' }}">
+                <a class="nav-link" href="{{ siteUrl }}events/fullcalendar">Full Calendar</a>
+            </li>
+            <li class="{{ page == 'edit' ? 'active' }}">
+                <a class="nav-link" href="{{ siteUrl }}events/edit/event/new">Create</a>
+            </li>  
+            #}
+        </ul>
+    </nav>
+
+    <main id="skip-header-target">
+        {% block eventContent %}
+        
+        {% endblock %}
+    </main>
+
+</div>
+
+{% endblock %}

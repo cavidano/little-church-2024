@@ -1,0 +1,125 @@
+{% extends "events/layouts/_layout.html" %}
+
+{% set pageTitle = "Month" %}
+{% set page = "month" %}
+
+{% block eventContent %}
+
+    <div class="div screen-reader-only">
+
+        <h1>Month</h1>
+
+        <p>
+            Below is full month calendar view, which allows you to see all your event occurrences.
+        </p>
+
+    </div>
+
+    {% set targetDate = "today" %}
+    {% set calendarHandle = null %}
+    {% if segment3 == "calendar" %}
+        {% set calendarHandle = segment4 %}
+        {% if segment5 %}
+            {% set targetDate = segment5~"-"~segment6~"-01" %}
+        {% endif %}
+    {% elseif segment3 is not empty %}
+        {% set targetDate = segment3~"-"~segment4~"-01" %}
+    {% endif %}
+
+    <div
+        class="margin-y-5"
+    >
+        {% include "events/layouts/_calendar_banner.html" %}
+
+        <div id="month_calendar">
+            {% set month = craft.calendar.month({
+                date: targetDate,
+                calendar: calendarHandle,
+            }) %}
+
+            {% set dateBoundsHelper = now.diff(month.nextDate)|date('%r%a') %}
+
+            <div class="display-flex justify-content-between align-items-center margin-bottom-2">
+                <div>
+                {% if dateBoundsHelper > -365 %}
+                    <a
+                        class="button 👉 button--has-icon text-color-link font-size-sm"
+                        href="{{ siteUrl }}events/month/{{ segment3 == "calendar" ? "calendar/"~segment4~"/" }}{{ month.previousDate.format('Y/m') }}"
+                    >
+                        <span class="icon icon-arrow-left"></span>
+                        <span class="button__text">{{ month.previousDate.format('F') }}</span>
+                    </a>
+                {% endif %}
+                </div>
+
+                <div>
+                    <h3 class="h2">
+                        {% include "events/layouts/_month_heading.html" with {month: month} only %} &nbsp;
+                    </h3>
+                </div>
+
+                <div>
+                {% if dateBoundsHelper < 365 %}
+                    <a
+                        class="button 👉 button--has-icon text-color-link font-size-sm"
+                        href="{{ siteUrl }}events/month/{{ segment3 == "calendar" ? "calendar/"~segment4~"/" }}{{ month.nextDate.format('Y/m') }}"
+                    >
+                        <span class="icon icon-arrow-right"></span>
+                        <span class="button__text">{{ month.nextDate.format('F') }}</span>
+                    </a>
+                {% endif %}
+                </div>
+            </div>
+
+            <div class="screen-reader-only {{ month.eventCount ? "badge-warning" : "badge-secondary" }}">
+                {{ month.eventCount }} event{{ month.eventCount > 1 or month.eventCount == 0 ? "s" }}
+            </div>
+                
+            <table id="month_calendar_inner" class="table table--divider border">
+                <thead>
+                    <tr id="days_of_week" class="active">
+                        {% for day in month|first %}
+                            <th class="day_of_week text-align-center">
+                                {{ day.date.format('l') }}
+                            </th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                {% for week in month %}
+                    <tr>
+                        {% for day in week %}
+                            {% if month.containsDate(day.date) %}
+                            <td class="day_cell{{ day.dateLocalized.isToday ? " today" }}">
+                                <div class="date{{ day.eventCount ? " has_events" }}">
+                                    <a class="num"
+                                       href="{{ siteUrl }}events/day/{{ segment3 == 'calendar' ? "calendar/"~segment4~"/" }}{{ day.date.format('Y/m/d') }}">
+                                        {{ day.date.format('j') }}
+                                    </a>
+                                </div>
+                            {% else %}
+                                <td class="day_cell out_of_range">
+                                <div class="date">
+                                    <span class="num">
+                                        {{ day.date.format('j') }}
+                                    </span>
+                                </div>
+                            {% endif %}
+
+                            {% for event in day.events %}
+                                {% include "events/layouts/_event.html" %}
+                            {% endfor %}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="display-none">
+            {% include "events/layouts/_sidebar.html" %}
+        </div>
+    </div>
+
+{% endblock %}
