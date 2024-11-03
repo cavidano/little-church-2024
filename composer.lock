@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea095df7952f82bdd427a258fb4c357b",
+    "content-hash": "653d93012eaf3fd7da6e6f39467675db",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1035,15 +1035,15 @@
         },
         {
             "name": "ezyang/htmlpurifier",
-            "version": "v4.17.0",
+            "version": "v4.18.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/bbc513d79acf6691fa9cf10f192c90dd2957f18c",
-                "reference": "bbc513d79acf6691fa9cf10f192c90dd2957f18c",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/cb56001e54359df7ae76dc522d08845dc741621b",
+                "reference": "cb56001e54359df7ae76dc522d08845dc741621b",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
+                "php": "~5.6.0 || ~7.0.0 || ~7.1.0 || ~7.2.0 || ~7.3.0 || ~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
             },
             "suggest": {
                 "cerdic/css-tidy": "If you want to use the filter 'Filter.ExtractStyleBlocks'.",
@@ -1078,7 +1078,7 @@
             "keywords": [
                 "html"
             ],
-            "time": "2023-11-17T15:01:25+00:00"
+            "time": "2024-11-01T03:51:45+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -1836,6 +1836,55 @@
                 "twig"
             ],
             "time": "2024-09-23T17:20:25+00:00"
+        },
+        {
+            "name": "nystudio107/craft-code-field",
+            "version": "5.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-code-field/zipball/d3b6d2ca921bf3c3f80c2bb39a5727968f89145b",
+                "reference": "d3b6d2ca921bf3c3f80c2bb39a5727968f89145b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "nystudio107/craft-code-editor": "^1.0.14",
+                "php": "^8.2"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Code Field",
+                "handle": "codefield",
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-code-field/v5/CHANGELOG.md",
+                "class": "nystudio107\\codefield\\CodeField"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\codefield\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com"
+                }
+            ],
+            "description": "Provides a Code Field that has a full-featured code editor with syntax highlighting & autocomplete",
+            "keywords": [
+                "cms",
+                "code field",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/nystudio107/craft-code-field/blob/v5/README.md",
+                "issues": "https://github.com/nystudio107/craft-code-field/issues"
+            },
+            "time": "2024-04-15T17:34:05+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",

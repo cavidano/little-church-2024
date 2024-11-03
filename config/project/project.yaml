@@ -1,4 +1,4 @@
-dateModified: 1730278911
+dateModified: 1730650836
 elementSources:
   craft\elements\Entry:
     -
@@ -166,6 +166,7 @@ fs:
     url: '@web/images/uploads/virtual-tour'
 meta:
   __names__:
+    2e80586a-8fa3-4ab6-9eb0-b8c61016ebd5: 'Brand Logo' # Brand Logo
     2f747c28-c7c2-4200-a471-390a2e529c99: 'Figure Image Full' # Figure Image Full
     3f15b324-fa65-485b-ab56-f9bfed089117: 'Homepage Carousel' # Homepage Carousel
     4de8895d-cb53-4939-90f8-d37639e60da3: 'Virtual Tour' # Virtual Tour
@@ -182,6 +183,7 @@ meta:
     46c2bc01-7fec-4a8d-9e8f-c578c727a0e3: 'Figure Image Right' # Figure Image Right
     67cb7d46-6622-4ee4-8930-b7fe3a6b6655: 'Hompepage Carousel' # Hompepage Carousel
     75c8e62e-3242-4d56-90d1-090d035078f6: 'Figure Image Full' # Figure Image Full
+    86bf3f52-140d-4267-8025-466a1c2b90d7: 'Specialty Banner' # Specialty Banner
     90d007fb-964b-4788-b672-633d855a0058: 'Rich Text' # Rich Text
     92eb37bb-240d-4363-ac53-88e9360941e8: 'Blog Images' # Blog Images
     0230f447-379b-4039-be7e-8a8160c130fd: 'Audio Sermons' # Audio Sermons
@@ -194,6 +196,7 @@ meta:
     820a6717-36a8-4b5c-819b-cbdc9e036334: 'Article Content Matrix' # Article Content Matrix
     820e255c-6450-4806-b5ca-85831d8a7c7f: 'Plain Text' # Plain Text
     979c8d61-727b-4c46-ab40-83a3561c192a: 'Hero Images' # Hero Images
+    4024edd3-9d2b-446a-a6dd-48f15e0fc637: 'Featured Pages' # Featured Pages
     4573cb02-ab7d-471a-80a1-93b140d3422a: 'Introduction Title' # Introduction Title
     6180f8f9-5c6e-408f-898a-bc265d3dab24: 'Call to Action' # Call to Action
     6453b749-5f18-4ffc-b62a-393fa9752a52: 'Hero Image' # Hero Image
@@ -247,6 +250,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  codefield:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   contact-form:
     edition: standard
     enabled: true

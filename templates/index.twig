@@ -89,18 +89,30 @@
 
 			<div class="grid grid--divider grid--divider--fill-x grid--divider--fill-y grid--column-2--lg">
 
+				{% set featuredPages = entry.featuredPages.all() %}
+
+				{% for page in featuredPages %}
 				<div>				
-					<a class="backdrop theme-dark" href="#1">
+					<a class="backdrop theme-dark" href="{{ page.url }}">
 
 						<div class="backdrop__media">
-							<img class="gradient-mask-bottom" src="/src/images/homepage-quadrants/clergy-and-staff.jpg" alt="Placeholder" />
+							{% if page.heroImage | length %}
+								{% set image = page.heroImage.one() %}
+								<img
+									class="gradient-mask-bottom"
+									src="{{ image.url }}"
+									alt="{{ image.alt ?? '' }}"
+								/>
+							{% else %}
+								<img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder">
+							{% endif %}
 						</div>
 
 						<div class="backdrop__cover align-content-end justify-content-start">
 
 							<div class="container text-align-center">
 								<h3 class="text-shadow margin-bottom-3">
-									Clergy &amp; Staff
+									{{ page.title }}
 								</h3>
 							</div>
 
@@ -108,68 +120,9 @@
 
 					</a>
 				</div>
+				
+				{% endfor %}
 
-				<div>					
-					<a class="backdrop theme-dark" href="#1">
-
-						<div class="backdrop__media">
-							<img class="gradient-mask-bottom" src="/src/images/homepage-quadrants/liturgy.jpg" alt="Placeholder" />
-						</div>
-
-						<div class="backdrop__cover align-content-end justify-content-start">
-
-							<div class="container text-align-center">
-								<h3 class="text-shadow margin-bottom-3">
-									Liturgy
-								</h3>
-							</div>
-
-						</div>
-
-					</a>
-				</div>
-
-				<div>
-					
-					<a class="backdrop theme-dark" href="#1">
-
-						<div class="backdrop__media">
-							<img class="gradient-mask-bottom" src="/src/images/homepage-quadrants/music.jpg" alt="Placeholder" />
-						</div>
-
-						<div class="backdrop__cover align-content-end justify-content-start">
-
-							<div class="container text-align-center">
-								<h3 class="text-shadow margin-bottom-3">
-									Music
-								</h3>
-							</div>
-
-						</div>
-
-					</a>
-				</div>
-
-				<div>
-					<a class="backdrop theme-dark" href="#1">
-
-						<div class="backdrop__media">
-							<img class="gradient-mask-bottom" src="/src/images/homepage-quadrants/parish-life.jpg" alt="Placeholder" />
-						</div>
-
-						<div class="backdrop__cover align-content-end justify-content-start">
-
-							<div class="container text-align-center">
-								<h3 class="text-shadow margin-bottom-3">
-									Parish life
-								</h3>
-							</div>
-
-						</div>
-
-					</a>
-				</div>
-		
 			</div>
 
 		</div>
@@ -224,36 +177,31 @@
 	<section class="theme-dark overflow-hidden">
 
 		<div class="margin-y-6">
-
-			<h2 class="screen-reader-only">
-				Vel Facilisis Volutpat
-			</h2>
 			
-			<div class="container narrow wide--lg">
+			<div class="margin-x-auto wide--lg">
 
 				<div class="grid grid--column-2--lg align-items-center gap-4">
 
-				<article>
+					<article>
 
-					<div class="container narrow margin-y-4">
+						<div class="container narrow--lg margin-y-4">
 
-						<div class="margin-bottom-3">
-							<h2>
-								How we became the <em>little church around the corner</em>
+							<div class="margin-bottom-3">
+								<h2>
+									How we became the <em>little church around the corner</em>
+								</h2>
+								<p>
+									From our founding in 1848 to the Civil War, and our longstanding ties to the theater, discover the vibrant history of our little church. 
+								</p>
+							</div>
 
-							</h2>
-							<p>
-								From our founding in 1848 to the Civil War, and our longstanding ties to the theater, discover the vibrant history of our little church. 
-							</p>
+							<a href="#1" class="button button--has-icon theme-primary font-size-md">
+								<span class="button__text">A Breif History</span>
+								<span class="icon icon-arrow-right"></span>
+							</a>
 						</div>
 
-						<a href="#1" class="button button--has-icon theme-primary font-size-md">
-							<span class="button__text">A Breif History</span>
-							<span class="icon icon-arrow-right"></span>
-						</a>
-					</div>
-
-				</article>
+					</article>
 
 					<div class="backdrop backdrop--fixed theme-dark aspect-ratio-1x1">
 

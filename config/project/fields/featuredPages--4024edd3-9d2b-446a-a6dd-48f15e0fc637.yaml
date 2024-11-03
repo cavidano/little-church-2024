@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: featuredPages
+instructions: null
+name: 'Featured Pages'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: true
+  showSiteMenu: true
+  sources:
+    - 'section:612cf07a-8adc-436d-8d30-04c51e6251c6' # About
+    - 'section:bfa7add0-6499-4af5-8d33-4dc3e2e262ad' # Education
+    - 'section:cf79e9cc-32bf-4f52-90d6-6002f2370405' # Music
+    - 'section:f3ad64b9-df55-4707-9d73-70653a4ee4f9' # Worship
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

@@ -1,0 +1,11 @@
+fieldLayouts:
+  95723c25-a596-454c-8d7d-632a3d33efb7:
+    tabs:
+      -
+        elementCondition: null
+        name: 'Brand Logo'
+        uid: 513cfc7a-e70d-45c1-bdb1-81c7f54968c6
+        userCondition: null
+handle: brandLogo
+name: 'Brand Logo'
+sortOrder: 1

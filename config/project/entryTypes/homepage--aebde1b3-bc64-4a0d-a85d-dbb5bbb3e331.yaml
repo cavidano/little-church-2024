@@ -36,18 +36,18 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-10-19T01:39:42+00:00'
+            dateAdded: '2024-11-03T14:13:58+00:00'
             elementCondition: null
-            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Rich Text
-            handle: homepageContent
+            fieldUid: 4024edd3-9d2b-446a-a6dd-48f15e0fc637 # Featured Pages
+            handle: null
             includeInCards: false
             instructions: null
-            label: Content
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0c5178b9-f146-4ae7-ad0c-109afb5e3bd9
+            uid: cfa14652-f970-4ca1-b4bb-d42d6fbdb85e
             userCondition: null
             warning: null
             width: 100
