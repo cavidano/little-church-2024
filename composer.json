@@ -7,6 +7,7 @@
     "craftcms/contact-form": "3.1.0",
     "nystudio107/craft-code-field": "5.0.0",
     "solspace/craft-calendar": "5.0.11",
+    "verbb/cp-nav": "5.0.2",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

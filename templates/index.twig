@@ -80,7 +80,7 @@
 		<div class="container narrow medium--lg text-align-center margin-bottom-5">
 		
 			<h2 class="banner-headline">
-				We embrace all who seek God's inclusive love
+				{{ entry.headerIntroduction }}
 			</h2>
 			
 		</div>
@@ -128,51 +128,109 @@
 		</div>
 
 	</section>
+	<!-- This needs authored and added to the CMS -->
 
-    <section class="margin-y-6">
-    
-        <div class="container wide">
+	{% if entry.spotlightVideoUrl is not empty %}
 
-            <header class="header border-bottom border-color-dark padding-bottom-1 margin-bottom-2">
-                <h2 class="font-size-sm font-weight-normal text-transform-uppercase">Spotlight Video</h2>
-            </header>
+	<section class="margin-y-6">
+		<div class="container wide">
 
-            <div class="grid grid--column-2--lg align-items-center gap-4">
-            
-                <div class="theme-dark  order-2--lg">
-					<iframe 
-					class="aspect-ratio-16x9 width-100"
-						src="https://www.youtube.com/embed/pr9spsWsdDo?si=7GR7M0TJYwDjPa-0"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin"
-						allowfullscreen>
-					</iframe>
+			<!-- Static Section Title -->
+			<header class="header border-bottom border-color-dark padding-bottom-1 margin-bottom-2">
+				<h2 class="font-size-sm font-weight-normal text-transform-uppercase">Spotlight Video</h2>
+			</header>
+
+			<div class="grid grid--column-2--lg align-items-center gap-4">
+			
+				<!-- Dynamic Thumbnail Image with Lightbox Button -->
+				<div class="order-2--lg">
+					<button
+						class="lightbox-thumbnail"
+						data-lightbox="video"
+						id="play-video-button"
+						target="_blank">
+						<img 
+							id="video-thumbnail"
+							class="width-100 aspect-ratio-16x9" 
+							src="https://via.placeholder.com/1280x720?text=Loading..." 
+							alt="YouTube video thumbnail"
+						/>
+					</button>
 				</div>
 
-                <div>
+				<!-- Dynamic Title and Description -->
+				<div>
+					<h3 id="video-title">Loading video title...</h3>
+					<p id="video-description">Loading video description...</p>
 
-                    <h3>
-                        A Requiem Mass for Rudy Mazzocchi
-                    </h3>
-                
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod porro nobis soluta facilis quas cupiditate quae.
-                    </p>
+					<a id="video-link" class="button 👉 button--has-icon theme-primary font-size-md" href="#" target="_blank">
+						<span class="icon icon-youtube"></span>
+						<span class="button__text">Watch on YouTube</span>
+					</a>
+				</div>
+			
+			</div> 
+			
+		</div>
+	</section>
 
-                    <a class="button 👉 button--has-icon theme-primary font-size-md" href="#1">
-                        <span class="icon icon-youtube"></span>
-                        <span class="button__text">Little Church on Youtube</span>
-                    </a>
+	<!-- JavaScript to Fetch Video Data and Update Lightbox Embed URL -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const videoUrl = "{{ entry.spotlightVideoUrl }}";
 
-                </div>
-            
-            </div> 
-            
-        </div>
+			if (!videoUrl) {
+				console.warn("No video URL provided.");
+				return;
+			}
 
-    </section>
+			// Extract video ID from the URL
+			const videoIdMatch = videoUrl.match(/(?:v=|\/)([0-9A-Za-z_-]{11})(?:\?|&|$)/);
+			const videoId = videoIdMatch ? videoIdMatch[1] : null;
+
+			if (!videoId) {
+				console.warn("Invalid YouTube URL provided.");
+				return;
+			}
+
+			// Generate Embed URL
+			const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+			
+			// Set the Embed URL in the lightbox button's data attribute
+			const playButton = document.getElementById("play-video-button");
+			playButton.setAttribute("data-lightbox-src", embedUrl);
+
+			// Fetch YouTube Data API for metadata (title, description, and thumbnail)
+			const apiKey = "AIzaSyBMukzRcxV0QEUWhIAQiDALNq0PoVqyghs"; // Use your actual API key
+			const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${apiKey}&part=snippet`;
+
+			fetch(apiUrl)
+				.then(response => response.json())
+				.then(data => {
+					if (data.items && data.items.length > 0) {
+						const snippet = data.items[0].snippet;
+						
+						// Update title and description
+						document.getElementById("video-title").innerText = snippet.title || "Title unavailable";
+						document.getElementById("video-description").innerText = snippet.description || "Description unavailable";
+
+						// Update thumbnail image
+						const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+						document.getElementById("video-thumbnail").src = thumbnailUrl;
+
+						// Update external YouTube link
+						document.getElementById("video-link").href = videoUrl;
+					} else {
+						console.warn("No video data found.");
+					}
+				})
+				.catch(() => console.warn("Error fetching video details. Please check the API key and video URL."));
+		});
+	</script>
+
+	{% endif %}
+
+	<!-- This needs authored and added to the CMS -->
 
 	<section class="theme-dark overflow-hidden">
 

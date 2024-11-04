@@ -1,4 +1,4 @@
-dateModified: 1730650836
+dateModified: 1730656693
 elementSources:
   craft\elements\Entry:
     -
@@ -166,6 +166,7 @@ fs:
     url: '@web/images/uploads/virtual-tour'
 meta:
   __names__:
+    1c7365c4-cfdc-40d5-9fa9-73682e32a75f: Default # Default
     2e80586a-8fa3-4ab6-9eb0-b8c61016ebd5: 'Brand Logo' # Brand Logo
     2f747c28-c7c2-4200-a471-390a2e529c99: 'Figure Image Full' # Figure Image Full
     3f15b324-fa65-485b-ab56-f9bfed089117: 'Homepage Carousel' # Homepage Carousel
@@ -206,7 +207,7 @@ meta:
     29691dec-8406-465e-bd7f-694f6a1776ff: Blog # Blog
     62967cc3-ad04-4380-8c1e-1a8c19ab8663: 'Figure Images' # Figure Images
     661393a2-0468-49cc-8a89-0a450670c96d: 'Figure Image Vertical' # Figure Image Vertical
-    aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: Homepage # Homepage
+    aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: 'Homepage Layout' # Homepage Layout
     b9395e1a-8d3b-4b8f-aafe-3eab9556b505: 'Primary Page Article' # Primary Page Article
     be991be1-9fbd-4fb8-9e2b-19282b305c62: 'Little Church' # Little Church
     bfa7add0-6499-4af5-8d33-4dc3e2e262ad: Education # Education
@@ -216,6 +217,7 @@ meta:
     cf79e9cc-32bf-4f52-90d6-6002f2370405: Music # Music
     d19a47f7-e578-47f9-afb6-1d31e1066065: 'Blog Article' # Blog Article
     dff320e3-08a7-4091-a328-0a3aa8fc2b82: 'Blog Image' # Blog Image
+    e404e713-c6b5-42aa-9614-6eab00ed8cc5: 'Spotlight Video URL' # Spotlight Video URL
     f3ad64b9-df55-4707-9d73-70653a4ee4f9: Worship # Worship
     f3e168c6-269e-4407-91bb-1679ca597acb: 'Figure Image Enlarge' # Figure Image Enlarge
     f627def0-bb59-4992-ae44-aef0dfb97c08: 'Little Church' # Little Church
@@ -232,7 +234,7 @@ plugins:
     settings:
       allDay: false
       authoredEventEditOnly: false
-      defaultView: day
+      defaultView: events
       demoBannerDisabled: true
       descriptionFieldHandle: null
       eventDuration: 60
@@ -265,6 +267,10 @@ plugins:
       prependSubject: 'New message from Little Church'
       successFlashMessage: 'Your message has been sent.'
       toEmail: cavidano@gmail.com
+  cp-nav:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.11
 system:
   edition: solo
   live: true

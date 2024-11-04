@@ -1,0 +1,16 @@
+currLabel: Calendars
+customIcon: null
+enabled: true
+handle: calendars
+icon: null
+layout: 1c7365c4-cfdc-40d5-9fa9-73682e32a75f # Default
+level: 2
+newWindow: false
+parent: fc476b5f-f8f4-4ef8-a299-603439fdcbc7
+prevLabel: Calendars
+prevLevel: 2
+prevParent: fc476b5f-f8f4-4ef8-a299-603439fdcbc7
+prevUrl: calendar/calendars
+sortOrder: 10
+type: plugin
+url: calendar/calendars

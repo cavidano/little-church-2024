@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331 # Homepage
+  - aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331 # Homepage Layout
 handle: homepage
 maxAuthors: 1
 name: Homepage
