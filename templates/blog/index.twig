@@ -4,181 +4,76 @@
 
 <main id="skip-header-target">
 
-	<article>
+    <article>
 
-		<header class="theme-primary" id="introduction">
+        <header class="theme-primary" id="introduction">
+            <div class="container narrow medium--lg text-align-center padding-y-5">
+                <h1>Our Little Blog</h1>
+            </div>
+        </header>
 
-			<div class="container narrow medium--lg text-align-center padding-y-5">
+        <div class="margin-x-auto narrow--md wide--lg margin-y-5">
+            
+            {# Fetch the latest blog post #}
+            {% set latestPost = craft.entries()
+                .section('blog')
+                .orderBy('postDate desc')
+                .one() %}
 
-				<h1>
-					Our Little Blog
-				</h1>
+            {% if latestPost %}
 
-			</div>
-
-		</header>
-
-		<div class="margin-x-auto narrow--md wide--lg margin-y-5">
-
-			<article class="grid grid--column-2 align-items-center--xl theme-dark">
-
-				<div>
-					<img src="/src/images/blog/hero-eternal-resurrection.jpg" alt="">
-				</div>
-
-				<div class="container text-align-center">
-					<p class="font-size-sm margin-bottom-0">
-						October 19, 2024
-					</p>
-					
-					<h2 class="margin-bottom-2">
-						Eternal Resurrection
-					</h2>
-
-					<p class="font-size-sm">
-						By <a href="#">The Rev. Dr. Patrick J. Ward</a>
-					</p>
-				</div>
-			
-			</article>
-
-			<hr class="margin-y-4" />
-
-			<ul class="grid grid--divider--fill-x grid--column-3--lg gap-4">
-
-				<li>
-					<a class="display-block" href="#">
-
-						<img
-							class="margin-bottom-2"
-							src="/src/images/blog/03-17-2020.jpg"
-							alt="Transfiguration's Updated Statement on COVID-19"
-						/>
-
-						<p class="margin-bottom-1 font-size-md">March 17, 2020</p>
-						<h5>Transfiguration's Updated Statement on COVID-19</h5>
-					</a>
-				</li>
-
-				<li>
-					<a class="display-block" href="#">
-
-						<img
-							class="margin-bottom-2"
-							src="/src/images/blog/03-13-2020.jpg"
-							alt="Transfiguration's Updated Statement on COVID-19"
-						/>
-
-						<p class="margin-bottom-1 font-size-md">March 17, 2020</p>
-						<h5>Transfiguration's Updated Statement on COVID-19</h5>
-					</a>
-				</li>
-			
-				<li>
-					<a class="display-block" href="#">
-
-						<img
-							class="margin-bottom-2"
-							src="/src/images/blog/09-19-2019.jpg"
-							alt="Transfiguration's Updated Statement on COVID-19"
-						/>
-
-						<p class="margin-bottom-1 font-size-md">March 17, 2020</p>
-						<h5>Transfiguration's Updated Statement on COVID-19</h5>
-					</a>
-				</li>
-
-				<li>
-					<a class="display-block" href="#">
-
-						<img
-							class="margin-bottom-2"
-							src="/src/images/blog/05-15-2019.jpg"
-							alt="Transfiguration's Updated Statement on COVID-19"
-						/>
-
-						<p class="margin-bottom-1 font-size-md">March 17, 2020</p>
-
-						<h5>Transfiguration's Updated Statement on COVID-19</h5>
-					</a>
-				</li>
-
-				<li>
-					<a class="display-block" href="#">
-
-						<img
-							class="margin-bottom-2"
-							src="/src/images/blog/10-24-2018.jpg"
-							alt="Transfiguration's Updated Statement on COVID-19"
-						/>
-
-						<p class="margin-bottom-1 font-size-md">March 17, 2020</p>
-						<h5>Transfiguration's Updated Statement on COVID-19</h5>
-					</a>
-				</li>
+			<a href="{{ latestPost.url }}">
 				
-				<li>
-					<a class="display-block" href="#">
+                <article class="grid grid--column-2 align-items-center--xl theme-dark">
 
-						<img
-							class="margin-bottom-2"
-							src="/src/images/blog/07-20-2018.jpg"
-							alt="Transfiguration's Updated Statement on COVID-19"
-						/>
+                    <div>
+                        <img src="{{ latestPost.blogImage.one().getUrl() }}" alt="{{ latestPost.title }}">
+                    </div>
+                    
+					<div class="container text-align-center">
+                        <p class="font-size-sm margin-bottom-0">
+                            {{ latestPost.postDate|date("F j, Y") }}
+                        </p>
+                        <h2 class="margin-bottom-2">{{ latestPost.title }}</h2>
+                        <p class="font-size-sm">
+                            By {{ latestPost.blogAuthor }}
+                        </p>
+                    </div>
+                
+				</article>
 
-						<p class="margin-bottom-1 font-size-md">March 17, 2020</p>
-						<h5>Transfiguration's Updated Statement on COVID-19</h5>
-					</a>
-				</li>
-				
-				<li>
-					<a class="display-block" href="#">
+			</a>
 
-						<img
-							class="margin-bottom-2"
-							src="/src/images/blog/03-13-2018.jpg"
-							alt="Transfiguration's Updated Statement on COVID-19"
-						/>
+            {% endif %}
 
-						<p class="margin-bottom-1 font-size-md">March 17, 2020</p>
-						<h5>Transfiguration's Updated Statement on COVID-19</h5>
-					</a>
-				</li>
-				
-				<li>
-					<a class="display-block" href="#">
+            <hr class="margin-y-4" />
 
-						<img
-							class="margin-bottom-2"
-							src="/src/images/blog/01-15-2018.jpg"
-							alt="Transfiguration's Updated Statement on COVID-19"
-						/>
+            {# Fetch the rest of the blog posts, excluding the latest one #}
+            {% set blogPosts = craft.entries()
+                .section('blog')
+                .orderBy('postDate desc')
+                .offset(1)
+                .all() %}
 
-						<p class="margin-bottom-1 font-size-md">March 17, 2020</p>
-						<h5>Transfiguration's Updated Statement on COVID-19</h5>
-					</a>
-				</li>
-				
-				<li>
-					<a class="display-block" href="#">
+            <ul class="grid grid--divider--fill-x grid--column-3--lg gap-4">
+                {% for post in blogPosts %}
+                    <li>
+                        <a class="display-block" href="{{ post.url }}">
+                            <img
+                                class="margin-bottom-2"
+                                src="{{ post.blogImage.one().getUrl() }}"
+                                alt="{{ post.title }}"
+                            />
+                            <p class="margin-bottom-1 font-size-md">{{ post.postDate|date("F j, Y") }}</p>
+                            <h5>{{ post.title }}</h5>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
 
-						<img
-							class="margin-bottom-2"
-							src="/src/images/blog/12-21-2017.jpg"
-							alt="Transfiguration's Updated Statement on COVID-19"
-						/>
+        </div>
 
-						<p class="margin-bottom-1 font-size-md">March 17, 2020</p>
-						<h5>Transfiguration's Updated Statement on COVID-19</h5>
-					</a>
-				</li>
-			
-			</ul>
-		
-		</div>
-
-
-	</article>
+    </article>
 
 </main>
 

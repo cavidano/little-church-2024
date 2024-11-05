@@ -1,6 +1,6 @@
 <div class="container narrow--md margin-y-2">
 
-	{% if entry.linkField is defined and entry.linkField %}
+	{% if entry.linkField %}
 		<a class="button text-color-link" href="{{ entry.linkField}}">
 			{{ entry.title }}
 			{% if entry.linkField.type == 'url' %}

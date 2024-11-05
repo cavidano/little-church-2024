@@ -63,11 +63,6 @@
                         Blog
                     </a>
                 </li>
-                <li>
-                    <a href="#" {{ macros.is_active('pledge') }}>
-                        Pledge
-                    </a>
-                </li>
             </ul>
 
             <ul class="global-header__nav__primary">
@@ -148,6 +143,13 @@
                         Events
                     </a>
                 </li>
+
+                <li>
+                    <a href="/give" {{ macros.is_active('give') }}>
+                        Give
+                    </a>
+                </li>
+
             </ul>
         </nav>
     </header>

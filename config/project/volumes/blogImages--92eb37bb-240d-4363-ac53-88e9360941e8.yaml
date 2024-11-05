@@ -81,7 +81,7 @@ fieldLayouts:
         name: Content
         uid: a1b54ce5-4f96-4508-b22b-7b0e4cf0fb86
         userCondition: null
-fs: blog
+fs: blogImages
 handle: blogImages
 name: 'Blog Images'
 sortOrder: 6

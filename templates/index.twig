@@ -137,7 +137,7 @@
 
 			<!-- Static Section Title -->
 			<header class="header border-bottom border-color-dark padding-bottom-1 margin-bottom-2">
-				<h2 class="font-size-sm font-weight-normal text-transform-uppercase">Spotlight Video</h2>
+				<h2 class="h6 text-transform-uppercase">Spotlight Video</h2>
 			</header>
 
 			<div class="grid grid--column-2--lg align-items-center gap-4">
@@ -245,26 +245,32 @@
 						<div class="container narrow--lg margin-y-4">
 
 							<div class="margin-bottom-3">
-								<h2>
-									How we became the <em>little church around the corner</em>
-								</h2>
-								<p>
-									From our founding in 1848 to the Civil War, and our longstanding ties to the theater, discover the vibrant history of our little church. 
-								</p>
+								{{ entry.featureText }}
 							</div>
+							
+							{% if entry.featureLink is defined and entry.featureLink %}
+                            <a href="{{ entry.featureLink }}" class="button button--has-icon theme-primary font-size-md">
+                                <span class="button__text">{{ entry.featureLink.label ?? "Read More" }}</span>
+                                <span class="icon icon-arrow-right"></span>
+                            </a>
+                        	{% endif %}
 
-							<a href="#1" class="button button--has-icon theme-primary font-size-md">
-								<span class="button__text">A Breif History</span>
-								<span class="icon icon-arrow-right"></span>
-							</a>
 						</div>
 
 					</article>
 
 					<div class="backdrop backdrop--fixed theme-dark aspect-ratio-1x1">
 
+						{% if entry.featureImage %}
+						{% set image = entry.featureImage.one() %}
 						<div class="backdrop__media">
-							<img src="/src/images/feature/a-breif-history.jpg" alt="Placeholder">
+							<img
+								src="{{ image.url }}"
+								alt="{{ image.alt ?? '' }}"
+							/>
+                        {% else %}
+                            <img src="/src/images/feature/a-breif-history.jpg" alt="Placeholder">
+                        {% endif %}
 						</div>
 
 					</div>
@@ -283,7 +289,7 @@
             
             <header class="header border-bottom border-color-dark padding-bottom-1 margin-bottom-2">
                 <h2 class="h6 font-weight-normal text-transform-uppercase">
-                    News and Blog
+                    Our Little Blog
                 </h2>
             </header>
             
@@ -292,7 +298,7 @@
 				{% for item in craft.entries.section('blog').limit(3).all() %}
             
 				<li>
-					<a class="display-block" href="{{ item.url}}">
+					<a class="display-block" href="{{ item.url }}">
 						<img
 							class="margin-bottom-2"
 							src="{{ item.blogImage.one().url }}"
@@ -303,7 +309,7 @@
 							{{ item.postDate.format('F j, Y') }}
 						</p>
 
-						<h3 class="h5" class="margin-bottom-1 font-size-md">
+						<h3 class="h5" class="font-size-md">
 							{{ item.title }}
 						</h3>
 					</a>

@@ -1,4 +1,4 @@
-dateModified: 1730656693
+dateModified: 1730719573
 elementSources:
   craft\elements\Entry:
     -
@@ -122,6 +122,13 @@ email:
   fromName: 'Little Church'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
+  FeatureImages:
+    hasUrls: true
+    name: 'Feature Images'
+    settings:
+      path: '@webroot/images/uploads/feature'
+    type: craft\fs\Local
+    url: '@web/images/uploads/feature'
   audioSermonMp3s:
     hasUrls: true
     name: 'Audio Sermon MP3s'
@@ -129,9 +136,9 @@ fs:
       path: '@webroot/mp3/uploads/sermons'
     type: craft\fs\Local
     url: '@web/mp3/uploads/sermons'
-  blog:
+  blogImages:
     hasUrls: true
-    name: Blog
+    name: 'Blog Images'
     settings:
       path: '@webroot/images/uploads/blog'
     type: craft\fs\Local
@@ -174,6 +181,7 @@ meta:
     5a15575b-ec2e-47c3-bd00-eb854f1d8055: 'Text Content' # Text Content
     5b9003a1-5077-4296-9639-f03328dd74a2: 'Virtual Tour Images' # Virtual Tour Images
     5da48b70-636f-4798-99d0-24e2899dff02: 'Link URL' # Link URL
+    6a6ae7db-e603-4a9d-8d0f-562e07f220c7: 'Feature Images' # Feature Images
     6f5da975-9b06-4385-a972-594aea2d9f04: 'Adult Education' # Adult Education
     6fded0a5-09f9-4885-9b87-14e039c52a6c: 'Link Field' # Link Field
     7e6327ec-021c-419b-a22d-fc3e845dc10f: 'Figure Image Right' # Figure Image Right
@@ -206,6 +214,7 @@ meta:
     24446aa6-8005-424a-8454-e760a87e7bb5: Standard # Standard
     29691dec-8406-465e-bd7f-694f6a1776ff: Blog # Blog
     62967cc3-ad04-4380-8c1e-1a8c19ab8663: 'Figure Images' # Figure Images
+    96916aa2-1b5e-429b-85fa-747aa201e6dc: 'Feature Image' # Feature Image
     661393a2-0468-49cc-8a89-0a450670c96d: 'Figure Image Vertical' # Figure Image Vertical
     aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: 'Homepage Layout' # Homepage Layout
     b9395e1a-8d3b-4b8f-aafe-3eab9556b505: 'Primary Page Article' # Primary Page Article
