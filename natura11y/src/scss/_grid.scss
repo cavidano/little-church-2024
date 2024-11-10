@@ -209,6 +209,28 @@ $rows: math.div($columns, 2);
         }
     }
 
+    @include breakpoint.breakpoint-up(xl) {
+        .grid-sidebars {
+            overflow: visible;
+            
+            &[class*="grid--divider"] {
+
+                > *::before {
+                    display: none;
+                }
+
+                > *:first-child::after {
+                    display: block;
+                }
+            }
+
+            grid-template-columns: var(--grid-sidebar-width) 1fr;
+            grid-template-areas: 
+                "minor-start major"
+                "minor-start minor-end";
+        }
+    }
+
     @include breakpoint.breakpoint-up(xxl) {
     
         .grid-sidebar--left,

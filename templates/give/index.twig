@@ -1,0 +1,67 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+
+<main id="skip-header-target">
+
+    <article>
+
+        <header class="theme-primary" id="introduction">
+            <div class="container narrow medium--lg text-align-center padding-y-5">
+                <h1>Support the Little Church</h1>
+            </div>
+        </header>
+
+        <div class="container narrow margin-y-5">
+
+            <!-- PayPal Option -->
+            <section class="margin-bottom-4">
+                <h2>PayPal</h2>
+                <p>
+                    If you'd like to donate via PayPal, please click the logo below. PayPal is a convenient option, especially for our international members and friends.</p>
+                <p>
+                    <em>
+                        Note: To designate your donation to a specific ministry, event, or fundraiser, add a note in the "Special Instructions" field.
+                    </em>
+                </p>
+                    
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=LBXCJZRBT5XQE" target="_blank">
+                    <img src="/images/btn-donate-paypal.svg" alt="Paypal" />
+                </a>
+            </section>
+
+            <hr class="margin-y-4" />
+
+            <!-- Breeze Option -->
+           <section class="margin-bottom-4">
+                <h2>Breeze e-Giving</h2>
+                <p>Breeze is our church's donation management software. For a secure and easy way to set up recurring or one-time donations, click the Breeze logo below or text <strong>914-685-9200</strong> to create your e-giving profile from your mobile device.</p>
+                <p><em>Note: If you'd like your donation to support a particular ministry, event, or project, please specify this in the comment box.</em></p>
+                <!-- Replace with actual Breeze button/link -->
+                <button>
+                    <img src="/images/btn-donate-breeze.svg" alt="Breeze e-Giving" />
+                </button>
+            </section>
+
+            <hr class="margin-y-4" />
+
+            <!-- Additional Ways to Give Section -->
+            <section>
+                <!-- In-Person & Mailed Donations -->
+                <h2>In-Person &amp; Mailed Donations</h2>
+                <p>If you prefer to donate via check or cash, we welcome plate and pledge offerings in-person at our services or by mail to the church office.</p>
+                <address>
+                    <strong>Mailing Address:</strong><br>
+                    The Church of the Transfiguration<br>
+                    1 East 29th Street<br>
+                    New York, NY 10016
+                </address>
+            </section>
+                
+        </div>
+
+    </article>
+
+</main>
+
+{% endblock %}

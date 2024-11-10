@@ -4,6 +4,7 @@
 node_modules
 dist/html
 .vscode
+vendor
 
 #Files
 package-lock.json
