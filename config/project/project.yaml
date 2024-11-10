@@ -1,4 +1,4 @@
-dateModified: 1730719573
+dateModified: 1731240536
 elementSources:
   craft\elements\Entry:
     -
@@ -164,6 +164,13 @@ fs:
       path: '@webroot/images/uploads/homepage-carousel'
     type: craft\fs\Local
     url: '@web/images/uploads/homepage-carousel'
+  inContentImages:
+    hasUrls: true
+    name: 'In-content Images'
+    settings:
+      path: '@webroot/images/uploads/inContent'
+    type: craft\fs\Local
+    url: '@web/images/uploads/inContent'
   virtualTourImages:
     hasUrls: true
     name: 'Virtual Tour Images'
@@ -224,11 +231,13 @@ meta:
     c243e913-1c84-463a-bbcb-327b23ff279a: Simple # Simple
     cadcecb7-766f-4de8-bee3-62b75a1e2092: 'Tour Highlight' # Tour Highlight
     cf79e9cc-32bf-4f52-90d6-6002f2370405: Music # Music
+    d2c0cf4c-216c-48fd-ba4e-df85d29d73eb: 'In-content Images' # In-content Images
     d19a47f7-e578-47f9-afb6-1d31e1066065: 'Blog Article' # Blog Article
     dff320e3-08a7-4091-a328-0a3aa8fc2b82: 'Blog Image' # Blog Image
     e404e713-c6b5-42aa-9614-6eab00ed8cc5: 'Spotlight Video URL' # Spotlight Video URL
     f3ad64b9-df55-4707-9d73-70653a4ee4f9: Worship # Worship
     f3e168c6-269e-4407-91bb-1679ca597acb: 'Figure Image Enlarge' # Figure Image Enlarge
+    f19c1853-f1a3-4c74-b351-7e640b63b495: 'In-content Image' # In-content Image
     f627def0-bb59-4992-ae44-aef0dfb97c08: 'Little Church' # Little Church
     f8355048-22c0-4c2d-8873-4db92a78ab46: 'Virtual Tour Image' # Virtual Tour Image
     fce93b65-4251-416d-9a60-b4bdd015eb33: Homepage # Homepage

@@ -5,7 +5,8 @@ name: 'Rich Text'
 searchable: true
 settings:
   availableTransforms: ''
-  availableVolumes: ''
+  availableVolumes:
+    - d2c0cf4c-216c-48fd-ba4e-df85d29d73eb # In-content Images
   ckeConfig: c243e913-1c84-463a-bbcb-327b23ff279a # Simple
   createButtonLabel: 'Add Text'
   defaultTransform: null
