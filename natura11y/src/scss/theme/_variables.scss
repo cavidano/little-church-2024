@@ -18,3 +18,11 @@
 
     --banner-headline-font-weight: var(--font-weight-bold);
 }
+
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --type-scale: 1.1375;
+        // --spacer-base: 0.675rem;
+    }
+}
