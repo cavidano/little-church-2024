@@ -4,74 +4,79 @@
 
 <main id="skip-header-target">
 
-	<section
-		class="track track--carousel theme-dark"
-		aria-labelledby="virtual-tour-highlights"
-	>
+	<section class="theme-dark">
 
-		<h3 class="screen-reader-only" id="virtual-tour-highlights">
-			Featured Content
-		</h3>
+		<div class="margin-x-auto wide--xl">
 
-		<div class="track__container">
+			<div class="track homepage-carousel" aria-labelledby="virtual-tour-highlights">
+			
+				<h3 class="screen-reader-only" id="virtual-tour-highlights">
+					Featured Content
+				</h3>
 
-			<ul class="track__panels gap-1">
+				<div class="track__container">
 
-				{% set homepageCarouselEntries = craft.entries.section('homepageCarousel').all() %}
+					<ul class="track__panels gap-1">
+
+						{% set homepageCarouselEntries = craft.entries.section('homepageCarousel').all() %}
+						
+						{# Loop through each entry #}
+						{% for entry in homepageCarouselEntries %}
+						
+							<li class="track__panel">
+
+								<article class="backdrop backdrop--stack--md">
+
+									<div class="backdrop__media">
+										{# Output the entry's image #}
+										{% if entry.image | length %}
+										{% set image = entry.image.one() %}
+
+											<img
+												class="gradient-mask-bottom"
+												src="{{ image.url }}"
+												alt="{{ image.alt ?? '' }}"
+											/>
+
+										{% else %}
+											<img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder">
+										{% endif %}
+									</div>
+
+									<div class="backdrop__cover align-content-end">
+
+										<div class="container narrow text-align-center">
+
+										<div class="text-shadow">
+										
+											<h1 class="h4 margin-bottom-3">
+												{{ entry.title }}
+											</h1>
+
+										</div>
+											<a class="button 👉 button--has-icon theme-primary font-size-md" href="{{ entry.linkUrl }}">
+												<span class="button__text">{{ entry.linkText }}</span>
+												<span class="icon icon-arrow-right"></span>
+											</a>
+
+										</div>
+											
+									</div>
+
+								</article>
+
+							</li>
+						{% endfor %}
+
+					</ul>
+
+				</div>
 				
-				{# Loop through each entry #}
-				{% for entry in homepageCarouselEntries %}
-				
-					<li class="track__panel">
+				<ul class="track__pagination margin-y-4 justify-content-center" data-track-pagination></ul>
 
-						<article class="backdrop backdrop--stack--md">
-
-							<div class="backdrop__media">
-								{# Output the entry's image #}
-								{% if entry.image | length %}
-								{% set image = entry.image.one() %}
-
-									<img
-										class="gradient-mask-bottom display-none"
-										src="{{ image.url }}"
-										alt="{{ image.alt ?? '' }}"
-									/>
-
-								{% else %}
-									<img class="opacity-50" src="https://via.placeholder.com/1500x750" alt="Placeholder">
-								{% endif %}
-							</div>
-
-							<div class="backdrop__cover align-content-end">
-
-								<div class="container narrow text-align-center">
-
-								<div class="text-shadow">
-								
-									<h1 class="h4 margin-bottom-3">
-										{{ entry.title }}
-									</h1>
-
-								</div>
-									<a class="button 👉 button--has-icon theme-primary font-size-md" href="{{ entry.linkUrl }}">
-										<span class="button__text">{{ entry.linkText }}</span>
-										<span class="icon icon-arrow-right"></span>
-									</a>
-
-								</div>
-									
-							</div>
-
-						</article>
-
-					</li>
-				{% endfor %}
-
-			</ul>
+			</div>
 
 		</div>
-		
-		<ul class="track__pagination margin-y-4 justify-content-center" data-track-pagination></ul>
 
 	</section>
 

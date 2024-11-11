@@ -165,25 +165,26 @@
     }
 }
 
-.track--carousel {
-    --narrow-width: min(40rem, 85vw); // Approximately 55 characters wide for readability
+.homepage-carousel {
+    --narrow-width: min(40rem, 85vw);
 
-    .track__container {
-        margin-inline: auto;
-        max-width: calc(var(--wide-width) * 1.125);
-    }
+    // .track__container {
+    //     margin-inline: auto;
+    //     max-width: calc(var(--wide-width) * 1.125);
+    // }
 }
 
 
 .float-right {
     max-width: 320px;
     margin-inline: auto;
-@media (min-width: 1000px) {
-    float: right;
-    margin-inline-start: 1em;
-    margin-block-end: 1em;
-    max-width: 240px;
-}
+    
+    @include breakpoint.breakpoint-up(lg) {
+        float: right;
+        margin-inline-start: 1em;
+        margin-block-end: 1em;
+        max-width: 240px;
+    }
 
 }
 

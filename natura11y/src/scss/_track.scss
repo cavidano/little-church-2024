@@ -56,9 +56,6 @@ $track-panels: 8;
         position: relative;
         overflow: hidden;
 
-        max-width: 100%;
-
-
         .track__prev,
         .track__next {
             position: absolute;
@@ -124,7 +121,6 @@ $track-panels: 8;
 
         > *:is(img, video) {
             width: 100%;
-            max-width: 100%;
             height: auto;
         }
     }
@@ -145,8 +141,6 @@ $track-panels: 8;
 
         .track__pagination {
             grid-area: pagination;
-        outline: 3px solid red;
-        outline-offset: -3px;
         }
 
         .track__prev {
