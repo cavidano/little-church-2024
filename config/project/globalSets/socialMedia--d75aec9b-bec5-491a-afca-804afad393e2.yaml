@@ -1,0 +1,28 @@
+fieldLayouts:
+  b887ff17-9e51-418b-a5f2-f76e8519d5a8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-11-10T13:41:15+00:00'
+            elementCondition: null
+            fieldUid: 4134d018-56ae-4e27-b184-ec3091b3ef44 # Social Media Channels
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2219b363-6924-4a65-a1a5-7a557af47a24
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Social Media Channels'
+        uid: 38614d70-69a3-4831-b044-2fabaebeffcb
+        userCondition: null
+handle: socialMedia
+name: 'Social Media'
+sortOrder: 1

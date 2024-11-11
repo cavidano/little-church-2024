@@ -1,0 +1,83 @@
+color: null
+fieldLayouts:
+  1266c6fb-4743-470f-b95b-6903091551ca:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-11-10T13:37:08+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3fe766aa-519a-4a4e-b34a-e33b756da739
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-10T13:40:35+00:00'
+            elementCondition: null
+            fieldUid: 296e8f4d-5cda-4e81-996a-3c97f9404a0a # Social Media URL
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b4e85a4c-0bbe-4159-ac05-fb8917f4c8c7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-10T13:40:35+00:00'
+            elementCondition: null
+            fieldUid: 6aa94d24-4ad6-4dfd-a774-caf5f96339c3 # Icon Handle
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c1b2c648-a833-43b5-bd40-a7bdacd50ecd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b3db246d-5659-42b5-960c-36817d35ebbc
+        userCondition: null
+handle: socialMediaChannel
+hasTitleField: true
+icon: hashtag
+name: 'Social Media Channel'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

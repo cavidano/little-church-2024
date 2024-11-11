@@ -150,13 +150,10 @@ In this file:
       opacity: var(--lightbox-overlay-opacity);
 
       background-color: var(--lightbox-overlay-color);
-      background-color: red;
 
       aspect-ratio: 1 / 1;
 
-      width: 5rem;
-      height: 5rem;
-      filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.5));
+      width: var(--button-icon-only-size);
     }
     
     &[data-lightbox="video"]::after {

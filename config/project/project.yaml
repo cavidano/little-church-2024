@@ -1,11 +1,11 @@
-dateModified: 1731240536
+dateModified: 1731251628
 elementSources:
   craft\elements\Entry:
     -
       defaultSort:
         - postDate
         - desc
-      disabled: false
+      disabled: true
       key: '*'
       tableAttributes:
         - status
@@ -18,7 +18,7 @@ elementSources:
       defaultSort:
         - title
         - asc
-      disabled: false
+      disabled: true
       key: singles
       tableAttributes:
         - status
@@ -27,6 +27,25 @@ elementSources:
     -
       heading: Homepage
       type: heading
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: b4bc74aa-31cf-459e-b3c0-3425128a0aad
+            values:
+              - fce93b65-4251-416d-9a60-b4bdd015eb33 # Homepage
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - title
+        - asc
+      key: 'custom:b580a3c7-480b-4137-b72b-460f537f3e49'
+      label: Homepage
+      tableAttributes: '-'
+      type: custom
     -
       defaultSort:
         - title
@@ -55,7 +74,16 @@ elementSources:
         - link
       type: native
     -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
       key: 'section:f3ad64b9-df55-4707-9d73-70653a4ee4f9' # Worship
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
       type: native
     -
       defaultSort:
@@ -97,8 +125,24 @@ elementSources:
         - link
       type: native
     -
-      heading: Channels
-      type: heading
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: 626d8c08-d451-4dab-9b66-12dc867892d8
+            values:
+              - 619a0795-e1df-4a64-ba8a-f51f8d892ef8 # Visit
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - title
+        - asc
+      key: 'custom:1b39c438-edab-49a2-a264-15f2211725cc'
+      label: Visit
+      tableAttributes: '-'
+      type: custom
     -
       defaultSort:
         - postDate
@@ -112,10 +156,13 @@ elementSources:
         - link
       type: native
     -
-      heading: ''
+      heading: Misc
       type: heading
     -
       key: 'section:0230f447-379b-4039-be7e-8a8160c130fd' # Audio Sermons
+      type: native
+    -
+      key: 'section:3aa3f6ab-edbb-4cf9-aa53-ba17f5c05da2' # Staff Bios
       type: native
 email:
   fromEmail: carl@avidanodigital.com
@@ -171,6 +218,13 @@ fs:
       path: '@webroot/images/uploads/inContent'
     type: craft\fs\Local
     url: '@web/images/uploads/inContent'
+  staffPortraitImages:
+    hasUrls: true
+    name: 'Staff Portrait Images'
+    settings:
+      path: '@webroot/images/uploads/staffPortrait'
+    type: craft\fs\Local
+    url: '@web/images/uploads/staffPortrait'
   virtualTourImages:
     hasUrls: true
     name: 'Virtual Tour Images'
@@ -181,18 +235,21 @@ fs:
 meta:
   __names__:
     1c7365c4-cfdc-40d5-9fa9-73682e32a75f: Default # Default
-    2e80586a-8fa3-4ab6-9eb0-b8c61016ebd5: 'Brand Logo' # Brand Logo
     2f747c28-c7c2-4200-a471-390a2e529c99: 'Figure Image Full' # Figure Image Full
+    3aa3f6ab-edbb-4cf9-aa53-ba17f5c05da2: 'Staff Bios' # Staff Bios
     3f15b324-fa65-485b-ab56-f9bfed089117: 'Homepage Carousel' # Homepage Carousel
     4de8895d-cb53-4939-90f8-d37639e60da3: 'Virtual Tour' # Virtual Tour
     5a15575b-ec2e-47c3-bd00-eb854f1d8055: 'Text Content' # Text Content
     5b9003a1-5077-4296-9639-f03328dd74a2: 'Virtual Tour Images' # Virtual Tour Images
     5da48b70-636f-4798-99d0-24e2899dff02: 'Link URL' # Link URL
     6a6ae7db-e603-4a9d-8d0f-562e07f220c7: 'Feature Images' # Feature Images
+    6aa94d24-4ad6-4dfd-a774-caf5f96339c3: 'Icon Handle' # Icon Handle
     6f5da975-9b06-4385-a972-594aea2d9f04: 'Adult Education' # Adult Education
     6fded0a5-09f9-4885-9b87-14e039c52a6c: 'Link Field' # Link Field
     7e6327ec-021c-419b-a22d-fc3e845dc10f: 'Figure Image Right' # Figure Image Right
     7e837081-2d44-4b75-914c-abca14574951: Date # Date
+    9af1c194-2693-4d86-9eee-bbff86eaae7a: 'Staff Bio' # Staff Bio
+    9b8fb642-9998-4f11-ac4f-92e53344af2c: 'Staff Portrait Images' # Staff Portrait Images
     27c04a34-53b5-4eaf-a615-91ca4dd52dd5: Image # Image
     41ea8475-5a25-4156-99a9-75f192140d9c: 'Homepage Carousel Images' # Homepage Carousel Images
     45ab6eb6-a238-4395-8d2d-7a851616aed6: 'Call to Action' # Call to Action
@@ -204,6 +261,7 @@ meta:
     92eb37bb-240d-4363-ac53-88e9360941e8: 'Blog Images' # Blog Images
     0230f447-379b-4039-be7e-8a8160c130fd: 'Audio Sermons' # Audio Sermons
     272db05d-f0fc-489d-9a91-32658794ef35: 'Audio Sermon Files' # Audio Sermon Files
+    296e8f4d-5cda-4e81-996a-3c97f9404a0a: 'Social Media URL' # Social Media URL
     312a0d44-7d08-4c21-bc00-91291780659b: 'Public Schema' # Public Schema
     612cf07a-8adc-436d-8d30-04c51e6251c6: About # About
     619a0795-e1df-4a64-ba8a-f51f8d892ef8: Visit # Visit
@@ -213,15 +271,18 @@ meta:
     820e255c-6450-4806-b5ca-85831d8a7c7f: 'Plain Text' # Plain Text
     979c8d61-727b-4c46-ab40-83a3561c192a: 'Hero Images' # Hero Images
     4024edd3-9d2b-446a-a6dd-48f15e0fc637: 'Featured Pages' # Featured Pages
+    4134d018-56ae-4e27-b184-ec3091b3ef44: 'Social Media Channels' # Social Media Channels
     4573cb02-ab7d-471a-80a1-93b140d3422a: 'Introduction Title' # Introduction Title
     6180f8f9-5c6e-408f-898a-bc265d3dab24: 'Call to Action' # Call to Action
     6453b749-5f18-4ffc-b62a-393fa9752a52: 'Hero Image' # Hero Image
     8548ad6c-0d95-4934-8408-543b298b0227: 'Figure Image Horizontal' # Figure Image Horizontal
     8827b8d4-2266-4f88-840c-c506b19dafb0: Image # Image
     24446aa6-8005-424a-8454-e760a87e7bb5: Standard # Standard
+    24715bb8-b7af-4e84-8803-7a8bfb40b984: 'Social Media Channel' # Social Media Channel
     29691dec-8406-465e-bd7f-694f6a1776ff: Blog # Blog
     62967cc3-ad04-4380-8c1e-1a8c19ab8663: 'Figure Images' # Figure Images
     96916aa2-1b5e-429b-85fa-747aa201e6dc: 'Feature Image' # Feature Image
+    123643e3-79a8-4fae-ba43-55c05a270bc5: 'Staff Bio Image' # Staff Bio Image
     661393a2-0468-49cc-8a89-0a450670c96d: 'Figure Image Vertical' # Figure Image Vertical
     aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: 'Homepage Layout' # Homepage Layout
     b9395e1a-8d3b-4b8f-aafe-3eab9556b505: 'Primary Page Article' # Primary Page Article
@@ -233,6 +294,7 @@ meta:
     cf79e9cc-32bf-4f52-90d6-6002f2370405: Music # Music
     d2c0cf4c-216c-48fd-ba4e-df85d29d73eb: 'In-content Images' # In-content Images
     d19a47f7-e578-47f9-afb6-1d31e1066065: 'Blog Article' # Blog Article
+    d75aec9b-bec5-491a-afca-804afad393e2: 'Social Media' # Social Media
     dff320e3-08a7-4091-a328-0a3aa8fc2b82: 'Blog Image' # Blog Image
     e404e713-c6b5-42aa-9614-6eab00ed8cc5: 'Spotlight Video URL' # Spotlight Video URL
     f3ad64b9-df55-4707-9d73-70653a4ee4f9: Worship # Worship

@@ -178,9 +178,10 @@
 .float-right {
     max-width: 320px;
     margin-inline: auto;
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     float: right;
     margin-inline-start: 1em;
+    margin-block-end: 1em;
     max-width: 240px;
 }
 

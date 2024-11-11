@@ -131,108 +131,110 @@
 
 									<section class="border-top padding-y-4">
 
-									<div class="container narrow--md">
-									
-										<p class="font-size-md margin-bottom-1">
-											{{ audioSermon.date|date("F j, Y") }}
-										</p>
+										<div class="container narrow--md">
 										
-										<h2 class="h5 margin-bottom-1">
-											<strong>
-												{{ audioSermon.title }}
-											</strong>
-										</h2>
+											<p class="font-size-md margin-bottom-1">
+												{{ audioSermon.date|date("F j, Y") }}
+											</p>
+											
+											<h2 class="h5 margin-bottom-1">
+												<strong>
+													{{ audioSermon.title }}
+												</strong>
+											</h2>
 
-										<p class="font-size-md">
-											<em>
-												{{ audioSermon.speaker }}
-											</em>
-										</p>
+											<p class="font-size-md">
+												<em>
+													{{ audioSermon.speaker }}
+												</em>
+											</p>
 
-										{% if audioSermon.audioFile | length %}
-										
-										<div class="audio-player subtle-fill-1 text-color-link border-radius-2">
+											{% if audioSermon.audioFile | length %}
+											
+											<div class="audio-player subtle-fill-1 text-color-link border-radius-2">
 
-											<audio id="audio" preload="auto">
-												<source src="{{ audioSermon.audioFile.one().url }}" type="audio/mpeg">
-												Your browser does not support the audio element.
-											</audio>
+												<audio id="audio" preload="auto">
+													<source src="{{ audioSermon.audioFile.one().url }}" type="audio/mpeg">
+													Your browser does not support the audio element.
+												</audio>
 
-											<div
-												class="audio-player__controls"
-												id="controls"
-											>
-
-												<button
-													class="button button--icon-only audio-player__controls__button"
-													id="play-pause-button"
+												<div
+													class="audio-player__controls"
+													id="controls"
 												>
-													<span class="icon icon-play" aria-hidden="true"></span>
-												</button>
 
-												<div 
-													class="audio-player__progress" 
-													id="progress-bar" 
-													tabindex="0"  
-													aria-valuemin="0" 
-													aria-valuemax="100" 
-													aria-valuenow="0" 
-													aria-label="Use arrow keys to forward or rewind the audio"
-													role="slider"
-												>
-													<div class="audio-player__progress__fill">
-														<span class="audio-player__thumb"></span>
-													</div>
-												</div>
-
-												<div class="audio-player__timestamp">
-													00:00
-												</div>
-
-												<div class="audio-player__volume-container">
-													<button id="mute-button">
-													
-													<span class="icon icon-volume"></span>
+													<button
+														class="button button--icon-only audio-player__controls__button"
+														id="play-pause-button"
+													>
+														<span class="icon icon-play" aria-hidden="true"></span>
 													</button>
 
 													<div 
-														class="audio-player__volume"
-														tabindex="0" 
+														class="audio-player__progress" 
+														id="progress-bar" 
+														tabindex="0"  
 														aria-valuemin="0" 
 														aria-valuemax="100" 
-														aria-valuenow="100" 
-														aria-label="Use arrow keys to adjust volume"
-														role="slider" 
+														aria-valuenow="0" 
+														aria-label="Use arrow keys to forward or rewind the audio"
+														role="slider"
 													>
-														<div class="audio-player__volume__fill">
+														<div class="audio-player__progress__fill">
 															<span class="audio-player__thumb"></span>
 														</div>
 													</div>
-												
+
+													<div class="audio-player__timestamp">
+														00:00
+													</div>
+
+													<div class="audio-player__volume-container">
+														<button id="mute-button">
+														
+														<span class="icon icon-volume"></span>
+														</button>
+
+														<div 
+															class="audio-player__volume"
+															tabindex="0" 
+															aria-valuemin="0" 
+															aria-valuemax="100" 
+															aria-valuenow="100" 
+															aria-label="Use arrow keys to adjust volume"
+															role="slider" 
+														>
+															<div class="audio-player__volume__fill">
+																<span class="audio-player__thumb"></span>
+															</div>
+														</div>
+													
+													</div>
+
 												</div>
 
 											</div>
+												
+											<div class="display-flex text-color-link gap-1 justify-content-end font-size-sm margin-top-2">
 
+												<a class="button 👉 button--has-icon " href="{{ audioSermon.audioFile.one().url }}" download>
+													<span class="icon icon-file-download"></span>
+													<span class="button__text">Download Audio</span>
+												</a>
+
+												<a class="button 👉 button--has-icon" href="{{ audioSermon.audioFile.one().url }}" target="_blank">
+													<span class="icon icon-open-new"></span>
+													<span class="button__text"> Play in new window</span>
+												</a>
+												
+											</div>
+											{% else %}
+												<p>No audio file available for this sermon.</p>
+											{% endif %}
 										</div>
-											
-										<div class="display-flex text-color-link gap-1 justify-content-end font-size-sm margin-top-2">
 
-											<a class="button 👉 button--has-icon " href="{{ audioSermon.audioFile.one().url }}" download>
-												<span class="icon icon-file-download"></span>
-												<span class="button__text">Download Audio</span>
-											</a>
-
-											<a class="button 👉 button--has-icon" href="{{ audioSermon.audioFile.one().url }}" target="_blank">
-												<span class="icon icon-open-new"></span>
-												<span class="button__text"> Play in new window</span>
-											</a>
-											
-										</div>
-										{% else %}
-											<p>No audio file available for this sermon.</p>
-										{% endif %}
-									</div>
 									</section>
+
 								{% endfor %}
 							</div>
 
@@ -242,6 +244,79 @@
 
 						</section>
 						
+						{% endif %}
+
+						{# Video Sermons #}
+
+						{% if entry.title == 'Clergy & Staff' %}
+
+						<section class="staff-bios">
+
+							<h3 class="screen-reader-only">
+								Staff Bios 
+							</h3>
+
+							{% for entry in craft.entries.section('staffBios').all() %}
+
+							<section class="overflow-hidden padding-y-4 border-top">
+
+								<div class="container narrow">
+							
+										{# Profile Image #}
+										{% if entry.staffBioImage is not empty %}
+
+										{% set image = entry.staffBioImage.one() %}
+
+										<figure class="float-right">
+
+											<button
+												class="lightbox-thumbnail"
+											👉  data-lightbox="image"
+											👉  data-lightbox-src="{{ image.url }}"
+											>
+												<img
+													class="width-100" 
+													src="{{ image.url('figureImageVertical') }}" 
+													alt="{{ image.alt ?? '' }}" 
+												/>
+											</button>
+
+										</figure>
+											
+										{% endif %}
+
+									{# Full Name #}
+									<h2 class="h4 margin-bottom-1">
+										{{ entry.fullName }}
+									</h2>
+
+									{# Job Title #}
+									{% if entry.jobTitle is not empty %}
+									<p>
+										<strong>
+											<em>
+												{{ entry.jobTitle }}
+											</em>
+										</strong>
+									</p>
+									{% endif %}
+
+								{# Biography Text #}
+									<div>
+
+										{% if entry.richText is not empty %}
+											{{ entry.richText | raw }}
+										{% endif %}
+									</div>
+
+								</div> 
+
+							</section>
+
+							{% endfor %}
+
+						</section>
+
 						{% endif %}
 						
 						<footer class="border-top padding-top-3 font-size-sm margin-top-4">
@@ -268,46 +343,47 @@
 				</div>
 
 				<div class="grid-sidebar__minor-end">
-				<div class="text-color-link subtle-fill-1">
-
-				<div class="subtle-fill-1 display-flex align-items-center font-size-md padding-x-2 padding-y-1 gap-2">
 				
-				<span class="icon icon-calendar"></span>
-					<strong>
-						October 28, 2024
-					</strong>
-				</div>
+					<div class="text-color-link subtle-fill-1">
 
-				<div>
-					<ul class="grid grid--divider font-size-md gap-2">
+					<div class="subtle-fill-1 display-flex align-items-center font-size-md padding-x-2 padding-y-1 gap-2">
+					
+					<span class="icon icon-calendar"></span>
+						<strong>
+							October 28, 2024
+						</strong>
+					</div>
 
-						<li class="padding-2">
-							<strong class="display-block">
-								Morning Prayer In Person and on Zoom
-							</strong>
-							8:40 am
-						</li>
+					<div>
+						<ul class="grid grid--divider font-size-md gap-2">
 
-						<li class="padding-2">
-							<strong class="display-block">
-								Weekday Morning and Evening Prayer on Zoom
-							</strong>
-							12:00 am
-						</li>
+							<li class="padding-2">
+								<strong class="display-block">
+									Morning Prayer In Person and on Zoom
+								</strong>
+								8:40 am
+							</li>
 
-						<li class="padding-2">
-							<strong class="display-block">
-								Evening Prayer on Zoom
-							</strong>
-							5:00 pm
-						</li>
+							<li class="padding-2">
+								<strong class="display-block">
+									Weekday Morning and Evening Prayer on Zoom
+								</strong>
+								12:00 am
+							</li>
 
-					</ul>
+							<li class="padding-2">
+								<strong class="display-block">
+									Evening Prayer on Zoom
+								</strong>
+								5:00 pm
+							</li>
 
-				</div>
+						</ul>
 
-				
-				</div>
+					</div>
+
+					
+					</div>
 
 				</div>
 

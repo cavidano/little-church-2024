@@ -1,0 +1,115 @@
+color: null
+fieldLayouts:
+  5e58b234-f2aa-4a11-8c18-230f7e743ed1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-11-10T14:20:05+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 2ce0d95a-d260-4e07-9383-166c4592ba0c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-10T14:34:23+00:00'
+            elementCondition: null
+            fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
+            handle: fullName
+            includeInCards: false
+            instructions: null
+            label: 'Full Name'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: db151eea-eb11-49df-99c3-fa485debfbbd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-10T14:23:26+00:00'
+            elementCondition: null
+            fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
+            handle: jobTitle
+            includeInCards: false
+            instructions: null
+            label: 'Job Title'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72500418-6c0e-48c9-8f03-f2d8f0ca8f69
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-10T14:23:26+00:00'
+            elementCondition: null
+            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Rich Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 249f9cf4-44e6-4cad-9eb8-059072f87763
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-10T14:32:07+00:00'
+            elementCondition: null
+            fieldUid: 123643e3-79a8-4fae-ba43-55c05a270bc5 # Staff Bio Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e35e8e77-3368-437c-8618-88fe0121c144
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6b86dc15-3b06-4995-aaca-ef053b1564ff
+        userCondition: null
+handle: staffBio
+hasTitleField: false
+icon: user
+name: 'Staff Bio'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{fullName}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

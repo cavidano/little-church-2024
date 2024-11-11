@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 9af1c194-2693-4d86-9eee-bbff86eaae7a # Staff Bio
+handle: staffBios
+maxAuthors: 1
+name: 'Staff Bios'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  f627def0-bb59-4992-ae44-aef0dfb97c08: # Little Church
+    enabledByDefault: true
+    hasUrls: true
+    template: staff-bios/_entry.twig
+    uriFormat: 'staff-bios/{slug}'
+structure:
+  maxLevels: 1
+  uid: e41ee424-945a-411d-95d9-341e84712255
+type: structure

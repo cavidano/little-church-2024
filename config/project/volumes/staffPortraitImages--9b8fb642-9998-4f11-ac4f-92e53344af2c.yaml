@@ -1,0 +1,50 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  2d26b035-e817-4224-a4f1-206638c19d48:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-11-10T14:10:41+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 818b7adb-fc79-4896-995b-fc8407e3dd5b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 76ccce4e-2721-4d48-91f0-a4a62c653aaf
+        userCondition: null
+fs: staffPortraitImages
+handle: staffPortraitImages
+name: 'Staff Portrait Images'
+sortOrder: 9
+subpath: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

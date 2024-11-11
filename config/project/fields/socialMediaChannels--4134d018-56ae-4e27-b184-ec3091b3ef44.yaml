@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: socialMediaChannels
+instructions: null
+name: 'Social Media Channels'
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - 24715bb8-b7af-4e84-8803-7a8bfb40b984 # Social Media Channel
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
