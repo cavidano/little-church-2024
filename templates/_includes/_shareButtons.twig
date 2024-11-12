@@ -1,0 +1,53 @@
+<div class="grid grid--column-3 gap-2 align-items-center">
+
+    <button class="button 👉 button--has-icon share-button facebook">
+        <span class="icon icon-facebook"></span>
+        <span class="button__text">Share</span>
+    </button>
+
+    <button class="button 👉 button--has-icon share-button twitter">
+        <span class="icon icon-twitter-x"></span>
+        <span class="button__text">Tweet</span>
+    </button>
+
+    <button class="button 👉 button--has-icon share-button linkedin">
+        <span class="icon icon-linked-in"></span>
+        <span class="button__text">Send</span>
+    </button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const pageUrl = encodeURIComponent("{{ currentUrl }}");
+    
+    document.querySelector('.facebook').setAttribute('href', `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`);
+    document.querySelector('.twitter').setAttribute('href', `https://twitter.com/intent/tweet?url=${pageUrl}&text=Check%20this%20out!`);
+    document.querySelector('.linkedin').setAttribute('href', `https://www.linkedin.com/shareArticle?mini=true&url=${pageUrl}`);
+    
+    const buttons = document.querySelectorAll('.share-button');
+    buttons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(button.href, 'shareWindow', 'height=450,width=550');
+      });
+    });
+  });
+</script>
+
+<style>
+  .share-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .share-button {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .share-button.facebook { background-color: #3b5998; }
+  .share-button.twitter { background-color: #1da1f2; }
+  .share-button.linkedin { background-color: #0077b5; }
+</style>

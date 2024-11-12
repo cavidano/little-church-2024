@@ -1,4 +1,4 @@
-<div class="btn-group display-none" role="group" aria-label="Month navigation">
+{# <div class="btn-group display-none" role="group" aria-label="Month navigation">
     <button id="calendar-month-menu"
             type="button"
             class="btn btn-secondary dropdown-toggle"
@@ -21,6 +21,6 @@
                 <div class="dropdown-divider"></div>{% endif %}
         {% endfor %}
     </div>
-</div>
+</div> #}
 
- <strong>{{ month.date.format('F Y') }}</strong>
+{{ month.date.format('F Y') }}

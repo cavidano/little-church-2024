@@ -30,20 +30,59 @@
 <div class="container wide--xl">
 
     <nav class="border-bottom">
-        <ul class="nav nav--horizontal nav--divider">
-            <li class="{{ page == 'month' ? 'active' }}">
-                <a class="nav-link" href="{{ siteUrl }}events/month">Month</a>
+
+        <ul class="nav nav--horizontal nav--divider font-size-md">
+        
+            <li>
+                <a
+                {% if page == 'events' %}
+                class="is-active"
+                aria-current="page"
+                {% endif %}
+                href="{{ siteUrl }}events/events"
+                >
+                    Upcoming
+                </a>
             </li>
-            <li class="{{ page == 'week' ? 'active' }}">
-                <a class="nav-link" href="{{ siteUrl }}events/week">Week</a>
+            
+            <li>
+                <a
+                {% if page == 'month' %}
+                class="is-active"
+                aria-current="page"
+                {% endif %}
+                href="{{ siteUrl }}events/month"
+                >
+                    Month
+                </a>
             </li>
-            <li class="{{ page == 'day' ? 'active' }}">
-                <a class="nav-link" href="{{ siteUrl }}events/day">Day</a>
+            
+            <li>
+                <a
+                {% if page == 'week' %}
+                class="is-active"
+                aria-current="page"
+                {% endif %}
+                href="{{ siteUrl }}events/week"
+                >
+                    Week
+                </a>
             </li>
-            <li class="{{ page == 'events' ? 'active' }}">
-                <a class="nav-link" href="{{ siteUrl }}events/events">Events List</a>
+            
+            <li>
+                <a
+                {% if page == 'day' %}
+                class="is-active"
+                aria-current="page"
+                {% endif %}
+                href="{{ siteUrl }}events/day"
+                >
+                    Day
+                </a>
             </li>
-            {#
+
+            {# To Archive
+
             <li class="{{ page == 'calendars' ? 'active' }}">
                 <a class="nav-link" href="{{ siteUrl }}events/calendars">Calendars</a>
             </li>
@@ -53,7 +92,9 @@
             <li class="{{ page == 'edit' ? 'active' }}">
                 <a class="nav-link" href="{{ siteUrl }}events/edit/event/new">Create</a>
             </li>  
+            
             #}
+
         </ul>
     </nav>
 

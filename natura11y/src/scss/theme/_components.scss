@@ -1,4 +1,12 @@
 
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use 'sass:map';
+@use '../breakpoint';
+
 .global-header {
     --_header-gap: 0;
     --_header-padding-y: var(--spacer-2);

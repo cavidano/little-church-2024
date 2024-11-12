@@ -49,20 +49,27 @@
     {% set targetEndDate = '+30 days' %}
 {% endif %}
 
-    <h1>Events List</h1>
-    <p class="lead">
-        Below is list of upcoming events for your site.
-    </p>
-    <hr /><br />
 
-    <div class="row">
+    <div class="div screen-reader-only">
+
+        <h1>Events List</h1>
+
+        <p>
+            Below is list of upcoming events for your site.
+        </p>
+
+    </div>
+
+    <div class="margin-y-4">
+
         <div class="col-md-9">
 
-            <h3>List of Events</h3>
+            <h3>Upcoming Events</h3>
+
             {% set eventOptions = {
                 rangeStart: targetStartDate,
                 rangeEnd: targetEndDate,
-                limit: 15
+                limit: 20
             } %}
 
             {% paginate craft.calendar.events(eventOptions) as pageInfo, events %}

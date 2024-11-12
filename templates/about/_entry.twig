@@ -320,23 +320,10 @@
 						{% endif %}
 						
 						<footer class="border-top padding-top-3 font-size-sm margin-top-4">
-							<div class="grid grid--column-3 gap-2 align-items-center">
 							
-								<a class="button 👉 button--has-icon" href="#1">
-									<span class="icon icon-facebook"></span>
-									<span class="button__text">Share</span>
-								</a>
-							
-								<a class="button 👉 button--has-icon" href="#1">
-									<span class="icon icon-twitter"></span>
-									<span class="button__text">Tweet</span>
-								</a>
-							
-								<a class="button 👉 button--has-icon" href="#1">
-									<span class="icon icon-mail"></span>
-									<span class="button__text">Send</span>
-								</a>
-							</div>
+
+							{% set currentUrl = craft.app.request.absoluteUrl %}
+{% include '_includes/_shareButtons.twig' with { currentUrl: currentUrl } %}
 						</footer>
 
 					</div>
