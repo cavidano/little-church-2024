@@ -54,7 +54,7 @@
 
                 <div>
                     <h3 class="h2">
-                        {% include "events/layouts/_month_heading.html" with {month: month} only %}
+                        {{ month.date.format('F Y') }}
                     </h3>
                 </div>
 

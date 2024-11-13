@@ -6,11 +6,11 @@ icon: null
 layout: 1c7365c4-cfdc-40d5-9fa9-73682e32a75f # Default
 level: 2
 newWindow: false
-parent: fc476b5f-f8f4-4ef8-a299-603439fdcbc7
+parent: cc5beb92-052d-4a69-ba50-b240baa46a0c
 prevLabel: Week
 prevLevel: 2
-prevParent: fc476b5f-f8f4-4ef8-a299-603439fdcbc7
+prevParent: cc5beb92-052d-4a69-ba50-b240baa46a0c
 prevUrl: calendar/view/week
-sortOrder: 7
+sortOrder: 17
 type: plugin
 url: calendar/view/week

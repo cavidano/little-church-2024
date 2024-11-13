@@ -1,4 +1,4 @@
-dateModified: 1731408506
+dateModified: 1731498774
 elementSources:
   craft\elements\Entry:
     -
@@ -244,7 +244,6 @@ meta:
     5da48b70-636f-4798-99d0-24e2899dff02: 'Link URL' # Link URL
     6a6ae7db-e603-4a9d-8d0f-562e07f220c7: 'Feature Images' # Feature Images
     6aa94d24-4ad6-4dfd-a774-caf5f96339c3: 'Icon Handle' # Icon Handle
-    6f5da975-9b06-4385-a972-594aea2d9f04: 'Adult Education' # Adult Education
     6fded0a5-09f9-4885-9b87-14e039c52a6c: 'Link Field' # Link Field
     7e6327ec-021c-419b-a22d-fc3e845dc10f: 'Figure Image Right' # Figure Image Right
     7e837081-2d44-4b75-914c-abca14574951: Date # Date
@@ -269,7 +268,6 @@ meta:
     649c5a54-f759-4177-990f-60a9da779147: 'Blog Article' # Blog Article
     820a6717-36a8-4b5c-819b-cbdc9e036334: 'Article Content Matrix' # Article Content Matrix
     820e255c-6450-4806-b5ca-85831d8a7c7f: 'Plain Text' # Plain Text
-    873d0b9b-df9c-49ee-8b81-90447e6ffde1: Worship # Worship
     979c8d61-727b-4c46-ab40-83a3561c192a: 'Hero Images' # Hero Images
     4024edd3-9d2b-446a-a6dd-48f15e0fc637: 'Featured Pages' # Featured Pages
     4134d018-56ae-4e27-b184-ec3091b3ef44: 'Social Media Channels' # Social Media Channels
@@ -290,6 +288,7 @@ meta:
     be991be1-9fbd-4fb8-9e2b-19282b305c62: 'Little Church' # Little Church
     bfa7add0-6499-4af5-8d33-4dc3e2e262ad: Education # Education
     c7d153a5-be7a-4158-94da-72e77d34ffbe: 'Audio File' # Audio File
+    c9aab3f5-2510-4e25-8062-ff9daae01c1b: Default # Default
     c243e913-1c84-463a-bbcb-327b23ff279a: Simple # Simple
     cadcecb7-766f-4de8-bee3-62b75a1e2092: 'Tour Highlight' # Tour Highlight
     cf79e9cc-32bf-4f52-90d6-6002f2370405: Music # Music
@@ -305,17 +304,16 @@ meta:
     f8355048-22c0-4c2d-8873-4db92a78ab46: 'Virtual Tour Image' # Virtual Tour Image
     fce93b65-4251-416d-9a60-b4bdd015eb33: Homepage # Homepage
     fdcba0b0-5a7a-4a08-b572-3f2b31afb9a1: 'Virtual Tour Image' # Virtual Tour Image
-    ffa934d2-edc4-4201-869b-2aef62147aa3: Default # Default
 plugins:
   calendar:
-    edition: pro
+    edition: lite
     enabled: true
-    licenseKey: TAT0KQ80MC7YUFDGUON18YTP
+    licenseKey: RVEQI36ULI02EV0E8N86CX3U
     schemaVersion: 5.0.1
     settings:
       allDay: false
       authoredEventEditOnly: false
-      defaultView: day
+      defaultView: month
       demoBannerDisabled: true
       descriptionFieldHandle: null
       eventDuration: 60
@@ -323,10 +321,10 @@ plugins:
       guestAccess: null
       locationFieldHandle: null
       overlapThreshold: 5
-      pluginName: Events
-      quickCreateEnabled: false
-      showDisabledEvents: false
-      showMiniCal: false
+      pluginName: null
+      quickCreateEnabled: true
+      showDisabledEvents: true
+      showMiniCal: true
       timeFormat: auto
       timeInterval: 30
   ckeditor:
@@ -357,7 +355,7 @@ system:
   live: true
   name: 'Little Church'
   retryDuration: null
-  schemaVersion: 5.3.0.2
+  schemaVersion: 5.5.0.0
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

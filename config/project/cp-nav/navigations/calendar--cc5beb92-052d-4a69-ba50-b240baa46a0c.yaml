@@ -1,4 +1,4 @@
-currLabel: Events
+currLabel: Calendar
 customIcon: null
 enabled: true
 handle: calendar
@@ -7,10 +7,10 @@ layout: 1c7365c4-cfdc-40d5-9fa9-73682e32a75f # Default
 level: 1
 newWindow: false
 parent: null
-prevLabel: Events
+prevLabel: Calendar
 prevLevel: 1
 prevParent: null
 prevUrl: calendar
-sortOrder: 5
+sortOrder: 15
 type: plugin
 url: calendar
