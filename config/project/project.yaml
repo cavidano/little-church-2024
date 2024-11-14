@@ -1,4 +1,4 @@
-dateModified: 1731498774
+dateModified: 1731579190
 elementSources:
   craft\elements\Entry:
     -
@@ -235,6 +235,7 @@ fs:
 meta:
   __names__:
     1c7365c4-cfdc-40d5-9fa9-73682e32a75f: Default # Default
+    2dcf23aa-ca5c-4c07-9b15-38f9d6b99b7e: Default # Default
     2f747c28-c7c2-4200-a471-390a2e529c99: 'Figure Image Full' # Figure Image Full
     3aa3f6ab-edbb-4cf9-aa53-ba17f5c05da2: 'Staff Bios' # Staff Bios
     3f15b324-fa65-485b-ab56-f9bfed089117: 'Homepage Carousel' # Homepage Carousel
@@ -288,7 +289,6 @@ meta:
     be991be1-9fbd-4fb8-9e2b-19282b305c62: 'Little Church' # Little Church
     bfa7add0-6499-4af5-8d33-4dc3e2e262ad: Education # Education
     c7d153a5-be7a-4158-94da-72e77d34ffbe: 'Audio File' # Audio File
-    c9aab3f5-2510-4e25-8062-ff9daae01c1b: Default # Default
     c243e913-1c84-463a-bbcb-327b23ff279a: Simple # Simple
     cadcecb7-766f-4de8-bee3-62b75a1e2092: 'Tour Highlight' # Tour Highlight
     cf79e9cc-32bf-4f52-90d6-6002f2370405: Music # Music
@@ -308,13 +308,13 @@ plugins:
   calendar:
     edition: lite
     enabled: true
-    licenseKey: RVEQI36ULI02EV0E8N86CX3U
+    licenseKey: USMSYGWPM856CQWAWMTXDIJN
     schemaVersion: 5.0.1
     settings:
       allDay: false
       authoredEventEditOnly: false
       defaultView: month
-      demoBannerDisabled: true
+      demoBannerDisabled: null
       descriptionFieldHandle: null
       eventDuration: 60
       firstDayOfWeek: -1

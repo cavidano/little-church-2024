@@ -1,5 +1,5 @@
 allowRepeatingEvents: true
-color: '#C82CA9'
+color: '#5F60F0'
 description: 'The default calendar'
 descriptionFieldHandle: null
 fieldLayout: null
@@ -10,7 +10,7 @@ icsTimezone: floating
 locationFieldHandle: null
 name: Default
 siteSettings:
-  75715ef5-cd56-4c71-9c66-6ec84ecec42e:
+  c701010d-b0d0-456f-8f38-76276636c60a:
     enabledByDefault: true
     hasUrls: null
     siteId: f627def0-bb59-4992-ae44-aef0dfb97c08 # Little Church
