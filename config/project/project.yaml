@@ -1,4 +1,4 @@
-dateModified: 1731579190
+dateModified: 1731602101
 elementSources:
   craft\elements\Entry:
     -
@@ -190,6 +190,13 @@ fs:
       path: '@webroot/images/uploads/blog'
     type: craft\fs\Local
     url: '@web/images/uploads/blog'
+  eventImages:
+    hasUrls: true
+    name: 'Event Images'
+    settings:
+      path: '@webroot/images/uploads/event'
+    type: craft\fs\Local
+    url: '@web/images/uploads/event'
   figureImages:
     hasUrls: true
     name: 'Figure Images'
@@ -250,15 +257,18 @@ meta:
     7e837081-2d44-4b75-914c-abca14574951: Date # Date
     9af1c194-2693-4d86-9eee-bbff86eaae7a: 'Staff Bio' # Staff Bio
     9b8fb642-9998-4f11-ac4f-92e53344af2c: 'Staff Portrait Images' # Staff Portrait Images
+    12ddbb21-575e-4a98-b2de-353d6663fad9: Event # Event
     27c04a34-53b5-4eaf-a615-91ca4dd52dd5: Image # Image
+    39af2a3a-aab0-4110-beef-2c6c8d52eb26: 'Event Image' # Event Image
     41ea8475-5a25-4156-99a9-75f192140d9c: 'Homepage Carousel Images' # Homepage Carousel Images
     45ab6eb6-a238-4395-8d2d-7a851616aed6: 'Call to Action' # Call to Action
     46c2bc01-7fec-4a8d-9e8f-c578c727a0e3: 'Figure Image Right' # Figure Image Right
     67cb7d46-6622-4ee4-8930-b7fe3a6b6655: 'Hompepage Carousel' # Hompepage Carousel
     75c8e62e-3242-4d56-90d1-090d035078f6: 'Figure Image Full' # Figure Image Full
     86bf3f52-140d-4267-8025-466a1c2b90d7: 'Specialty Banner' # Specialty Banner
-    90d007fb-964b-4788-b672-633d855a0058: 'Rich Text' # Rich Text
+    90d007fb-964b-4788-b672-633d855a0058: 'Event Details' # Event Details
     92eb37bb-240d-4363-ac53-88e9360941e8: 'Blog Images' # Blog Images
+    133d1b38-9cb8-4cd0-8001-01d0f0fe0dd3: Event # Event
     0230f447-379b-4039-be7e-8a8160c130fd: 'Audio Sermons' # Audio Sermons
     272db05d-f0fc-489d-9a91-32658794ef35: 'Audio Sermon Files' # Audio Sermon Files
     296e8f4d-5cda-4e81-996a-3c97f9404a0a: 'Social Media URL' # Social Media URL
@@ -275,6 +285,7 @@ meta:
     4573cb02-ab7d-471a-80a1-93b140d3422a: 'Introduction Title' # Introduction Title
     6180f8f9-5c6e-408f-898a-bc265d3dab24: 'Call to Action' # Call to Action
     6453b749-5f18-4ffc-b62a-393fa9752a52: 'Hero Image' # Hero Image
+    8374da94-9d3b-49d7-9f8c-293a41e4ada7: 'Event Images' # Event Images
     8548ad6c-0d95-4934-8408-543b298b0227: 'Figure Image Horizontal' # Figure Image Horizontal
     8827b8d4-2266-4f88-840c-c506b19dafb0: Image # Image
     24446aa6-8005-424a-8454-e760a87e7bb5: Standard # Standard
@@ -283,6 +294,7 @@ meta:
     62967cc3-ad04-4380-8c1e-1a8c19ab8663: 'Figure Images' # Figure Images
     96916aa2-1b5e-429b-85fa-747aa201e6dc: 'Feature Image' # Feature Image
     123643e3-79a8-4fae-ba43-55c05a270bc5: 'Staff Bio Image' # Staff Bio Image
+    211161e3-d705-4c10-acea-25a14bd50f23: Worship # Worship
     661393a2-0468-49cc-8a89-0a450670c96d: 'Figure Image Vertical' # Figure Image Vertical
     aebde1b3-bc64-4a0d-a85d-dbb5bbb3e331: 'Homepage Layout' # Homepage Layout
     b9395e1a-8d3b-4b8f-aafe-3eab9556b505: 'Primary Page Article' # Primary Page Article
@@ -306,7 +318,7 @@ meta:
     fdcba0b0-5a7a-4a08-b572-3f2b31afb9a1: 'Virtual Tour Image' # Virtual Tour Image
 plugins:
   calendar:
-    edition: lite
+    edition: pro
     enabled: true
     licenseKey: USMSYGWPM856CQWAWMTXDIJN
     schemaVersion: 5.0.1
@@ -314,14 +326,14 @@ plugins:
       allDay: false
       authoredEventEditOnly: false
       defaultView: month
-      demoBannerDisabled: null
+      demoBannerDisabled: true
       descriptionFieldHandle: null
       eventDuration: 60
       firstDayOfWeek: -1
       guestAccess: null
       locationFieldHandle: null
       overlapThreshold: 5
-      pluginName: null
+      pluginName: Events
       quickCreateEnabled: true
       showDisabledEvents: true
       showMiniCal: true

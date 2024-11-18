@@ -1,6 +1,7 @@
-color: null
+altTranslationKeyFormat: null
+altTranslationMethod: none
 fieldLayouts:
-  99272cac-a96a-402e-8f48-698f74a833c2:
+  a00bc44b-1f91-4197-abe8-337b1a227bbb:
     tabs:
       -
         elementCondition: null
@@ -10,7 +11,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-10-20T15:34:19+00:00'
+            dateAdded: '2024-11-14T16:03:50+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -30,38 +31,36 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 63c8266c-75ac-44c3-b16f-db88fefb7500
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 482589fc-c2b4-46cd-92cc-0cf4ec55e6b9
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-10-20T15:37:44+00:00'
+            dateAdded: '2024-11-14T16:07:46+00:00'
             elementCondition: null
-            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Event Details
-            handle: textContent
+            fieldUid: 820e255c-6450-4806-b5ca-85831d8a7c7f # Plain Text
+            handle: caption
             includeInCards: false
             instructions: null
-            label: 'Text Content'
+            label: Caption
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2e3e4b2f-c619-4560-b2d1-62f4deb649c9
+            uid: 81151698-61e0-4b5d-adc2-c60c90518b62
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 301495d9-0542-44bd-912e-ac00f2003bfe
+        uid: a436a44b-fee0-46a0-88f3-ade1ceb6bbf3
         userCondition: null
-handle: textContent
-hasTitleField: false
-icon: font-case
-name: 'Text Content'
-showSlugField: false
-showStatusField: false
-slugTranslationKeyFormat: null
-slugTranslationMethod: site
-titleFormat: ''
+fs: eventImages
+handle: eventImages
+name: 'Event Images'
+sortOrder: 10
+subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

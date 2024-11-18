@@ -5,23 +5,27 @@
 
 {% block eventContent %}
 
-	<h1>Event View</h1>
-	<p class="lead">
-		Below is an individual event view, which allows you to see full details and occurrences for the given event.
-	</p>
-    <hr /><br />
+    <div class="screen-reader-only">
 
+        <h1>Event View</h1>
+        <p>
+            Below is an individual event view, which allows you to see full details and occurrences for the given event.
+        </p>
+
+    </div>
+{#     
     {% set eventSaved = craft.app.session.getFlash('calendar_event_saved') %}
+
     {% if eventSaved %}
         <div class="alert alert-success alert-dismissible" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             Event saved successfully!
         </div>
 		<br />
-    {% endif %}
+    {% endif %} #}
 
-	<div class="row">
-		<div class="col-md-9">
+	<div class="margin-y-4">
+		<div class="container narrow">
 			<div id="events_calendar">
 
                 {% set occurrenceDate = null %}
@@ -39,6 +43,12 @@
                 {% endif %}
 
                 {% if event %}
+
+                {# Add event image here #}
+
+                {% if event.eventImage|length %}
+    <img src="{{ event.eventImage.one().url }}" alt="{{ event.eventImage.one().title }}">
+{% endif %}
 
                     <div class="btn-group float-right" role="group" aria-label="actions">
                         {% if craft.calendar.exportEnabled %}

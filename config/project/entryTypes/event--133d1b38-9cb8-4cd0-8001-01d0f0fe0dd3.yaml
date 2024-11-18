@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  99272cac-a96a-402e-8f48-698f74a833c2:
+  6f32e4d3-5b6c-42d2-b591-4d6383ab06b8:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-10-20T15:34:19+00:00'
+            dateAdded: '2024-11-14T16:21:17+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -25,41 +25,57 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 63c8266c-75ac-44c3-b16f-db88fefb7500
+            uid: a199cc97-04a1-4cce-82a2-add1c9a977e1
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-10-20T15:37:44+00:00'
+            dateAdded: '2024-11-14T16:24:12+00:00'
             elementCondition: null
-            fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Event Details
-            handle: textContent
+            fieldUid: 12ddbb21-575e-4a98-b2de-353d6663fad9 # Event
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Text Content'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2e3e4b2f-c619-4560-b2d1-62f4deb649c9
+            uid: 7ecf7cc1-cd0f-4176-991d-ab39d55a0bcf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-11-14T16:26:18+00:00'
+            elementCondition: null
+            fieldUid: 39af2a3a-aab0-4110-beef-2c6c8d52eb26 # Event Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0beeb0a8-632b-4ffb-90f4-54b07b31e7ef
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 301495d9-0542-44bd-912e-ac00f2003bfe
+        uid: a4c8efb0-3196-4395-b27c-1d7e308639eb
         userCondition: null
-handle: textContent
-hasTitleField: false
-icon: font-case
-name: 'Text Content'
-showSlugField: false
-showStatusField: false
+handle: event
+hasTitleField: true
+icon: calendar-days
+name: Event
+showSlugField: true
+showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
 titleFormat: ''

@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: richText
+handle: eventDetails
 instructions: null
-name: 'Rich Text'
+name: 'Event Details'
 searchable: true
 settings:
   availableTransforms: ''

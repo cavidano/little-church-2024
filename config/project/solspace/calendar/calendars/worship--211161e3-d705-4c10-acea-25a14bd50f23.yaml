@@ -1,0 +1,62 @@
+allowRepeatingEvents: true
+color: '#966ACA'
+description: ''
+descriptionFieldHandle: ''
+fieldLayout:
+  tabs:
+    -
+      elementCondition: null
+      elements:
+        -
+          dateAdded: '2024-11-14T16:27:48+00:00'
+          elementCondition: null
+          fieldUid: 39af2a3a-aab0-4110-beef-2c6c8d52eb26 # Event Image
+          handle: null
+          includeInCards: false
+          instructions: null
+          label: null
+          providesThumbs: false
+          required: false
+          tip: null
+          type: craft\fieldlayoutelements\CustomField
+          uid: df86406c-8189-4d5e-a27a-c39d587e8052
+          userCondition: null
+          warning: null
+          width: 100
+        -
+          dateAdded: '2024-11-14T16:32:40+00:00'
+          elementCondition: null
+          fieldUid: 90d007fb-964b-4788-b672-633d855a0058 # Event Details
+          handle: null
+          includeInCards: false
+          instructions: null
+          label: null
+          providesThumbs: false
+          required: false
+          tip: null
+          type: craft\fieldlayoutelements\CustomField
+          uid: df9af2a3-5f14-4ecf-a080-197b9fce541e
+          userCondition: null
+          warning: null
+          width: 100
+      name: 'Event Details'
+      uid: 6da06282-de76-442a-9783-cc3ddbd6ce8a
+      userCondition: null
+  uid: 0c90371e-7e1f-402f-864e-ec928dd8820b
+handle: worship
+hasTitleField: true
+icsHash: null
+icsTimezone: floating
+locationFieldHandle: ''
+name: Worship
+siteSettings:
+  9436224b-3e4f-48cd-84d2-f20971f1664c:
+    enabledByDefault: true
+    hasUrls: true
+    siteId: f627def0-bb59-4992-ae44-aef0dfb97c08 # Little Church
+    template: worship/_entry
+    uriFormat: 'events/worship/{slug}'
+titleFormat: ''
+titleLabel: Title
+titleTranslationKeyFormat: ''
+titleTranslationMethod: none
