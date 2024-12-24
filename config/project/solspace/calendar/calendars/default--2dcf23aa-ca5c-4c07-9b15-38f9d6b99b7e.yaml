@@ -12,7 +12,7 @@ name: Default
 siteSettings:
   c701010d-b0d0-456f-8f38-76276636c60a:
     enabledByDefault: true
-    hasUrls: null
+    hasUrls: false
     siteId: f627def0-bb59-4992-ae44-aef0dfb97c08 # Little Church
     template: null
     uriFormat: null

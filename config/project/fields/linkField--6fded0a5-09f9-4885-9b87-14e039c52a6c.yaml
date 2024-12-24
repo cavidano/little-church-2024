@@ -5,6 +5,8 @@ name: 'Link Field'
 searchable: false
 settings:
   maxLength: 255
+  showLabelField: false
+  showTargetField: false
   typeSettings:
     __assoc__:
       -

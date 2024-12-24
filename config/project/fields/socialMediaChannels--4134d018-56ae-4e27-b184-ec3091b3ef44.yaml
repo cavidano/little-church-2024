@@ -5,6 +5,7 @@ name: 'Social Media Channels'
 searchable: false
 settings:
   createButtonLabel: null
+  defaultIndexViewMode: cards
   entryTypes:
     - 24715bb8-b7af-4e84-8803-7a8bfb40b984 # Social Media Channel
   includeTableView: false

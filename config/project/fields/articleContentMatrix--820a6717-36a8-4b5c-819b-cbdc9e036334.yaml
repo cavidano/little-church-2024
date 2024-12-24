@@ -5,6 +5,7 @@ name: 'Article Content Matrix'
 searchable: true
 settings:
   createButtonLabel: null
+  defaultIndexViewMode: cards
   entryTypes:
     - 5a15575b-ec2e-47c3-bd00-eb854f1d8055 # Text Content
     - 2f747c28-c7c2-4200-a471-390a2e529c99 # Figure Image Full

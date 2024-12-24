@@ -25,7 +25,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -72,12 +72,12 @@ fieldLayouts:
         userCondition: null
 handle: specialtyBanner
 hasTitleField: true
-icon: ''
+icon: null
 name: 'Specialty Banner'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

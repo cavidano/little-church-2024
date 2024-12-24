@@ -25,7 +25,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -56,12 +56,12 @@ fieldLayouts:
         userCondition: null
 handle: virtualTourImage
 hasTitleField: false
-icon: ''
+icon: null
 name: 'Virtual Tour Image'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
