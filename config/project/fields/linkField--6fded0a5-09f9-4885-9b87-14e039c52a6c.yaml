@@ -4,11 +4,18 @@ instructions: null
 name: 'Link Field'
 searchable: false
 settings:
+  fullGraphqlData: false
   maxLength: 255
   showLabelField: false
-  showTargetField: false
   typeSettings:
     __assoc__:
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
       -
         - url
         -
@@ -19,13 +26,6 @@ settings:
             -
               - allowAnchors
               - ''
-      -
-        - entry
-        -
-          __assoc__:
-            -
-              - sources
-              - '*'
   types:
     - url
     - email
